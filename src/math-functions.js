@@ -57,6 +57,13 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const sumAB = sum(a, b)[0];
+    const sumABC = sum(sumAB, c)[0];
+    const prodAB = multiply(a, b)[0];
+    const prodABC = multiply(prodAB, c)[0];
+    const sumMessage = a + ' and ' + b + ' and ' + c + ' sum to ' + sumABC + '.';
+    const prodMessage = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + prodABC + '.';
+    return [sumABC, prodABC, sumMessage, prodMessage];
 
 }
 
@@ -102,6 +109,7 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    
 
 }
 
