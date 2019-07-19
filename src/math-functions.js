@@ -32,7 +32,13 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    const total = a * b;
 
+    let array = [];
+    array[0] = total;
+    array[1] = 'The product of ' + a + ' and ' + b + ' is ' + total + '.';
+
+    return array;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
