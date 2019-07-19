@@ -13,8 +13,8 @@ example and uses the values that were input into the function:
 
 export function sum(a, b) {
     const total = a + b;
-    const totalStatement = 'The sum of ' + a + ' and ' + b + ' is ' + total + '.';
-    return [total, totalStatement];
+    const sumStatement = 'The sum of ' + a + ' and ' + b + ' is ' + total + '.';
+    return [total, sumStatement];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -22,13 +22,17 @@ export function sum(a, b) {
 
 /////////////////////////////////////
 /* Problem 2
-Write a function called multiply() that takes in two numbers as arguments and returns an array where the first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called multiply() that takes in two numbers as arguments and returns an array where the 
+first element is the product of those numbers, and the second element is a string that EXACTLY follows 
+this example and uses the values that were input into the function:
 
 "The product of 5 and 9 is 45."
 */
 
 export function multiply(a, b) {
-
+    const product = a * b;
+    const multiplyStatement = 'The product of ' + a + ' and ' + b + ' is ' + product + '.';
+    return [product, multiplyStatement];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
