@@ -13,8 +13,7 @@ example and uses the values that were input into the function:
 
 export function sum(a, b) {
     let c = a + b;
-    let arrayAandB = [c, 'The sum of ' + a + ' and ' + b + ' is ' + c + '.'];
-    return arrayAandB;
+    return [c, 'The sum of ' + a + ' and ' + b + ' is ' + c + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -72,6 +71,8 @@ of the numbers in the array, and the second element is a string that EXACTLY fol
 this example and uses the values that were input into the function:
 
 "2,3,4 was passed in as an array of numbers, and 9 is their sum."
+	
+"The numbers 2,3,4 have a sum of 9."
 
 IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. 
 To do addition, use your sum() function that you've already created. You're going to 
@@ -80,8 +81,13 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    let sumArrNum = sum(sumArr[0], sumArr[1]);
+    let sumAyNum = sum(sumArr[1], sumArr[2]);
+    let sumApple = sum(sumArrNum[0], sumAyNum[0]);
+    let sumPeach = sumApple[0] - sumArr[1];
+    return [sumPeach, 'The numbers ' + sumArr + ' have a sum of ' + sumPeach + '.'];
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
