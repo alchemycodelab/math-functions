@@ -27,7 +27,7 @@ test('multiply', (assert) => {
 
 test('sumAndMultiplyThreeNumbers', (assert) => {
     const result = sumAndMultiplyThreeNumbers(4, 7, 5);
-
+    
     assert.equal(result[0], 16);
     assert.equal(result[1], 140);
     assert.equal(result[2], '4 and 7 and 5 sum to 16.');
