@@ -138,7 +138,6 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     }
     const lastCharIndex = dynamicArray.length * 2 - 1;
     numberString = numberString.slice(0, lastCharIndex);
-    console.log(numberString);
     const message = 'The numbers ' + numberString + ' have a product of ' + multiplied + '.';
     return [multiplied, message];
 }
