@@ -12,8 +12,8 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-    const added = a + b;
-    return [added, 'The sum of ' + a + ' and ' + b + ' is ' + added + '.'];
+    const sum2 = a + b;
+    return [sum2, 'The sum of ' + a + ' and ' + b + ' is ' + sum2 + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -27,8 +27,8 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-    const product = a * b;
-    return [product, 'The product of ' + a + ' and ' + b + ' is ' + product + '.'];
+    const product2 = a * b;
+    return [product2, 'The product of ' + a + ' and ' + b + ' is ' + product2 + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -53,7 +53,13 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    const sum3 = sum(a, sum(b, c)[0])[0];
+    const product3 = multiply(a, multiply(b, c)[0])[0];
+    return [
+        sum3,
+        product3,
+        a + ' and ' + b + ' and ' + c + ' sum to ' + sum3 + '.',
+        'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + product3 + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -75,7 +81,7 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    // const sum = sumArr[0] + sumArr[1] + sumArr[2];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
