@@ -90,6 +90,7 @@ export function sumArrayWithThreeNumbers(sumArr) {
     const array = [sumArray1, `The numbers ${sumArr[0]},${sumArr[1]},${sumArr[2]} have a sum of ${sumArray1}.`];
     return array;
 }
+// messed up last PR so redoing on new branch :/
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
