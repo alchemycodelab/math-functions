@@ -148,9 +148,11 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     let n = dynamicArray[0];
     for(let i = 1; i < dynamicArray.length; i++) {
         let prodArray = multiply(n, dynamicArray[i]);
-        n = prodArray[0];       
+        n = prodArray[0];
     }
-    return n;
+    const statement = 'The numbers ' + dynamicArray + ' have a product of ' + n + '.';
+
+    return [n, statement];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
