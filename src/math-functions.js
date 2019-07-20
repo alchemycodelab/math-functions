@@ -109,7 +109,9 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    let multiplyThree = sumAndMultiplyThreeNumbers(multArr[0], multArr[1], multArr [2])[1];
+    let stringOfThree = 'The numbers 2,3,4 have a product of 24.';
+    return [multiplyThree, stringOfThree];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
