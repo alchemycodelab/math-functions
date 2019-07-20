@@ -70,6 +70,7 @@ as its single argument and then returns an array where the first element is the 
 of the numbers in the array, and the second element is a string that EXACTLY follows 
 this example and uses the values that were input into the function:
 
+
 	
 "The numbers 2,3,4 have a sum of 9."
 
@@ -80,6 +81,7 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+
     let plum = sum(sumArr[0], sumArr[1]);
     let grape = sum(sumArr[1], sumArr[2]);
     let apple = sum(plum[0], grape[0]);
