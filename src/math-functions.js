@@ -103,6 +103,7 @@ and the second element is a string that EXACTLY follows this example and uses th
 that were input into the function:
 
 "The numbers 2,3,4 have a product of 24."
+'The numbers 2,3,4 have a product of 24.'
 
 IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. 
 To do multiplication, use your multiply() function that you've already created. 
@@ -110,9 +111,11 @@ You're going to have to be resourceful to figure out how to do this.
 This function should handle an array containing three elements. However, 
 you may continue to use the + operator for string concatenation.
 */
-
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    const multArray1 = multiply(multArr[0], multArr[1]);
+    const multArray2 = multiply(multArray1[0], multArr[2]);
+    const array = [multArray2[0], `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multArray2[0]}.`];
+    return array;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
