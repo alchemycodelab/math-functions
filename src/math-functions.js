@@ -13,7 +13,7 @@ example and uses the values that were input into the function:
 
 export function sum(a, b) {
     const added = a + b;
-    const message = 'The sum of ' + a + ' and ' + b + ' is ' + added + '.';
+    const message = `The sum of ${a} and ${b} is ${added}.`;
     const array = [added, message];
     return array;
 }
@@ -32,7 +32,7 @@ uses the values that were input into the function:
 
 export function multiply(a, b) {
     const multiplied = a * b;
-    const message = 'The product of ' + a + ' and ' + b + ' is ' + multiplied + '.';
+    const message = `The product of ${a} and ${b} is ${multiplied}.`;
     const array = [multiplied, message];
     return array;
 }
@@ -60,9 +60,9 @@ how to do this. However, you may continue to use the + operator for string conca
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
     const resultAdd = sum(sum(a, b)[0], c);
-    const addMessage = a + ' and ' + b + ' and ' + c + ' sum to ' + resultAdd[0] + '.';
+    const addMessage = `${a} and ${b} and ${c} sum to ${resultAdd[0]}.`;
     const resultMult = multiply(multiply(a, b)[0], c);
-    const multMessage = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + resultMult[0] + '.';
+    const multMessage = `The product of ${a} and ${b} and ${c} is ${resultMult[0]}.`;
     const array = [resultAdd[0], resultMult[0], addMessage, multMessage];
     return array;
 }
@@ -143,7 +143,6 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
         message = `The numbers ${msgString} have a product of ${product}.`;
     }
     return [product, message];
-
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
