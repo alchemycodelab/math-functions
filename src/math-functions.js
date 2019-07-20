@@ -112,9 +112,8 @@ This function should handle an array containing three elements. However,
 you may continue to use the + operator for string concatenation.
 */
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-    const multArray1 = multiply(multArr[0], multArr[1]);
-    const multArray2 = multiply(multArray1[0], multArr[2]);
-    const array = [multArray2[0], `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multArray2[0]}.`];
+    const multArray1 = multiply(multiply(multArr[0], multArr[1])[0], multArr[2])[0];
+    const array = [multArray1, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multArray1}.`];
     return array;
 }
 
