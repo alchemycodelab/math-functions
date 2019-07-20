@@ -79,7 +79,18 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    let sumResult = 0;
+    let arrayEl = '';
+    for(let i = 0; i < sumArr.length; i++) {
+        sumResult = sum(sumResult, sumArr[i])[0];
+    }
+    for(let x = 0; x < sumArr.length; x++) {
+        if(x > 0) {
+            arrayEl += ',';
+        }
+        arrayEl += sumArr[x];
+    }
+    return [sumResult, 'The numbers ' + arrayEl + ' have a sum of ' + sumResult + '.']; 
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -102,7 +113,18 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    let multResult = 1;
+    let arrayEl = 0;
+    for(let i = 0; i < multArr.length; i++) {
+        multResult = multiply(multResult, multArr[i])[0];
+    }
+    for(let x = 0; x < multArr.length; x++) {
+        if(x > 0) {
+            arrayEl += ',';
+        }
+        arrayEl += multArr[x];
+    }
+    return [multResult, 'The numbers ' + arrayEl + ' have a product of ' + multResult + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -114,6 +136,7 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
 /////////////////////////////////////
 /* STRETCH GOAL: Problem 6
 Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
+
 
 "The numbers 1,2,3,4,5 have a product of 120."
 
