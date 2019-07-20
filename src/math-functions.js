@@ -70,7 +70,7 @@ as its single argument and then returns an array where the first element is the 
 of the numbers in the array, and the second element is a string that EXACTLY follows 
 this example and uses the values that were input into the function:
 
-"2,3,4 was passed in as an array of numbers, and 9 is their sum."
+
 	
 "The numbers 2,3,4 have a sum of 9."
 
@@ -81,11 +81,12 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-    let sumArrNum = sum(sumArr[0], sumArr[1]);
-    let sumAyNum = sum(sumArr[1], sumArr[2]);
-    let sumApple = sum(sumArrNum[0], sumAyNum[0]);
-    let sumPeach = sumApple[0] - sumArr[1];
-    return [sumPeach, 'The numbers ' + sumArr + ' have a sum of ' + sumPeach + '.'];
+
+    let plum = sum(sumArr[0], sumArr[1]);
+    let grape = sum(sumArr[1], sumArr[2]);
+    let apple = sum(plum[0], grape[0]);
+    let peach = apple[0] - sumArr[1];
+    return [peach, 'The numbers ' + sumArr + ' have a sum of ' + peach + '.'];
 }
 
 
@@ -108,9 +109,14 @@ This function should handle an array containing three elements. However,
 you may continue to use the + operator for string concatenation.
 */
 
-export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+export function multiplyArrayWithThreeNumbers(multArr) {
+    let zuccini = multiply(multArr[0], multArr[1]);
+    let cucumber = multiply(multArr[1], multArr[2]);
+    let eggplant = zuccini[0] / multArr[1];
+    let parsnip = multiply(eggplant, cucumber[0]);
+    return [parsnip[0], 'The numbers ' + multArr + ' have a product of ' + parsnip[0] + '.'];
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
