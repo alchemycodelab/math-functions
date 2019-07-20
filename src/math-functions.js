@@ -55,6 +55,14 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    
+    let d = parseInt((sum(a, b)));
+    let e = parseInt(sum(c, d));
+    
+    let f = parseInt(multiply(a, b));
+    let h = parseInt(multiply(c, f));
+
+    return [e, h, a + ' and ' + b + ' and ' + c + ' sum to ' + e + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + h + '.'];
 
 }
 
