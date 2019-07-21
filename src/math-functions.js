@@ -137,17 +137,16 @@ This function should be dynamic, accepting an array of any length.
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     
-    let solvedMessage = 'The numbers ';
-    const solvedMessageActual = String(solvedMessage);
-    let basicNumber = 1;
+    let numberVariable = 1;
+    let i = 0;
 
-    for(let i = 0; i < dynamicArray.length; i++) {
-        
-        basicNumber = multiply(basicNumber, dynamicArray[i])[0];
-        const daFunction = String(dynamicArray);
-        solvedMessage = solvedMessageActual + daFunction + ' have a product of ' + basicNumber + '.';
+    for(i = 0; i < dynamicArray.length; i++) {
+
+        numberVariable = multiply(numberVariable, dynamicArray[i])[0];
+
     }
-    return [basicNumber, solvedMessage];
+    
+    return [numberVariable, 'The numbers ' + String(dynamicArray) + ' have a product of ' + numberVariable + '.'];
 
 }
 
