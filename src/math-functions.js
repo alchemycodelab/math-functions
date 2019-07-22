@@ -56,12 +56,12 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-    let sumTwoNum = sum(a, b) [0];
-    let sumThreeNum = sum(sumTwoNum, c) [0];
-    let multiplyTwoNum = multiply(a, b) [0];
-    let multiplyThreeNum = multiply(multiplyTwoNum, c) [0];
-    let thirdElement = '4 and 7 and 5 sum to 16.';
-    let fourthElement = 'The product of 4 and 7 and 5 is 140.';
+    let sumTwoNum = sum(a, b)[0];
+    let sumThreeNum = sum(sumTwoNum, c)[0];
+    let multiplyTwoNum = multiply(a, b)[0];
+    let multiplyThreeNum = multiply(multiplyTwoNum, c)[0];
+    let thirdElement = a + ' and '+ b + ' and ' + c + ' sum to ' + sumThreeNum + '.';
+    let fourthElement = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplyThreeNum + '.';
     return [sumThreeNum, multiplyThreeNum, thirdElement, fourthElement];
 }
 
@@ -85,7 +85,7 @@ to use the + operator for string concatenation.
 
 export function sumArrayWithThreeNumbers(sumArr) {
     let sumOfThree = sumAndMultiplyThreeNumbers(sumArr[0], sumArr[1], sumArr[2])[0];
-    let stringThree = 'The numbers 2,3,4 have a sum of 9.';
+    let stringThree = 'The numbers ' + sumArr[0] + ',' + sumArr[1] + ',' + sumArr[2] + ' have a sum of ' + sumOfThree + '.';
     return [sumOfThree, stringThree];
 }
 
@@ -144,7 +144,6 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     }
     
     let stretchString = 'The numbers ' + text + ' have a product of ' + stretchOne + '.';
-
     return [stretchOne, stretchString];
     
 }
