@@ -133,12 +133,14 @@ This function should be dynamic, accepting an array of any length.
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     let stretchOne = multiply(dynamicArray[0], 1)[0];
+    let text = '';
     for(let i = 0; i < dynamicArray.length; i++) {
         stretchOne = multiply(dynamicArray[i], stretchOne)[0];
+        text += dynamicArray[i] + ',';
+        
     }
-    let listOfI = '1,2,3,4,5';
     
-    let stretchString = 'The numbers ' + listOfI + ' have a product of 120.';
+    let stretchString = 'The numbers ' + text + ' have a product of ' + stretchOne + '.';
 
     return [stretchOne, stretchString];
     
