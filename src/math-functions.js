@@ -136,8 +136,11 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     let text = '';
     for(let i = 0; i < dynamicArray.length; i++) {
         stretchOne = multiply(dynamicArray[i], stretchOne)[0];
-        text += dynamicArray[i] + ',';
+        text += dynamicArray[i];
         
+        if(i < dynamicArray.length - 1) {
+            text = text += ',';
+        }
     }
     
     let stretchString = 'The numbers ' + text + ' have a product of ' + stretchOne + '.';
