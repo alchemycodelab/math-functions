@@ -60,7 +60,7 @@ export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
     let sumThreeNum = sum(sumTwoNum, c)[0];
     let multiplyTwoNum = multiply(a, b)[0];
     let multiplyThreeNum = multiply(multiplyTwoNum, c)[0];
-    let thirdElement = a + ' and '+ b + ' and ' + c + ' sum to ' + sumThreeNum + '.';
+    let thirdElement = a + ' and ' + b + ' and ' + c + ' sum to ' + sumThreeNum + '.';
     let fourthElement = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplyThreeNum + '.';
     return [sumThreeNum, multiplyThreeNum, thirdElement, fourthElement];
 }
