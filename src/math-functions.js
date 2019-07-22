@@ -53,11 +53,13 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { 
-    let sumThree = a + b + c;
-    let productThree = a * b * c;
-    let sumArray = [a + ' and ' + b + ' and ' + c + ' sum to ' + sumThree + '.'];
-    let productArray = ['The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productThree + '.'];
-    return [sumThree, productThree, sumArray, productArray];
+    let lily = sum(a, b);
+    let rose = sum(lily[0], c);
+    let pine = multiply(a, b);
+    let spruce = multiply(pine[0], c);
+    let sumArray = [a + ' and ' + b + ' and ' + c + ' sum to ' + rose[0] + '.'];
+    let productArray = ['The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + spruce[0] + '.'];
+    return [rose[0], spruce[0], sumArray, productArray];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
