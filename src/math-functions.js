@@ -86,7 +86,7 @@ to use the + operator for string concatenation.
 export function sumArrayWithThreeNumbers(sumArr) {
     const firstSum = sum(sumArr[0], sumArr[1]) [0];
     const secondSum = sum(firstSum, sumArr[2]) [0];
-    return [secondSum, 'The numbers ' + sumArr + ' have a sum of 9.'];
+    return [secondSum, 'The numbers ' + sumArr + ' have a sum of ' + secondSum + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -111,7 +111,7 @@ you may continue to use the + operator for string concatenation.
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
     const firstProduct = multiply(multArr[0], multArr[1]) [0];
     const secondProduct = multiply(firstProduct, multArr[2]) [0];
-    return [secondProduct, 'The numbers ' + multArr + ' have a product of 24.'];
+    return [secondProduct, 'The numbers ' + multArr + ' have a product of ' + secondProduct + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -132,12 +132,11 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-    // let total = 0;
-    // for(let i = 0; i < sumArr.length; i++) {
-    //     total = total + sumArr[i]; // total += sumArr[i];
-    // }
-    // return total;
-
+    let total = dynamicArray[0];
+    for(let i = 1; i < dynamicArray.length; i++) {
+        total *= dynamicArray[i]; 
+    }
+    return [total, 'The numbers 1,2,3,4,5 have a product of ' + total + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
