@@ -69,10 +69,10 @@ export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
 
     const sumString = `${a} and ${b} and ${c} sum to ${sumTwo}.`;
     const productString = `The product of ${a} and ${b} and ${c} is ${productTwo}.`;
+
     const sumArray = [sumTwo, productTwo, sumString, productString];
 
     return sumArray;
-
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
