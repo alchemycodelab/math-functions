@@ -76,7 +76,7 @@ to use the + operator for string concatenation.
 
 export function sumArrayWithThreeNumbers(sumArr) {
     const sumOfThree = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0];
-    // return [sumOfThree, `${sumArr.join()} was passed in as an array of numbers, and ${sumOfThree} is their sum.`]
+    // return [sumOfThree, `${sumArr.join()} was passed in as an array of numbers, and ${sumOfThree} is their sum.`]
     return [sumOfThree, `The numbers ${sumArr.join()} have a sum of ${sumOfThree}.`];
 }
 
@@ -100,7 +100,8 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-    
+    const prodOfThree = multiply(multiply(multArr[0], multArr[1])[0], multArr[2])[0];
+    return [prodOfThree, `The numbers ${multArr.join()} have a product of ${prodOfThree}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
