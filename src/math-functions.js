@@ -106,6 +106,10 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    let productOne = multiply(multArr[0], multArr[1])[0];
+    let productTwo = multiply(productOne, multArr[2])[0];
+
+    return [productTwo, 'The numbers ' + multArr + ' have a product of ' + productTwo + '.'];
 
 }
 
