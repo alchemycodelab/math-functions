@@ -52,9 +52,16 @@ To do addition, use your sum() function, and to do multiplication, use your mult
 function that you've already created. You're going to have to be resourceful to figure out 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
+// const sum2 = a + b + c;
+// const multiply2 = a * b * c;
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    const sumThreeNumbers = sum(a, sum (b, c)[0])[0];
+    const productThreeNumbers = multiply(a, multiply (b, c)[0])[0];
+    
+    return [sumThreeNumbers, productThreeNumbers, a + ' and ' + b + ' and ' + c + ' sum to ' + sumThreeNumbers + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productThreeNumbers + '.'];
+    
+    // return [sumThreeNumbers, productThreeNumbers, a + ' and ' + b + ' and ' + c + ' sum to ' + sumThreeNumbers + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productThreeNumbers + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
