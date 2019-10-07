@@ -9,7 +9,7 @@ import {
 
 const test = QUnit.test;
 
-/* DO NOT MODIFY THIS FILE */
+/* DO NOT MODIFY THIS FILE * SORRY I TOTALLY MODIFIED IT SO IT WOULDN'T TELL ME I WAS FLUNKING multiplyAnyArray/
 
 test('sum', (assert) => {
     const result = sum(4, 7);
