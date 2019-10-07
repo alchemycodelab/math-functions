@@ -12,6 +12,9 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
+    let totalSum = a + b;
+    return [totalSum, 'The sum of ' + a + ' and ' + b + ' is ' + totalSum + '.'];
+    
 
 }
 
