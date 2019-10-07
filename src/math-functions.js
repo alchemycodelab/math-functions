@@ -152,6 +152,26 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let finalProduct = 1;
+
+    for(let i = 0; i < dynamicArray.length; i++) {
+        finalProduct = multiply(finalProduct, dynamicArray[i])[0];
+    }
+
+    let outputString = 'The numbers ';
+
+    for(let i = 0; i < dynamicArray.length; i++) {
+        outputString += (dynamicArray[i] + ',');
+    }
+        
+    outputString = outputString.slice(0, (outputString.length - 1));
+
+    outputString += (' have a product of ' + finalProduct + '.');
+
+    const prodArray = [finalProduct, outputString];
+
+    return prodArray;
+
 
 }
 
