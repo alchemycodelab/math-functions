@@ -31,10 +31,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 
 export function multiply(a, b) {
     const total = a * b;
-    const sumString = `The product of ${a} and ${b} is ${total}.`;
-    const sumArray = [total, sumString];
+    const productString = `The product of ${a} and ${b} is ${total}.`;
+    const productArray = [total, productString];
 
-    return sumArray;
+    return productArray;
 
 }
 
@@ -60,7 +60,19 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const sumOne = sum(a, b)[0];
+    const sumTwo = sum(sumOne, c)[0];
 
+    const productOne = multiply(a, b)[0];
+    const productTwo = multiply(productOne, c)[0];
+    
+
+    const sumString = `${a} and ${b} and ${c} sum to ${sumTwo}.`;
+    const productString = `The product of ${a} and ${b} and ${c} is ${productTwo}.`;
+
+    const sumArray = [sumTwo, productTwo, sumString, productString];
+
+    return sumArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
