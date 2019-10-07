@@ -28,7 +28,8 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    let mult = a * b;
+    return [mult, 'The product of ' + a + ' and ' + b + ' is ' + mult + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
