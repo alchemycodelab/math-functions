@@ -42,11 +42,10 @@ export function multiply(a, b) {
 
 /////////////////////////////////////
 /* Problem 3
-Write a function called sumAndMultiplyThreeNumbers() that takes in three 
-numbers as separate arguments and returns 
-an array where the first element is the sum of those three numbers, 
-the second element is the product of those three numbers,  
-and the third and fourth elements are strings that EXACTLY follow this example and 
+Write a function called sumAndMultiplyThreeNumbers() that takes in three numbers as separate arguments 
+- and returns an array where the first element is the sum of those three numbers, 
+- the second element is the product of those three numbers,  
+- and the third and fourth elements are strings that EXACTLY follow this example and 
 use the values that were input into the function:
 
 Third element: "4 and 7 and 5 sum to 16."
@@ -59,7 +58,15 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const arr = [];
 
+    arr [0] = sum(sum(a, b)[0], c)[0];
+    arr [1] = multiply(multiply(a, b)[0], c)[0];
+
+    arr [2] = `${a} and ${b} and ${c} sum to ${arr[0]}.`;
+    arr [3] = `The product of ${a} and ${b} and ${c} is ${arr[1]}.`;
+
+    return arr ;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
