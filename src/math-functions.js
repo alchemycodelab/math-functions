@@ -13,7 +13,7 @@ example and uses the values that were input into the function:
 
 
 export function sum(a, b) {
-  return [a + b, `The sum of ${a} and ${b} is ${a+b}.`]
+    return [a + b, `The sum of ${a} and ${b} is ${a+b}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -27,7 +27,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-  return [(a * b), `The product of ${a} and ${b} is ${a * b}.`]
+    return [(a * b), `The product of ${a} and ${b} is ${a * b}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -52,7 +52,15 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const firstSum = sum(a, b)[0];
+    const totalSum = sum(firstSum, c)[0];
+    const totalSumSentence = `${a} and ${b} and ${c} sum to ${totalSum}.`;
 
+    const firstProduct = multiply(a, b)[0];
+    const totalProduct = multiply(firstProduct, c)[0];
+    const totalProductSentence = `The product of ${a} and ${b} and ${c} is ${a * b * c}.`;
+    
+  return [totalSum, totalProduct, totalSumSentence, totalProductSentence];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
