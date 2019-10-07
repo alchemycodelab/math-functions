@@ -12,8 +12,9 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    return [(a + b), 'The sum of ' + a + ' and ' + b + ' is ' + (a + b) + '.'];
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -26,7 +27,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    return [(a * b), 'The product of ' + a + ' and ' + b + ' is ' + (a * b) + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,7 +52,10 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const sumOne = sum(sum(a, b)[0], c)[0];
+    const multiplyOne = multiply(multiply(a, b)[0], c)[0];
 
+    return [sumOne, multiplyOne, a + ' and ' + b + ' and ' + c + ' sum to ' + sumOne + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplyOne + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,6 +77,9 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const sumOne = sum(sumArr[0], sumArr[1])[0];
+    const sumTotal = sum(sumOne, sumArr[2])[0];
+    return [sumTotal, 'The numbers ' + sumArr + ' have a sum of ' + sumTotal + '.']; 
 
 }
 
@@ -96,7 +103,9 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    const multOne = multiply(multArr[0], multArr[1])[0];
+    const multTotal = multiply(multOne, multArr[2])[0];
+    return [multTotal, 'The numbers ' + multArr + ' have a product of ' + multTotal + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -116,9 +125,10 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
-export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+// export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
-}
+// }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
+// for travis
