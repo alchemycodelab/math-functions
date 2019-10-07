@@ -10,9 +10,7 @@ example and uses the values that were input into the function:
 
 "The sum of 4 and 7 is 11."
 */
-let a = 4;
-let b = 7;
-export function sum(a, b) {
+export function sum(a = 4, b = 7) {
     return [(a + b), 'The sum of ' + a + ' and ' + b + ' is ' + (a + b) + '.'];
 }
 
@@ -25,10 +23,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 
 "The product of 5 and 9 is 45."
 */
-let c = 5;
-let d = 9;
-export function multiply(c, d) {
-    return [(c * d), 'The product of ' + c + ' and ' + d + ' is ' + (c * d) + '.'];
+
+export function multiply(a = 5, b = 9) {
+    return [(a * b), 'The product of ' + a + ' and ' + b + ' is ' + (a * b) + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,8 +48,15 @@ To do addition, use your sum() function, and to do multiplication, use your mult
 function that you've already created. You're going to have to be resourceful to figure out 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
-
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(a = 4, b = 7, c = 7 ){ //eslint-disable-line
+    const sumResult = sum(a, b); 
+    const sumResultSecond = sum(sumResult[0], c);
+    const productResult = multiply(a, b);
+    const productResultSecond = multiply(productResult[0], c); 
+    const submessage = a + ' and ' + b + ' and ' + c + ' sum to ' + sumResultSecond[0] + '.';
+    const productmessage = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productResultSecond[0] + '.';
+    return [sumResultSecond[0], productResultSecond[0], submessage, productmessage]; 
+    
 
 }
 
@@ -75,7 +79,7 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
