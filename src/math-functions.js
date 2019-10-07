@@ -105,7 +105,10 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    const productResult = multiply(2, 3);
+    const productResultSecond = multiply(productResult[0], 4);
+    const productMessage = 'The numbers 2,3,4 have a product of ' + productResultSecond[0] + '.';
+    return [productResultSecond[0], productMessage];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
