@@ -76,6 +76,9 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    let arraySum = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0];
+    return [arraySum, 'The numbers ' + sumArr.join() + ' have a sum of ' + arraySum + '.'];
+
 
 }
 
