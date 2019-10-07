@@ -30,7 +30,11 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    const emptyArray1 = [];
 
+    emptyArray1.push(a * b);
+    emptyArray1.push('The product of ' + a + ' and ' + b + ' is ' + (a * b) + '.');
+    return emptyArray1;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
