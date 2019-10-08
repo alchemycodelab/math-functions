@@ -122,7 +122,7 @@ This function should be dynamic, accepting an array of any length.
 */
 
 // export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-}
+// }
 // }
 // export function multiply(a, b) {
 //     return [a * b, `The product of ${a} and ${b} is ${a * b}.`];
