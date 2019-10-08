@@ -15,7 +15,6 @@ export function sum(a = 4, b = 7) {
     return [(a + b), 'The sum of ' + a + ' and ' + b + ' is ' + (a + b) + '.'];
     
 }
-sum (4 + 7);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
@@ -29,7 +28,6 @@ Write a function called multiply() that takes in two numbers as arguments and re
 export function multiply(a = 5, b = 9) {
     return [(a * b), 'The product of ' + a + ' and ' + b + ' is ' + (a * b + '.')];
 }
-multiply (5 * 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -56,13 +54,11 @@ export function sumAndMultiplyThreeNumbers(a, b , c) { //eslint-disable-line
     const firstSum = sum(a, b);
     const secondSum = sum(firstSum[0], c);
     const threeSum = a + ' and ' + b + ' and ' + 5 + ' sum to ' + secondSum[0] + '.';
-    
     const firstMult = multiply(a, b);
     const secondMult = multiply(firstMult[0], c);
     const threeMult = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + secondMult[0] + '.';
     return [secondSum[0], secondMult[0], threeSum, threeMult];
 }
-sum(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
