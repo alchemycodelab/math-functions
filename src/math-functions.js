@@ -137,16 +137,15 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
-export function multiplyAnyArray(dynamicArray) { 
+export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     let DynamicProduct = 1;
     
     for(let i = 0; i < dynamicArray.length; i++){
         DynamicProduct = multiply(DynamicProduct, dynamicArray[i])[0];
     }
     
-    let stringOfProducts = 'The numbers ' + dynamicArray[0] + ',' + dynamicArray[1] + ',' + dynamicArray[2] + ',' + dynamicArray[3] + ',' + dynamicArray[4] + ' have a product of ' + DynamicProduct + '.';
     
-    return [DynamicProduct, stringOfProducts];
+    return [DynamicProduct, 'The numbers ' + dynamicArray + ' have a product of ' + DynamicProduct + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
