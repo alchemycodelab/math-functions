@@ -12,8 +12,8 @@ example and uses the values that were input into the function:
 */
 
 export function sum(numberOne, numberTwo) {
-    const sum = numberOne + numberTwo;
-    const sumArray = [numberOne + numberTwo, `The sum of ${numberOne} and ${numberTwo} is ${sum}.`];
+    const sumOfNumbers = numberOne + numberTwo;
+    const sumArray = [sumOfNumbers, `The sum of ${numberOne} and ${numberTwo} is ${sumOfNumbers}.`];
 
     return sumArray;
 }
@@ -28,8 +28,11 @@ Write a function called multiply() that takes in two numbers as arguments and re
 "The product of 5 and 9 is 45."
 */
 
-export function multiply(a, b) {
+export function multiply(numberOne, numberTwo) {
+    const productOfNumbers = numberOne * numberTwo;
+    const productArray = [productOfNumbers, `The product of ${numberOne} and ${numberTwo} is ${productOfNumbers}.`];
 
+    return productArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
