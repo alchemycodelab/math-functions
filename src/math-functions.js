@@ -128,6 +128,20 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    const numberOne = multArr[0];
+    const numberTwo = multArr[1];
+    const numberThree = multArr[2];
+
+    const productOfTwo = multiply(numberOne, numberTwo);
+    const productOfTwoValue = productOfTwo[0];
+
+    const productOfThree = multiply(productOfTwoValue, numberThree);
+    const productOfThreeValue = productOfThree[0];
+    const productOfThreeString = `The numbers ${numberOne},${numberTwo},${numberThree} have a product of ${productOfThreeValue}.`;
+
+    const sumOfThreeArray = [productOfThreeValue, productOfThreeString];
+
+    return sumOfThreeArray;
 
 }
 
