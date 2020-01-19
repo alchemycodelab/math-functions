@@ -56,8 +56,23 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(numberOne, numberTwo, numberThree) { //eslint-disable-line
+    const sumOfTwo = sum(numberOne, numberTwo);
+    const sumOfThree = sum(sumOfTwo[0], numberThree);
+    const sumOfThreeValue = sumOfThree[0];
+    const sumOfThreeString = `${numberOne} and ${numberTwo} and ${numberThree} sum to ${sumOfThreeValue}.`;
 
+
+    const productOfTwo = multiply(numberOne, numberTwo);
+    const productOfThree = multiply(productOfTwo[0], numberThree);
+    const productOfThreeValue = productOfThree[0];
+    const productOfThreeString = `The product of ${numberOne} and ${numberTwo} and ${numberThree} is ${productOfThreeValue}.`;
+
+
+
+    const sumAndProductArray = [sumOfThreeValue, productOfThreeValue, sumOfThreeString, productOfThreeString];
+    
+    return sumAndProductArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
