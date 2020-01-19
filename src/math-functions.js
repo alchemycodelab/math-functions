@@ -68,8 +68,6 @@ export function sumAndMultiplyThreeNumbers(numberOne, numberTwo, numberThree) { 
     const productOfThreeValue = productOfThree[0];
     const productOfThreeString = `The product of ${numberOne} and ${numberTwo} and ${numberThree} is ${productOfThreeValue}.`;
 
-
-
     const sumAndProductArray = [sumOfThreeValue, productOfThreeValue, sumOfThreeString, productOfThreeString];
     
     return sumAndProductArray;
@@ -94,7 +92,20 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const numberOne = sumArr[0];
+    const numberTwo = sumArr[1];
+    const numberThree = sumArr[2];
 
+    const sumOfTwo = sum(numberOne, numberTwo);
+    const sumOfTwoValue = sumOfTwo[0];
+
+    const sumOfThree = sum(sumOfTwoValue, numberThree);
+    const sumOfThreeValue = sumOfThree[0];
+    const sumOfThreeString = `${numberOne},${numberTwo},${numberThree} was passed in as an array of numbers, and ${sumOfThreeValue} is their sum.`;
+
+    const sumOfThreeArray = [sumOfThreeValue, sumOfThreeString];
+
+    return sumOfThreeArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
