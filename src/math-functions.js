@@ -12,7 +12,7 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-    const result = (a + b)
+    const result = (a + b);
     const array = [result, `The sum of ${a} and ${b} is ${result}.`];
     return array;
 }
@@ -56,7 +56,7 @@ how to do this. However, you may continue to use the + operator for string conca
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
     const sum = a + b + c;
     const product = a * b * c;
-    return [sum, product, `${a} and ${b} and ${c} sum to ${sum}.`, `The product of ${a} and ${b} and ${c} is ${product}.`]
+    return [sum, product, `${a} and ${b} and ${c} sum to ${sum}.`, `The product of ${a} and ${b} and ${c} is ${product}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -132,8 +132,15 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    let result;
+    for(let i = 0; i < (dynamicArray.length - 1); i++) {
+        const product = multiply(dynamicArray[i], (dynamicArray[i] + 1))[0];
+        result = multiply(product, (dynamicArray[i] + 2))[0];
+    }
+    return [result, 'The numbers ' + dynamicArray + ` have a product of ${result}.`];
 }
+
+multiplyAnyArray([1, 2, 3, 4, 5]);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
