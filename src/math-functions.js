@@ -27,34 +27,22 @@ export function sumAndMultiplyThreeNumbers(a, b, c) {
 /////////////////////////////////////
 // Problem 4
 
-export function sumArrayWithThreeNumbers([]) {
-    let num = sum(2, 3)[0];
-    let sumNum = sum(num, 4)[0];
+export function sumArrayWithThreeNumbers([a, b, c]) {
+    let num = sum(a, b)[0];
+    let sumNum = sum(num, c)[0];
     return [sumNum, '2,3,4 was passed in as an array of numbers, and 9 is their sum.'];
 }
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
-// Don't forget to create a new branch for your work on the next question!
-
 /////////////////////////////////////
-/* Problem 5
-Write a function called multiplyArrayWithThreeNumbers() that takes an array of numbers 
-as its argument and returns an array whose first element is the product of those numbers, 
-and the second element is a string that EXACTLY follows this example and uses the values 
-that were input into the function:
+// Problem 5
 
-"The numbers 2,3,4 have a product of 24."
 
-IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. 
-To do multiplication, use your multiply() function that you've already created. 
-You're going to have to be resourceful to figure out how to do this. 
-This function should handle an array containing three elements. However, 
-you may continue to use the + operator for string concatenation.
-*/
+export function multiplyArrayWithThreeNumbers([a, b, c]) {
+    let num = multiply(a, b)[0];
+    let productNum = multiply(num, c)[0];
+    return [productNum, 'The numbers 2,3,4 have a product of 24.'];
 
-//export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
-//}
+};
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
