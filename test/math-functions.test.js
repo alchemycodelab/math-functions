@@ -1,22 +1,31 @@
 import { 
+<<<<<<< HEAD
     sum, 
     /*multiply, 
     sumAndMultiplyThreeNumbers, 
     sumArrayWithThreeNumbers, 
     multiplyArrayWithThreeNumbers, 
     multiplyAnyArray */
+=======
+    //sum, 
+    multiply, 
+    /*sumAndMultiplyThreeNumbers, 
+    sumArrayWithThreeNumbers, 
+    multiplyArrayWithThreeNumbers, 
+    multiplyAnyArray*/
+>>>>>>> problem-2
 } from '../src/math-functions.js';
 
 const test = QUnit.test;
 
 /* DO NOT MODIFY THIS FILE */
 
-test('sum', (assert) => {
+/*test('sum', (assert) => {
     const result = sum(4, 7);
 
     assert.equal(result[0], 11);
     assert.equal(result[1], 'The sum of 4 and 7 is 11.');
-});
+});*/
 
 /*
 test('multiply', (assert) => {
@@ -26,7 +35,8 @@ test('multiply', (assert) => {
     assert.equal(result[1], 'The product of 5 and 9 is 45.');
 });
 
-test('sumAndMultiplyThreeNumbers', (assert) => {
+
+/*test('sumAndMultiplyThreeNumbers', (assert) => {
     const result = sumAndMultiplyThreeNumbers(4, 7, 5);
 
     assert.equal(result[0], 16);
@@ -54,4 +64,8 @@ test('multiplyAnyArray', (assert) => {
 
     assert.equal(result[0], 120);
     assert.equal(result[1], 'The numbers 1,2,3,4,5 have a product of 120.');
+<<<<<<< HEAD
 }); */
+=======
+});*/
+>>>>>>> problem-2
