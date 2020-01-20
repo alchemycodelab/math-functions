@@ -84,7 +84,27 @@ to use the + operator for string concatenation.
 
 export function sumArrayWithThreeNumbers(sumArr) {
 
+    // eslint-disable-next-line no-empty
+    var sum_multiple_numbers = [0];
+    for(let i = 0; i < sumArr.length; i++){
+      
+        sum_multiple_numbers = sum(sum_multiple_numbers[0], sumArr[i]);
+    }
+    let numberArray = 0;
+    for(let i = 0; i < sumArr.length; i++){
+        if(i === (sumArr.length - 1)){
+            numberArray = numberArray + sumArr[i] + ' ';
+        } else {
+
+            numberArray = numberArray + sumArr[i] + ',';
+        }
+    }
+    const array = [sum_multiple_numbers[0], numberArray + 'was passed in as an array of numbers, and ' + sum_multiple_numbers[0] + ' is their sum.'];
+    return array;
 }
+
+
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
