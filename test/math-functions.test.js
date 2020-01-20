@@ -1,10 +1,10 @@
 import { 
     sum, 
-    multiply, 
+    /*multiply, 
     sumAndMultiplyThreeNumbers, 
     sumArrayWithThreeNumbers, 
     multiplyArrayWithThreeNumbers, 
-    multiplyAnyArray
+    multiplyAnyArray */
 } from '../src/math-functions.js';
 
 const test = QUnit.test;
@@ -18,6 +18,7 @@ test('sum', (assert) => {
     assert.equal(result[1], 'The sum of 4 and 7 is 11.');
 });
 
+/*
 test('multiply', (assert) => {
     const result = multiply(5, 9);
 
@@ -53,4 +54,4 @@ test('multiplyAnyArray', (assert) => {
 
     assert.equal(result[0], 120);
     assert.equal(result[1], 'The numbers 1,2,3,4,5 have a product of 120.');
-});
+}); */
