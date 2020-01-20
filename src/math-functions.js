@@ -29,7 +29,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    const multiplyTotal = a * b;
+    const multiplyMsg = [multiplyTotal, `The product of ${a} and ${b} is ${multiplyTotal}.`];
+    console.log(multiplyMsg);
+    return multiplyMsg;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
