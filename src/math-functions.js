@@ -62,7 +62,7 @@ This function should be dynamic, accepting an array of any length.
 */
 
 
-}
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
