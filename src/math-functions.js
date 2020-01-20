@@ -25,8 +25,11 @@ Write a function called multiply() that takes in two numbers as arguments and re
 "The product of 5 and 9 is 45."
 */
 
-export function multiply(a, b) {
-
+export function multiply(a,b) {
+    let total = a * b;
+    let msg = `The product of ${a} and ${b} is ${total}.`;
+    let myArray = [total, msg];
+    return myArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
