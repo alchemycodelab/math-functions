@@ -11,9 +11,11 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
+
 export function sum(a, b) {
     const sumOfAPlusB = (a + b);
     const sumConcatenated = (`The sum of ${a} and ${b} is ${sumOfAPlusB}.`);
+
     const sumArray = [sumOfAPlusB, sumConcatenated];
     return sumArray;
 }
@@ -30,6 +32,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 export function multiply(a, b) {
     const productOfAPlusB = (a * b);
     const productConcatenated = (`The product of ${a} and ${b} is ${productOfAPlusB}.`);
+
     const productArray = [productOfAPlusB, productConcatenated];
     return productArray;
 }
@@ -55,9 +58,25 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(a, b, c) { 
+    const callSumFunction = sum(a, b);
+    const addThirdValue = sum(callSumFunction[0], c);
+    const sumOfThreeNumbers = addThirdValue[0];
 
+    const callMultiplyFunction = multiply(a, b);
+    const multiplyThirdValue = multiply(callMultiplyFunction[0], c);
+    const productOfThreeNumbers = multiplyThirdValue[0];
+
+    const thirdElement = (`${a} and ${b} and ${c} sum to ${sumOfThreeNumbers}.`);
+    const fourthElement = (`The product of ${a} and ${b} and ${c} is ${productOfThreeNumbers}.`);
+    
+    const sumAndMultiplyThreeArray = [sumOfThreeNumbers, productOfThreeNumbers, thirdElement, fourthElement];
+    return sumAndMultiplyThreeArray;
 }
+
+
+
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
