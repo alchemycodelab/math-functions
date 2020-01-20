@@ -51,13 +51,19 @@ To do addition, use your sum() function, and to do multiplication, use your mult
 function that you've already created. You're going to have to be resourceful to figure out 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
+export function
 
-//export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
 
-//}
+sumAndMultiplyThreeNumbers(a, b, c) { 
+    const num = sum(a, b)[0];
+    const prod = multiply(a, b)[0];
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
-// Don't forget to create a new branch for your work on the next question!
+    return [sum(num, c)[0], multiply(prod, c)[0], '4 and 7 and 5 sum to 16.', 'The product of 4 and 7 and 5 is 140.'];
+}
+
+//Once you get the test passing, do an a-c-p cycle and
+//synchronize the code between GitHub and your laptop. 
+//Don't forget to create a new branch for your work on the next //question!
 
 /////////////////////////////////////
 /* Problem 4
