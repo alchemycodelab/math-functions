@@ -83,8 +83,13 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    let a = sumArr[0, 0];
+    let b = sumArr[0, 1];
+    let c = sumArr[0, 2];
+    let totalSum = sum(sum(a, b)[0], c)[0];
+    return [totalSum, `${a},${b},${c} was passed in as an array of numbers, and ${totalSum} is their sum.`];
+} 
 
-}
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -132,3 +137,13 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
+
+  // let sum2 = 0;
+    // let i;
+    // for(let i = 0; i < sumArr.length - 1; i++) {
+    //     sum2 = sum(sumArr[i], sumArr[i + 1]);         
+    //     console.log(sum2);
+    // }
+    // console.log(sumArr, sum2[0]);
+
+    //return [sum2[0], sumArr + 'was passed in an array of numbers, and ' + sum2[0] + 'is their sum."'];
