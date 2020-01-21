@@ -10,8 +10,13 @@ example and uses the values that were input into the function:
 
 "The sum of 4 and 7 is 11."
 */
+let numberOne = 4;
+let numberTwo = 7;
 
-export function sum(a, b) {
+export function sum(numberOne, numberTwo) {
+    const numsTogether = (numberOne + numberTwo);
+    const sumArray = [numsTogether, `The sum of ${numberOne} and ${numberTwo} is ${numsTogether}.`];
+    return sumArray;
 
 }
 
