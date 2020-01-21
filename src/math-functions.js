@@ -59,12 +59,12 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { 
-    const callSumFunction = sum(a, b);
-    const addThirdValue = sum(callSumFunction[0], c);
+    const addTwoNumbers = sum(a, b);
+    const addThirdValue = sum(addTwoNumbers[0], c);
     const sumOfThreeNumbers = addThirdValue[0];
 
-    const callMultiplyFunction = multiply(a, b);
-    const multiplyThirdValue = multiply(callMultiplyFunction[0], c);
+    const multiplyTwoNumbers = multiply(a, b);
+    const multiplyThirdValue = multiply(multiplyTwoNumbers[0], c);
     const productOfThreeNumbers = multiplyThirdValue[0];
 
     const thirdElement = (`${a} and ${b} and ${c} sum to ${sumOfThreeNumbers}.`);
@@ -73,8 +73,6 @@ export function sumAndMultiplyThreeNumbers(a, b, c) {
     const sumAndMultiplyThreeArray = [sumOfThreeNumbers, productOfThreeNumbers, thirdElement, fourthElement];
     return sumAndMultiplyThreeArray;
 }
-
-
 
 
 
@@ -97,8 +95,18 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const addTwo = sum(sumArr[0], sumArr[1]);
+    const sumOfTwoNumbers = addTwo[0];
+    const addThree = sum(sumOfTwoNumbers, sumArr[2]);
+    const sumOfThreeNumbers = addThree[0];
 
+    const arrayItemTwo = (`${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumOfThreeNumbers} is their sum.`);    
+
+    const arrayWithThreeNumbers = [sumOfThreeNumbers, arrayItemTwo];
+    return arrayWithThreeNumbers;
 }
+
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
