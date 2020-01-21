@@ -128,8 +128,19 @@ This function should handle an array containing three elements. However,
 you may continue to use the + operator for string concatenation.
 */
 
-export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+export function multiplyArrayWithThreeNumbers(a, b, c) {
+    const initArray = [a, b, c];
+    const multiplyArray = multiply(initArray[0], initArray[1], initArray[2]);
+    //console.log(multiplyArray)
+    const stringer = "The numbers " + a + "," + b + "," + c + "," + " have a product of " + multiplyArray + ".";
+    const finalArray = [multiplyArray, stringer];
+    //console.log(finalArray);
+    function multiply(a, b, c) {
+     
+       let multiplier = a * b * c;
+       return multiplier;
+    }
+    return finalArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
