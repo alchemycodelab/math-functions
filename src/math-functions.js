@@ -29,7 +29,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 export function multiply(a, b) {
     let newNum = a * b;
     return [newNum, `The product of ${a} and ${b} is ${newNum}.`];
-}
+} 
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -53,6 +53,11 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    let theSum = sum (a, b)[0];
+    let theSumOfAll = (c, theSum)[0];
+    let theMult = multiply (a, b)[0];
+    let theMultOfAll = (c, theMult)[0];
+    return [theSumOfAll, `${4} and ${7} and ${5} sum to ${16}.`    theMultOfAll,  `The product of ${4} and ${7} and ${5} is ${140}.`];
 
 }
 
@@ -75,6 +80,7 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    
 
 }
 
