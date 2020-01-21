@@ -53,11 +53,20 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-    let theSum = sum (a, b)[0];
-    let theSumOfAll = (c, theSum)[0];
-    let theMult = multiply (a, b)[0];
-    let theMultOfAll = (c, theMult)[0];
-    return [theSumOfAll, `${4} and ${7} and ${5} sum to ${16}.`    theMultOfAll,  `The product of ${4} and ${7} and ${5} is ${140}.`];
+    let theSum = sum(a, b)[0];
+
+    console.log(theSum);
+
+    let theSumOfAll = (c + theSum);
+
+    console.log(theSumOfAll);
+
+    let theMult = multiply(a, b)[0];
+
+    let theMultOfAll = (c * theMult);
+    console.log(theMultOfAll);
+
+    return [theSumOfAll, theMultOfAll, `${a} and ${b} and ${c} sum to ${theSumOfAll}.`, `The product of ${a} and ${b} and ${c} is ${theMultOfAll}.`];
 
 }
 
@@ -81,6 +90,9 @@ to use the + operator for string concatenation.
 
 export function sumArrayWithThreeNumbers(sumArr) {
     
+    sumArr = (a, b)[0]
+    let sumArrOfAll = (c, sumArr);
+    return [sumArr, `was passed in as an array of numbers, and ${sumArrOfAll} is their sum.`]
 
 }
 
