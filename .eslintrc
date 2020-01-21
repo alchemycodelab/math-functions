@@ -56,27 +56,7 @@
       "error",
       {
         "before": true,
-        "after": true,
-        "overrides": {
-          "if": {
-            "after": false
-          },
-          "for": {
-            "after": false
-          },
-          "while": {
-            "after": false
-          },
-          "do": {
-            "after": false
-          },
-          "switch": {
-            "after": false
-          },
-          "catch": {
-            "after": false
-          }
-        }
+        "after": true
       }
     ],
     "array-bracket-spacing": "error"
