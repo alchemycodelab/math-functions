@@ -100,7 +100,11 @@ export function multiplyArrayWithThreeNumbers(multArr) {
     const firstNumber = multArr[0];
     const secondNumber = multArr[1];
     const thirdNumber = multArr[2];
-    const multTotal = [firstNumber, secondNumber];
+    const multTotal = multiply(firstNumber, secondNumber);
+    console.log(multTotal);
+    const newTotal = multiply(multTotal[0], thirdNumber);
+
+    return [newTotal, `$[multArr] `];
 
 }
 
