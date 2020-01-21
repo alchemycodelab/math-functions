@@ -122,7 +122,15 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    let answer = 1;
 
+    multArr.forEach(element => {
+        [answer] = multiply(element, answer);
+    });
+
+    const message = 'The numbers ' + multArr.toString() + ' have a product of ' + answer + '.';
+
+    return [answer, message];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
