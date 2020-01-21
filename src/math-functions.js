@@ -56,7 +56,11 @@ use the + operator for string concatenation.
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-    const arrayThree = [(a + b + c), (a * b * c), `${a} and ${b} and ${c} sum to ${a + b + c}.`, `The product of ${a} and ${b} and ${c} is ${a * b * c}.`];
+    const sumOf = sum(a, b)[0];
+    const sumOfAll = sum(c, sumOf)[0];
+    const multiplyOf = multiply(a, b)[0];
+    const multiplyAll = multiply(c, multiplyOf)[0];
+    const arrayThree = [sumOfAll, multiplyAll, `${a} and ${b} and ${c} sum to ${sumOfAll}.`, `The product of ${a} and ${b} and ${c} is ${multiplyAll}.`];
     return arrayThree;
 }
 
@@ -65,21 +69,27 @@ export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
 
 /////////////////////////////////////
 /* Problem 4
-Write a function called sumArrayWithThreeNumbers() that takes in an array of numbers 
-as its single argument and then returns an array where the first element is the sum 
-of the numbers in the array, and the second element is a string that EXACTLY follows 
-this example and uses the values that were input into the function:
+Write a function called sumArrayWithThreeNumbers() that takes in an array of 
+numbers as its single argument and then returns an array where the first element 
+is the sum of the numbers in the array, and the second element is a string that 
+EXACTLY follows this example and uses the values that were input into the function:
 
 "2,3,4 was passed in as an array of numbers, and 9 is their sum."
 
 IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. 
-To do addition, use your sum() function that you've already created. You're going to 
-have to be resourceful to figure out how to do this. However, you may continue 
-to use the + operator for string concatenation.
+To do addition, use your sum() function that you've already created. You're 
+going to have to be resourceful to figure out how to do this. However, you may 
+continue to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    const a = sumArr[0];
+    const b = sumArr[1];
+    const c = sumArr[2];
+    const sumOfArray = sum(a, b)[0];
+    const finalArraySum = sum(c, sumOfArray)[0];
+    const arrayFour = [finalArraySum, `${sumArr} was passed in as an array of numbers, and ${finalArraySum} is their sum.`];
+    return arrayFour;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
