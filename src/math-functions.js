@@ -30,7 +30,13 @@ Write a function called multiply() that takes in two numbers as arguments and re
 "The product of 5 and 9 is 45."
 */
 
-export function multiply(a, b) {
+let numberA = 5;
+let numberB = 9;
+
+export function multiply(numberA, numberB) {
+    const numsProduct = (numberA * numberB);
+    const multiplyArray = [numsProduct, `The product of ${numberA} and ${numberB} is ${numsProduct}.`];
+    return multiplyArray;
 
 }
 
