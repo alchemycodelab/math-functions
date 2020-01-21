@@ -60,8 +60,19 @@ To do addition, use your sum() function, and to do multiplication, use your mult
 function that you've already created. You're going to have to be resourceful to figure out 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
+let aNum = 4;
+let bNum = 7;
+let cNum = 5;
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(aNum, bNum, cNum) { //eslint-disable-line
+
+    let threeSum = sum(aNum, bNum)[0];
+    let threeSumArray = sum(threeSum, cNum);
+    let sumTotal = threeSumArray[0];
+    let threeProduct = multiply(aNum, bNum)[0];
+    let threeProductArray = multiply(threeProduct, cNum);
+    let productTotal = threeProductArray[0];
+    return [sumTotal, productTotal, `${aNum} and ${bNum} and ${cNum} sum to ${sumTotal}.`, `The product of ${aNum} and ${bNum} and ${cNum} is ${productTotal}.`];//
 
 }
 
