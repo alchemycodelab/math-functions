@@ -75,7 +75,7 @@ export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
         return multiplier;
     }
     //console.log(arrayAranger);
-    return arrayAranger
+    return arrayAranger;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,8 +96,17 @@ have to be resourceful to figure out how to do this. However, you may continue
 to use the + operator for string concatenation.
 */
 
-export function sumArrayWithThreeNumbers(sumArr) {
+export function sumArrayWithThreeNumbers(a, b, c) {
+    const initArray = [a, b, c];
+    const sumArray = sum(initArray[0], initArray[1], initArray[2]);
+    const stringer = a + b + c + " was passed in as an array of numbers, and " + sumArray + " is their sum.";
+    const finalArray = [sumArray, stringer];
+    return finalArray;
 
+    function sum(a, b, c) {
+        let adder = a + b +c;
+        return adder;
+    }
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
