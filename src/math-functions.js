@@ -12,10 +12,8 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-    const x = a;
-    const y = b;
     const sum = a + b;
-    const varSum = [sum, 'The sum of ' + x + ' and ' + y + ' is ' + sum + '.'];
+    const varSum = [sum, 'The sum of ' + a + ' and ' + b + ' is ' + sum + '.'];
     return varSum;
     
 }
@@ -31,10 +29,8 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-    const x = a;
-    const y = b;
     const sum = a * b;
-    const varSum = [sum, 'The product of ' + x + ' and ' + y + ' is ' + sum + '.'];
+    const varSum = [sum, 'The product of ' + a + ' and ' + b + ' is ' + sum + '.'];
     return varSum;
 }
 
@@ -61,12 +57,9 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-    const x = a;
-    const y = b;
-    const z = c;
-    const sum = a + b + c;
-    const product = (a * b * c);
-    const totalArray = [sum, product, x + ' and ' + y + ' and ' + z + ' sum to ' + sum + '.', 'The product of ' + x + ' and ' + y + ' and ' + z + ' is ' + product + '.'];
+    const totalSum = sum(sum(a, b)[0], c)[0];
+    const product = multiply(multiply(a, b)[0], c)[0];
+    const totalArray = [totalSum, product, a + ' and ' + b + ' and ' + c + ' sum to ' + totalSum + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + product + '.'];
     return totalArray;
 
 }
