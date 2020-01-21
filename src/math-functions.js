@@ -26,7 +26,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    let product = a * b
+    let answerFormat = `The product of ${a} and ${b} is ${product}.`
+    return [product, answerFormat];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -50,7 +52,8 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(a, b, c) {
+     //eslint-disable-line
 
 }
 
@@ -73,7 +76,12 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const sumArr = [2, 3, 4];
+    const myArraySum = (sumArr[0] + sumArr[1] + sumArr[2]);
+    const myArrayString = `${myArray[0]},${myArray[1]},${myArray[2]} was passed in as an array of numbers, and ${myArraySum} is their sum.`
 
+
+    return [myArraySum, myArrayString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
