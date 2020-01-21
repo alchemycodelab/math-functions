@@ -26,6 +26,8 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    const multiply = [a * b];
+    return [multiply, `The product of ${a} and ${b} is ${multiply}.`];
 
 }
 
@@ -95,7 +97,14 @@ This function should handle an array containing three elements. However,
 you may continue to use the + operator for string concatenation.
 */
 
-export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+export function multiplyArrayWithThreeNumbers(multArr) { 
+    const firstNumber = multArr[0];
+    const secondNumber = multArr[1];
+    const thirdNumber = multArr[2];
+    const multTotal = multiply(firstNumber, secondNumber);
+    const newTotal = multiply(multTotal[0], thirdNumber);
+
+    return [newTotal[0], `The numbers ${multArr} have a product of ${newTotal[0]}.`];
 
 }
 
