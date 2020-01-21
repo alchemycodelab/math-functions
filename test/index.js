@@ -1,6 +1,6 @@
 /* eslint-disable */
-// this file is required for running qunit from CLI
 
+// include jsdom for DOM use in tests on travis
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 const { window } = new JSDOM(``, {
