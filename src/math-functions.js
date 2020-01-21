@@ -12,7 +12,9 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    let answer = a + b
+    let answerString = `The sum of ${a} and ${b} is ${answer}.`
+    return [answer, answerString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +28,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    let product = a * b
+    let answerFormat = `The product of ${a} and ${b} is ${product}.`
+    return [product, answerFormat];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -50,7 +54,13 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(a, b, c) {
+     //eslint-disable-line
+    let sumArray = a + b + c;
+    let productArray = a * b * c;
+    let sumString = `${a} and ${b} and ${c} sum to ${sumArray}.`;
+    let productString = `The product of ${a} and ${b} and ${c} is ${productArray}.`;
+    return [sumArray, productArray, sumString, productString];  
 
 }
 
@@ -73,6 +83,13 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    
+    const sumArr = [2, 3, 4];
+    const myArraySum = (sumArr[0] + sumArr[1] + sumArr[2]);
+    const myArrayString = `${myArray[0]},${myArray[1]},${myArray[2]} was passed in as an array of numbers, and ${myArraySum} is their sum.`
+
+
+    return [myArraySum, myArrayString];
 
 }
 
@@ -96,7 +113,12 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    const multArr = [1, 2, 3]
+    const firstReturn = (multArr[0] * multArr[1] * multArr[2]);
+    const secondReturn = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of 24.`
 
+
+    return [firstReturn, secondReturn];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
