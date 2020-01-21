@@ -75,7 +75,7 @@ export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
         return multiplier;
     }
     //console.log(arrayAranger);
-    return arrayAranger
+    return arrayAranger;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
