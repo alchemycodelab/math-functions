@@ -29,6 +29,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    let answer = a * b;
+    let text = `The product of ${a} and ${b} is ${answer}.`;
+    return [answer, text];
 
 }
 
