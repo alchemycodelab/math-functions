@@ -87,7 +87,6 @@ export function sumArrayWithThreeNumbers(sumArr) {
     let theSumOfArr = sum(a, b)[0];
     let sumArrOfAll = sum(c, theSumOfArr)[0];
     return [sumArrOfAll, `${sumArr} was passed in as an array of numbers, and ${sumArrOfAll} is their sum.`];
-
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -114,9 +113,10 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
     let b = multArr[1];
     let c = multArr[2];
 
-    let theMultOfArr = mult(a, b)[0];
-    let MultArrOfAll = mult(c, theMultOfArr)[0];
-    return [MultArrOfAll, `the numbers ${multArr} have a product of ${MultArrOfAll}`];
+    let theMultOfArr = multiply(a, b)[0];
+    let multArrOfAll = multiply(c, theMultOfArr)[0];
+
+    return [multArrOfAll, `The numbers ${multArr} have a product of ${multArrOfAll}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
