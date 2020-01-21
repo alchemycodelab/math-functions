@@ -12,6 +12,9 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
+const sumValue = a + b;
+const addString = 'The sum of ' + a + ' and ' + b + ' is ' + sumValue + '.';
+return [sumValue, addString];
 
 }
 
@@ -26,6 +29,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    const productValue = a * b;
+    const multiply = 'The product of ' + a + ' and ' + b + ' is ' + productValue + '.';
+    return [productValue, multiply];
 
 }
 
