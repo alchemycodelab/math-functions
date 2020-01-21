@@ -12,10 +12,8 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-    const x = a;
-    const y = b;
     const sum = a + b;
-    const varSum = [sum, 'The sum of ' + x + ' and ' + y + ' is ' + sum + '.'];
+    const varSum = [sum, 'The sum of ' + a + ' and ' + b + ' is ' + sum + '.'];
     return varSum;
     
 }
@@ -31,10 +29,8 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-    const x = a;
-    const y = b;
     const sum = a * b;
-    const varSum = [sum, 'The product of ' + x + ' and ' + y + ' is ' + sum + '.'];
+    const varSum = [sum, 'The product of ' + a + ' and ' + b + ' is ' + sum + '.'];
     return varSum;
 }
 
@@ -61,12 +57,9 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-    const x = a;
-    const y = b;
-    const z = c;
-    const sum = a + b + c;
-    const product = (a * b * c);
-    const totalArray = [sum, product, x + ' and ' + y + ' and ' + z + ' sum to ' + sum + '.', 'The product of ' + x + ' and ' + y + ' and ' + z + ' is ' + product + '.'];
+    const totalSum = sum(sum(a, b)[0], c)[0];
+    const product = multiply(multiply(a, b)[0], c)[0];
+    const totalArray = [totalSum, product, a + ' and ' + b + ' and ' + c + ' sum to ' + totalSum + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + product + '.'];
     return totalArray;
 
 }
@@ -90,8 +83,13 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    let a = sumArr[0, 0];
+    let b = sumArr[0, 1];
+    let c = sumArr[0, 2];
+    let totalSum = sum(sum(a, b)[0], c)[0];
+    return [totalSum, `${a},${b},${c} was passed in as an array of numbers, and ${totalSum} is their sum.`];
+} 
 
-}
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -139,3 +137,13 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
+
+  // let sum2 = 0;
+    // let i;
+    // for(let i = 0; i < sumArr.length - 1; i++) {
+    //     sum2 = sum(sumArr[i], sumArr[i + 1]);         
+    //     console.log(sum2);
+    // }
+    // console.log(sumArr, sum2[0]);
+
+    //return [sum2[0], sumArr + 'was passed in an array of numbers, and ' + sum2[0] + 'is their sum."'];
