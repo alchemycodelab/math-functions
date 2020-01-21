@@ -95,6 +95,15 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    let a = sumArr[0];
+    let b = sumArr[1];
+    let c = sumArr[2];
+
+    const sum3Nums = sum(a, sum(b, c)[0])[0];
+    
+    return [sum3Nums, `${a},${b},${c} was passed in as an array of numbers, and ${sum3Nums} is their sum.`];
+    
+    
     
 }
 
@@ -118,7 +127,13 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    let a = multArr[0];
+    let b = multArr[1];
+    let c = multArr[2];
 
+    const mult3Nums = multiply(a, multiply(b, c)[0])[0];
+
+    return [mult3Nums, `The numbers ${a},${b},${c} have a product of ${mult3Nums}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -139,6 +154,7 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+
 
 }
 
