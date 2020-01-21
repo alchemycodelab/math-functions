@@ -14,7 +14,9 @@ example and uses the values that were input into the function:
 export function sum(a, b) {
     const sumTotal = a + b;
     const sumMsg = [sumTotal, `The sum of ${a} and ${b} is ${sumTotal}.`];
+    
     console.log(sumMsg);
+    
     return sumMsg;
 }
 
@@ -31,7 +33,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 export function multiply(a, b) {
     const multiplyTotal = a * b;
     const multiplyMsg = [multiplyTotal, `The product of ${a} and ${b} is ${multiplyTotal}.`];
+    
     console.log(multiplyMsg);
+    
     return multiplyMsg;
 }
 
@@ -56,7 +60,19 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
+// THIS ISN'T WORKING I think something wrong is happening by calling the function
+// as an argument.
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const sum3Nums = sum(a, sum(b, c)[0])[0];
+    const mult3Nums = multiply(a, multiply(b, c)[0])[0]; 
+    const sumAndMult3NumsMsg = [sum3Nums, mult3Nums, `${a} and ${b} and ${c} sum to ${sum3Nums}.`, `The product of ${a} and ${b} and ${c} is ${mult3Nums}.`];
+
+
+    console.log(sum3Nums);
+    console.log(mult3Nums);
+    
+    return sumAndMult3NumsMsg;
+    
 
 }
 
@@ -79,7 +95,7 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
