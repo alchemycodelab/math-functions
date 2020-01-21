@@ -27,6 +27,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 
 export function multiply(a, b) {
     const multiply = [a * b];
+    return [multiply, `The product of ${a} and ${b} is ${multiply}.`];
 
 }
 
@@ -101,10 +102,9 @@ export function multiplyArrayWithThreeNumbers(multArr) {
     const secondNumber = multArr[1];
     const thirdNumber = multArr[2];
     const multTotal = multiply(firstNumber, secondNumber);
-    console.log(multTotal);
     const newTotal = multiply(multTotal[0], thirdNumber);
 
-    return [newTotal, `$[multArr] `];
+    return [newTotal[0], `The numbers ${multArr} have a product of ${newTotal[0]}.`];
 
 }
 
