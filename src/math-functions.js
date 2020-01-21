@@ -42,20 +42,22 @@ Write a function called sumAndMultiplyThreeNumbers() that takes in three
 numbers as separate arguments and returns 
 an array where the first element is the sum of those three numbers, 
 the second element is the product of those three numbers,  
-and the third and fourth elements are strings that EXACTLY follow this example and 
-use the values that were input into the function:
+and the third and fourth elements are strings that EXACTLY follow 
+this example and use the values that were input into the function:
 
 Third element: "4 and 7 and 5 sum to 16."
 Fourth element: "The product of 4 and 7 and 5 is 140."
 
-IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this function. 
-To do addition, use your sum() function, and to do multiplication, use your multiply() 
-function that you've already created. You're going to have to be resourceful to figure out 
-how to do this. However, you may continue to use the + operator for string concatenation.
+IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this 
+function. To do addition, use your sum() function, and to do multiplication, 
+use your multiply() function that you've already created. You're going to have 
+to be resourceful to figure out how to do this. However, you may continue to 
+use the + operator for string concatenation.
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    const arrayThree = [(a + b + c), (a * b * c), `${a} and ${b} and ${c} sum to ${a + b + c}.`, `The product of ${a} and ${b} and ${c} is ${a * b * c}.`];
+    return arrayThree;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
