@@ -4,7 +4,7 @@
 //Problem 1
 
 export function sum(a, b) {
-    return [a + b, 'The sum of 4 and 7 is 11.'];
+    return [a + b, `The sum of ${a} and ${b} is ${a + b}.`];
 }
 
 
@@ -12,7 +12,7 @@ export function sum(a, b) {
 // Problem 2
 
 export function multiply(a, b) {
-    return [a * b, 'The product of 5 and 9 is 45.'];
+    return [a * b, `The product of ${a} and ${b} is ${a * b}.`];
 }
 
 /////////////////////////////////////
@@ -22,7 +22,7 @@ export function sumAndMultiplyThreeNumbers(a, b, c) {
     const num = sum(a, b)[0];
     const prod = multiply(a, b)[0];
 
-    return [sum(num, c)[0], multiply(prod, c)[0], '4 and 7 and 5 sum to 16.', 'The product of 4 and 7 and 5 is 140.'];
+    return [sum(num, c)[0], multiply(prod, c)[0], `${a} and ${b} and ${c} sum to ${a + b + c}.`, `The product of ${a} and ${b} and ${c} is ${a * b * c}.`];
 }
 /////////////////////////////////////
 // Problem 4
@@ -30,7 +30,7 @@ export function sumAndMultiplyThreeNumbers(a, b, c) {
 export function sumArrayWithThreeNumbers([a, b, c]) {
     let num = sum(a, b)[0];
     let sumNum = sum(num, c)[0];
-    return [sumNum, '2,3,4 was passed in as an array of numbers, and 9 is their sum.'];
+    return [sumNum, `${a},${b},${c} was passed in as an array of numbers, and ${a + b + c} is their sum.`];
 }
 
 /////////////////////////////////////
@@ -40,9 +40,9 @@ export function sumArrayWithThreeNumbers([a, b, c]) {
 export function multiplyArrayWithThreeNumbers([a, b, c]) {
     let num = multiply(a, b)[0];
     let productNum = multiply(num, c)[0];
-    return [productNum, 'The numbers 2,3,4 have a product of 24.'];
+    return [productNum, `The numbers ${a},${b},${c} have a product of ${a * b * c}.`];
 
-};
+}
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
