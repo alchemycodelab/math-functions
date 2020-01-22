@@ -56,3 +56,10 @@ test('multiplyArrayWithThreeNumbers', (assert) => {
     assert.equal(result[0], 120);
     assert.equal(result[1], 'The numbers 1,2,3,4,5 have a product of 120.');
 });*/
+
+/*test('multiplyAnyArray', (assert) => {
+    const result = multiplyAnyArray([1, 2, 3, 4, 5]);
+
+    assert.equal(result[0], 120);
+    assert.equal(result[1], 'The numbers 1,2,3,4,5 have a product of 120.');
+});*/
