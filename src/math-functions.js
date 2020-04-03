@@ -56,6 +56,14 @@ how to do this. However, you may continue to use the + operator for string conca
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
 
+    const sumTwoNumber = sum(a, b)[0];
+    const sumThreeNumber = sum(sumTwoNumber, c)[0];
+    const multTwoNumber = multiply(a, b)[0];
+    const multThreeNumbers = multiply(multTwoNumber, c)[0];
+    
+    const sumThreeNumbersString = `${a} and ${b} and ${c} sum to ${sumThreeNumber}.`;
+    const multThreeNumbersString = `The product of ${a} and ${b} and ${c} is ${multThreeNumbers}.`;
+    return [sumThreeNumber, multThreeNumbers, sumThreeNumbersString, multThreeNumbersString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -77,7 +85,7 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    cost 
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
