@@ -96,8 +96,8 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-    let firstSum = sum(sumArr[0], sumArr[1]);
-    let secondSum = sum(firstSum[0], sumArr[2]);
+    let firstProduct = sum(sumArr[0], sumArr[1]);
+    let secondSum = sum(firstProduct[0], sumArr[2]);
     let finalSum = secondSum[0];
 
     const finalArray = [];
@@ -109,7 +109,7 @@ export function sumArrayWithThreeNumbers(sumArr) {
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
-/////////////////////////////////////
+///////////////////
 /* Problem 5
 Write a function called multiplyArrayWithThreeNumbers() that takes an array of numbers 
 as its argument and returns an array whose first element is the product of those numbers, 
@@ -126,6 +126,15 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+
+    let firstProduct = multiply(multArr[0], multArr[1]);
+    let secondProduct = multiply(firstProduct[0], multArr[2]);
+    let finalProduct = secondProduct[0];
+
+    const finalArray = [];
+    finalArray[0] = finalProduct;
+    finalArray[1] = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${finalProduct}.`;
+    return finalArray;
 
 }
 
