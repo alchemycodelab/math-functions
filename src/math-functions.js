@@ -12,8 +12,14 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    const array = [];
+    array[0] = a + b;
+    array[1] = `The sum of ${a} and ${b} is ${array[0]}.`;
+    
+    return array;
 }
+
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
