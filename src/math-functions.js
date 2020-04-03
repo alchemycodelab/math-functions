@@ -80,7 +80,11 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    let sum = 0;
+    sumArr.forEach(element => {
+        sum += element;
+    });
+    return [sum, `${sumArr.join(',')} was passed in as an array of numbers, and ${sum} is their sum.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
