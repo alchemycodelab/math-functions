@@ -144,7 +144,24 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let arr = [];
+    let multiplied = 1; // has to be 1 because anything multiplied by 1 is the same, by 0 is 0
+    let stringNum = ''; 
+    for(let i = 0; i < dynamicArray.length; i++) {
+        // multiplies previous number by current number
+        multiplied = multiplied * dynamicArray[i];
+        // add the current number onto string stack along with a ,
+        stringNum = stringNum.concat(`${dynamicArray[i]},`);
 
+    }
+    // remove that last extra comma
+    stringNum = stringNum.substring(0, stringNum.length - 1);
+
+    const multipliedWords = `The numbers ${stringNum} have a product of 120.`;
+
+    arr = [multiplied, multipliedWords];
+
+    return arr;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
