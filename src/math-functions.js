@@ -159,7 +159,7 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     // remove that last extra comma
     stringNum = stringNum.substring(0, stringNum.length - 1);
 
-    const multipliedWords = `The numbers ${stringNum} have a product of 120.`;
+    const multipliedWords = `The numbers ${stringNum} have a product of ${multiplied}.`;
 
     arr = [multiplied, multipliedWords];
 
