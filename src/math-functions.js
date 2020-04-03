@@ -28,7 +28,7 @@ export function sum(a, b, ...rest) {
     // write string
     const elementTwo = `The sum of ${a} and ${b} is ${elementOne}.`;
 
-    // 
+    // populate & return array
     return [elementOne, elementTwo];
 }
 
@@ -120,11 +120,14 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    // call sum function
     const result = sum(sumArr);
 
+    // retrieve values for array
     const elementOne = result[0];
     const elementTwo = `${sumArr} was passed in as an array of numbers, and ${elementOne} is their sum.`;
 
+    // populate and return array
     return [elementOne, elementTwo];
 }
 
@@ -148,7 +151,15 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    // call multiply function
+    const result = multiply(multArr);
 
+    // retrieve values for array
+    const elementOne = result[0];
+    const elementTwo = `The numbers ${multArr} have a product of ${elementOne}.`;
+
+    // populate and return array
+    return [elementOne, elementTwo];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
