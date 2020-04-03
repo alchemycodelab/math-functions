@@ -56,11 +56,32 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-    const firstelem = a + b + c;
-    const secondelem = a * b * c;
-    const thirdelem = a + ' and ' + b + ' and ' + c + ' sum to ' + firstelem + '.';
-    const fourthelem = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + secondelem + '.';
-    return [firstelem, secondelem, thirdelem, fourthelem];
+    const sumone = sum(a, b)[0];
+    const sumtwo = sum(c, 0)[0];
+    const firstElem = sum(sumone, sumtwo)[0];
+    const productone = multiply(a, b)[0];
+    const producttwo = multiply(c, 1)[0];
+    const secondElem = multiply(productone, producttwo)[0];
+    const sentencePartOne = sum(a, ' and ')[0];
+    const sentencePartTwo = sum(b, ' and ')[0];
+    const sentencePartThree = sum(c, ' sum to ')[0];
+    const sentencePartFour = sum(firstElem, '.')[0];
+    const halfSentencePartOne = sum(sentencePartOne, sentencePartTwo)[0];
+    const halfSentencePartTwo = sum(sentencePartThree, sentencePartFour)[0];
+    const thirdElem = sum(halfSentencePartOne, halfSentencePartTwo)[0];
+    const mSentencePartOne = sum('The product of ', a)[0];
+    const mSentencePartTwo = sum(' and ', b)[0];
+    const mSentencePartThree = sum(' and ', c)[0];
+    const mSentencePartFour = sum(' is ', secondElem)[0];
+    const mSentencePartFive = '.';
+    const mHalfSentencePartOne = sum(mSentencePartOne, mSentencePartTwo)[0];
+    const mHalfSentencePartTwo = sum(mSentencePartThree, mSentencePartFour)[0];
+    const mAlmostDone = sum(mHalfSentencePartOne, mHalfSentencePartTwo)[0];
+    const fourthElem = sum(mAlmostDone, mSentencePartFive)[0];
+
+    // const thirdelem = a + ' and ' + b + ' and ' + c + ' sum to ' + firstelem + '.';
+    // const fourthelem = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + secondelem + '.';
+    return [firstElem, secondElem, thirdElem, fourthElem];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -82,6 +103,12 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const sumOne = sum(sumArr[0], sumArr[1])[0];
+    const sumTwo = sum(sumOne, sumArr[2])[0];
+    const firstElem = sumTwo;
+    const secondElem = sumArr[0] + ',' + sumArr[1] + ',' + sumArr[2] + ' was passed in as an array of numbers, and ' + sumTwo + ' is their sum.';
+
+    return [firstElem, secondElem];
 
 }
 
