@@ -32,6 +32,13 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    let array = [];
+    let answer = (a * b);
+
+    array.push(answer);
+    array.push(`The product of ${a} and ${b} is ${answer}.`);
+    
+    return array;
 
 }
 
