@@ -19,8 +19,6 @@ export function sum(a, b) {
     return array;
 }
 
-
-
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
@@ -32,7 +30,11 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    const array = [];
+    array[0] = a * b;
+    array[1] = `The product of ${a} and ${b} is ${array[0]}.`;
+    
+    return array;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
