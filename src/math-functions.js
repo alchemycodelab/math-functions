@@ -11,31 +11,26 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
-//  --- first draft
-
-// export function sum(a, b) {
-//     // add numbers
-//     const elementOne = a + b;
-//     // concatenate strings
-//     const elementTwo = `The sum of ${a} and ${b} is ${elementOne}.`;
-//     // populate & return array
-//     return [elementOne, elementTwo];
-// }
-
-// --- refactor
-
-export function sum(...numbers) {
-    // add all numbers
+export function sum(a, b, ...rest) {
+    // init variable to track sum
     let elementOne = 0;
-    numbers.forEach(number => elementOne += number);
 
+    // add first two numbers
+    if(typeof a === 'object') {
+        a.forEach(number => elementOne += number);
+    } else {
+        elementOne = a + b;
+    }
+    
+    // add remaining numbers to sum
+    rest.forEach(number => elementOne += number);
+    
     // write string
-    const elementTwo = `The sum of ${numbers[0]} and ${numbers[1]} is ${elementOne}.`;
+    const elementTwo = `The sum of ${a} and ${b} is ${elementOne}.`;
 
-    // populate & return array
+    // 
     return [elementOne, elementTwo];
 }
-
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -47,23 +42,22 @@ Write a function called multiply() that takes in two numbers as arguments and re
 "The product of 5 and 9 is 45."
 */
 
-// --- first draft
-
-// export function multiply(a, b) {
-//     const elementOne = a * b;
-//     const elementTwo = `The product of ${a} and ${b} is ${elementOne}.`;
-//     return [elementOne, elementTwo];
-// }
-
-// --- refactor
-
-export function multiply(...numbers) {
-    // multiply all numbers
+export function multiply(a, b, ...rest) {
+    // init variable to track product
     let elementOne = 1;
-    numbers.forEach(number => elementOne = elementOne * number);
+    
+    // multiply first two numbers
+    if(typeof a === 'object') {
+        a.forEach(number => elementOne *= number);
+    } else {
+        elementOne = a * b;
+    }
+
+    // multiply with the rest of the numbers
+    rest.forEach(number => elementOne *= number);
 
     // write string
-    const elementTwo = `The product of ${numbers[0]} and ${numbers[1]} is ${elementOne}.`;
+    const elementTwo = `The product of ${a} and ${b} is ${elementOne}.`;
 
     // populate & return array
     return [elementOne, elementTwo];
@@ -126,7 +120,12 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const result = sum(sumArr);
 
+    const elementOne = result[0];
+    const elementTwo = `${sumArr} was passed in as an array of numbers, and ${elementOne} is their sum.`;
+
+    return [elementOne, elementTwo];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
