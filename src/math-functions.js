@@ -27,11 +27,10 @@ example and uses the values that were input into the function:
 export function sum(...numbers) {
     // add all numbers
     let elementOne = 0;
-    const numbersArray = numbers;
-    numbersArray.forEach(number => elementOne += number);
+    numbers.forEach(number => elementOne += number);
 
     // write string
-    const elementTwo = `The sum of ${numbersArray[0]} and ${numbersArray[1]} is ${elementOne}.`;
+    const elementTwo = `The sum of ${numbers[0]} and ${numbers[1]} is ${elementOne}.`;
 
     // populate & return array
     return [elementOne, elementTwo];
@@ -61,11 +60,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 export function multiply(...numbers) {
     // multiply all numbers
     let elementOne = 1;
-    const numbersArray = numbers;
-    numbersArray.forEach(number => elementOne = elementOne * number);
+    numbers.forEach(number => elementOne = elementOne * number);
 
     // write string
-    const elementTwo = `The product of ${numbersArray[0]} and ${numbersArray[1]} is ${elementOne}.`;
+    const elementTwo = `The product of ${numbers[0]} and ${numbers[1]} is ${elementOne}.`;
 
     // populate & return array
     return [elementOne, elementTwo];
