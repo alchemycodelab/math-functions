@@ -149,7 +149,9 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     let stringNum = ''; 
     for(let i = 0; i < dynamicArray.length; i++) {
         // multiplies previous number by current number
-        multiplied = multiplied * dynamicArray[i];
+        // can't do easy way: multiplied = multiplied * dynamicArray[i];
+        multiplied = multiply(multiplied, dynamicArray[i]);
+        multiplied = multiplied[0];
         // add the current number onto string stack along with a ,
         stringNum = stringNum.concat(`${dynamicArray[i]},`);
 
