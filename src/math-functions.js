@@ -12,7 +12,9 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    let answer = a + b;
+    let text = `The sum of ${a} and ${b} is ${answer}.`;
+return [answer, text];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,8 +28,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
-}
+    let answer = a * b;
+    let text = `The product of ${a} and ${b} is ${answer}.`;
+return [answer, text]  
+};
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -51,6 +55,11 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    let sumAnswer = sum(sum(a, b)[0], c)[0];
+    let multiplyAnswer = multiply(multiply(a, b)[0], c)[0];
+    let sumText = `${a} and ${b} and ${c} sum to ${sumAnswer}.`;
+    let multiplyText = `The product of ${a} and ${b} and ${c} is ${multiplyAnswer}.`;
+return [sumAnswer, multiplyAnswer, sumText, multiplyText];
 
 }
 
@@ -73,6 +82,13 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    let a = sumArr[0];
+    let b = sumArr[1];
+    let c = sumArr[2];
+    let answer = sum(sum(a, b)[0], c)[0];
+    let text = `${a},${b},${c} was passed in as an array of numbers, and ${answer} is their sum.`;
+return  [answer, text];
+
 
 }
 
@@ -96,6 +112,13 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    let a = multArr[0];
+    let b = multArr[1];
+    let c = multArr[2];
+    let answer = multiply(multiply(a, b)[0], c)[0];
+    let text = `The numbers ${a},${b},${c} have a product of ${answer}.`;
+    return [answer, text];
+
 
 }
 
@@ -117,6 +140,13 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let a = dynamicArray[0];
+    let b = dynamicArray[1];
+    let c = dynamicArray[2];
+    let answer = dynamicArray(dynamicArray(a, b)[0], c)[0];
+    let text = `The numbers ${a}, ${b}, ${c}, have a product of ${answer}.`;
+return [answer, text];
+    
 
 }
 
