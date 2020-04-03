@@ -11,14 +11,32 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
-export function sum(a, b) {
-    // add numbers
-    const elementOne = a + b;
-    // concatenate strings
-    const elementTwo = `The sum of ${a} and ${b} is ${elementOne}.`;
+//  --- first draft
+
+// export function sum(a, b) {
+//     // add numbers
+//     const elementOne = a + b;
+//     // concatenate strings
+//     const elementTwo = `The sum of ${a} and ${b} is ${elementOne}.`;
+//     // populate & return array
+//     return [elementOne, elementTwo];
+// }
+
+// --- refactor
+
+export function sum(...numbers) {
+    // add all numbers
+    let elementOne = 0;
+    const numbersArray = numbers;
+    numbersArray.forEach(number => elementOne += number);
+
+    // write string
+    const elementTwo = `The sum of ${numbersArray[0]} and ${numbersArray[1]} is ${elementOne}.`;
+
     // populate & return array
     return [elementOne, elementTwo];
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -30,9 +48,26 @@ Write a function called multiply() that takes in two numbers as arguments and re
 "The product of 5 and 9 is 45."
 */
 
-export function multiply(a, b) {
-    const elementOne = a * b;
-    const elementTwo = `The product of ${a} and ${b} is ${elementOne}.`;
+// --- first draft
+
+// export function multiply(a, b) {
+//     const elementOne = a * b;
+//     const elementTwo = `The product of ${a} and ${b} is ${elementOne}.`;
+//     return [elementOne, elementTwo];
+// }
+
+// --- refactor
+
+export function multiply(...numbers) {
+    // multiply all numbers
+    let elementOne = 1;
+    const numbersArray = numbers;
+    numbersArray.forEach(number => elementOne = elementOne * number);
+
+    // write string
+    const elementTwo = `The product of ${numbersArray[0]} and ${numbersArray[1]} is ${elementOne}.`;
+
+    // populate & return array
     return [elementOne, elementTwo];
 }
 
