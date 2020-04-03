@@ -11,8 +11,20 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
-export function sum(a, b) {
+// test('sum', (assert) => {
+//     const result = sum(4, 7);
 
+//     assert.equal(result[0], 11);
+//     assert.equal(result[1], 'The sum of 4 and 7 is 11.');
+// });
+
+export function sum(a, b) {
+    // add numbers
+    const elementOne = a + b;
+    // concatenate strings
+    const elementTwo = `The sum of ${a} and ${b} is ${elementOne}.`;
+    // populate & return array
+    return [elementOne, elementTwo];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
