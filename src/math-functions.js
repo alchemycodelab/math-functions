@@ -32,6 +32,12 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    let x = a * b;
+    const arrayReturn = [];
+    arrayReturn[0] = x;
+    arrayReturn[1] = `The product of ${a} and ${b} is ${x}.`;
+    return arrayReturn;
+
 
 }
 
