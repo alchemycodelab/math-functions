@@ -13,12 +13,12 @@ example and uses the values that were input into the function:
 
 export function sum(a, b) {
     let x = a + b;
-
     const arrayReturn = [];
+   
     arrayReturn[0] = x;
     arrayReturn[1] = `The sum of ${a} and ${b} is ${x}.`;
+    
     return arrayReturn;
-
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -34,11 +34,11 @@ Write a function called multiply() that takes in two numbers as arguments and re
 export function multiply(a, b) {
     let x = a * b;
     const arrayReturn = [];
+   
     arrayReturn[0] = x;
     arrayReturn[1] = `The product of ${a} and ${b} is ${x}.`;
+    
     return arrayReturn;
-
-
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -64,7 +64,6 @@ how to do this. However, you may continue to use the + operator for string conca
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
     const arrayReturn = [];
-    const arraySecond = [];
 
     //addition
     let x = sum(a, b);
@@ -101,9 +100,11 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    // funtion declars
     let arrayReturn = [0];
     let x = sum(sumArr[0], sumArr[1]);
     let y = sum(sumArr[2], x[0]);
+
     arrayReturn[0] = y[0];
     arrayReturn[1] = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${arrayReturn[0]} is their sum.`;
     return arrayReturn;
@@ -156,6 +157,28 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let arrayReturn = [];
+    let stringOne = 'The numbers ';
+    let stringTwo = '';
+    
+    //one because of multiplication 
+    let x = 1;
+    
+
+    for(let i = 0; i < dynamicArray.length; i++){
+        x = multiply(x, dynamicArray[i])[0]; 
+        if(i + 1 === dynamicArray.length)
+        { 
+            stringTwo += dynamicArray[i];
+        }
+        else { stringTwo += dynamicArray[i] + ','; }
+    }   
+
+    //strings to add in the funtion
+    let stringThree = ` have a product of ${x}.`;
+    arrayReturn[0] = x;
+    arrayReturn[1] = stringOne + stringTwo + stringThree;
+    return arrayReturn; 
 
 }
 
