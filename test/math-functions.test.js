@@ -10,7 +10,7 @@ import {
 const test = QUnit.test;
 
 /* DO NOT MODIFY THIS FILE */
-
+``
 test('sum', (assert) => {
     const result = sum(4, 7);
 
