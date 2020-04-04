@@ -12,10 +12,12 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-    const sumOfNumbers = a + b; 
-    const stringOfSum = `The sum of ${a} and ${b} is ${sumOfNumbers}.`;
-    return [sumOfNumbers, stringOfSum];
+    const myArray = [];
+    myArray[0] = a + b; 
+    myArray[1] = `The sum of ${a} and ${b} is ${myArray[0]}.`;
+    return myArray;
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -28,9 +30,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-    const productOfNumbers = a * b; 
-    const stringOfProduct = `The product of ${a} and ${b} is ${productOfNumbers}.`;
-    return [productOfNumbers, stringOfProduct];
+    const myArray = [];
+    myArray[0] = a * b; 
+    myArray[1] = `The product of ${a} and ${b} is ${myArray[0]}.`;
+    return myArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -54,9 +57,26 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(a, b, c) { 
+    //eslint-disable-line
+    
+    const myArray = [];
+    const sumOfTwoNumbers = sum(a, b);
+    const sumOfThreeNumbers = sum(sumOfTwoNumbers[0], c);
+    const finalSum = sumOfThreeNumbers;
 
+    const productOfTwoNumbers = multiply(a, b);
+    const productOfThreeNumbers = multiply(productOfTwoNumbers[0], c);
+    const finalProduct = productOfThreeNumbers;
+    
+    myArray[0] = finalSum[0];
+    myArray[1] = finalProduct[0];
+    myArray[2] = `${a} and ${b} and ${c} sum to ${myArray[0]}.`;
+    myArray[3] = `The product of ${a} and ${b} and ${c} is ${myArray[1]}.`;
+
+    return myArray;
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
