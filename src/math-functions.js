@@ -158,24 +158,11 @@ This function should be dynamic, accepting an array of any length.
 //     const secondMultiply = multiply(firstMultiply[0], dynamicArray[2]);
 //     const thridMultiply = multiply(secondMultiply[0], dynamicArray[3]);
 //     const finalMultiply = multiply(thridMultiply[0], dynamicArray[4]);
-    
-//     var scores = [120];
-//     var arrayLength = 1, 2, 3, 4, 5;
-//     var roundNumber = 0;
-//     var msg = '';
-//     var i;
-
-//     for (i = 0; i < arrayLength; i++) {
-//         roundNumber = (i + 1);
-//         msg += 'Round ' + roundNumber + ': ';
-//         msg +
-//     }
-
 
 //     array[0] = finalMultiply[0];
 //     array[1] = `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${finalMultiply[0]}.`;
 
-// //     return array;
+// //  return array;
 
 // }
 
