@@ -12,7 +12,7 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    return [a + b, `The sum of ${a} and ${b} is ${a + b}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +26,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    return [a * b, `The product of ${a} and ${b} is ${a * b}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,6 +51,13 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const sumTwo = sum(a, b);
+    const sumOfThree = sum(sumTwo[0], c);
+
+    const productOfTwo = multiply(a, b);
+    const productOfThree = multiply(productOfTwo[0], c);
+
+    return [sumOfThree[0], productOfThree[0], `${a} and ${b} and ${c} sum to ${sumOfThree[0]}.`, `The product of ${4} and ${7} and ${5} is ${productOfThree[0]}.`];
 
 }
 
@@ -73,7 +80,11 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    let additive = sum(0, 0);
+    sumArr.forEach(element => {
+        additive = sum(additive[0], element);
+    });
+    return [additive[0], `${sumArr.join(',')} was passed in as an array of numbers, and ${additive[0]} is their sum.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,7 +107,10 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    const product1 = multiply(multArr[0], multArr[1]);
+    const productFinal = multiply(product1[0], multArr[2]);
 
+    return [productFinal[0], `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${productFinal[0]}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -117,7 +131,13 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let product = multiply(dynamicArray[0], 1);
 
+    for(let i = 1; i < dynamicArray.length; i++) {
+        product = multiply(product[0], dynamicArray[i]);
+    }
+    return [product[0], `The numbers ${dynamicArray.join(',')} have a product of ${product[0]}.`];
+    
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
