@@ -132,6 +132,10 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    // const 
+    // for (i = 0; i < dynamicArray.length; i++){
+    //     multiply(a, b)
+    // }
 
 }
 
