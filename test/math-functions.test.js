@@ -4,7 +4,7 @@ import {
     sumAndMultiplyThreeNumbers, 
     sumArrayWithThreeNumbers, 
     multiplyArrayWithThreeNumbers, 
-    multiplyAnyArray
+    // multiplyAnyArray
 } from '../src/math-functions.js';
 
 const test = QUnit.test;
