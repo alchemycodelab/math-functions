@@ -165,7 +165,6 @@ This function should be dynamic, accepting an array of any length.
 //     const myArray = []; 
 //     const productOne = 1; 
 //     for (let i = 0; i < dynamicArray.length; i++) {
-    
 //     }
 
 //     myArray[0] = finalProduct[0]; 
