@@ -11,10 +11,10 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
-export function sum(a, b) {
-
+export function sum(a = 4, b = 7) {
+    return [(a + b), 'The sum of ' + a + ' and ' + b + ' is ' + (a + b) + '.'];
+    
 }
-
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
@@ -25,8 +25,8 @@ Write a function called multiply() that takes in two numbers as arguments and re
 "The product of 5 and 9 is 45."
 */
 
-export function multiply(a, b) {
-
+export function multiply(a = 5, b = 9) {
+    return [(a * b), 'The product of ' + a + ' and ' + b + ' is ' + (a * b + '.')];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -50,8 +50,14 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+export function sumAndMultiplyThreeNumbers(a, b , c) { //eslint-disable-line
+    const firstSum = sum(a, b);
+    const secondSum = sum(firstSum[0], c);
+    const threeSum = a + ' and ' + b + ' and ' + 5 + ' sum to ' + secondSum[0] + '.';
+    const firstMult = multiply(a, b);
+    const secondMult = multiply(firstMult[0], c);
+    const threeMult = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + secondMult[0] + '.';
+    return [secondSum[0], secondMult[0], threeSum, threeMult];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,7 +79,10 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    const sumArrayOne = sum(sumArr[0], sumArr[1]);
+    const sumArrayTwo = sum(sumArrayOne[0], sumArr[2]);
+    const sumMessage = 'The numbers ' + sumArr[0] + ',' + sumArr[1] + ',' + sumArr[2] + ' have a sum of ' + sumArrayTwo[0] + '.'; 
+    return [sumArrayTwo[0], sumMessage];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,7 +105,10 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    const multArrOne = multiply (multArr[0], multArr[1]);
+    const multArrTwo = multiply (multArrOne[0], multArr[2]);
+    const multMessage = 'The numbers ' + multArr[0] + ',' + multArr[1] + ',' + multArr[2] + ' have a product of ' + multArrTwo[0] + '.';
+    return [multArrTwo [0], multMessage];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
