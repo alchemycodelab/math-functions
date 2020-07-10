@@ -122,3 +122,5 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
+
+//small change for intial commit before branch
