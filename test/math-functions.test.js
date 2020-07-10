@@ -11,14 +11,14 @@ const test = QUnit.test;
 
 /* DO NOT MODIFY THIS FILE */
 
-test('sum', (assert) => {
+test('when given a 4 and a 7  we expect it to returnan array with 11. ', (assert) => {
     const result = sum(4, 7);
 
     assert.equal(result[0], 11);
     assert.equal(result[1], 'The sum of 4 and 7 is 11.');
 });
 
-test('multiply', (assert) => {
+test('when given a 5 and a 9 we it expect it to return an array with 45', (assert) => {
     const result = multiply(5, 9);
 
     assert.equal(result[0], 45);
