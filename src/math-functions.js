@@ -11,9 +11,14 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
-export function sum(a, b) {
 
+export function sum(a, b) {
+    const result = a + b;
+    const sumString = `The sum of ${a} and ${b} is ${result}.`;
+    return [result, sumString];
+    
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -123,4 +128,4 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
 
-//small change for intial commit before branch
+
