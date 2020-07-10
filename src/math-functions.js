@@ -31,6 +31,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    const result = a * b;
+    const multString = `The product of ${a} and ${b} is ${result}.`;
+    return [result, multString];
 
 }
 
