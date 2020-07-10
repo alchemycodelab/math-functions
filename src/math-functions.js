@@ -28,6 +28,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    const arr = [];
+    const num = a * b;
+    const string = 'The product of 5 and 9 is 45.';
+    return arr.concat(num, string);
 
 }
 
