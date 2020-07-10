@@ -12,7 +12,9 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    const sumResult = Number(a) + Number(b);
+    const sumArray = [sumResult, 'The sum of ' + a + ' and ' + b + ' is ' + sumResult + '.'];
+    return sumArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +28,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    const product = Number(a) * Number(b);
+    const productArray = [product, 'The product of ' + a + ' and ' + b + ' is ' + product + '.'];
+    return productArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
