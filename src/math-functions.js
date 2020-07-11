@@ -12,9 +12,10 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-    const array1 = [a + b];
-    const string = 'The sum of 4 and 7 is 11.';
-    return array1.concat(string);
+    const arr1 = [];
+    const sumNum = a + b;
+    const string1 = `The sum of ${a} and ${b} is ${sumNum}.`;
+    return arr1.concat(sumNum, string1);
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -28,10 +29,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-    const arr = [];
-    const num = a * b;
-    const string = 'The product of 5 and 9 is 45.';
-    return arr.concat(num, string);
+    const arr2 = [];
+    const multiplyNum = a * b;
+    const string2 = `The product of ${a} and ${b} is ${multiplyNum}.`;
+    return arr2.concat(multiplyNum, string2);
 
 }
 
@@ -58,6 +59,17 @@ how to do this. However, you may continue to use the + operator for string conca
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
 
+    const sumAB = sum(a, b)[0];
+    const sumABC = sum(sumAB, c)[0];
+
+    const multiAB = multiply(a, b)[0];
+    const multiABC = multiply(multiAB, c)[0];
+
+    const string3 = `${a} and ${b} and ${c} sum to ${sumABC}.`;
+    const string4 = `The product of ${a} and ${b} and ${c} is ${multiABC}.`;
+
+    const arr3 = [sumABC, multiABC, string3, string4];
+    return arr3;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -74,12 +86,21 @@ this example and uses the values that were input into the function:
 
 IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. 
 To do addition, use your sum() function that you've already created. You're going to 
-have to be resourceful to figure out how to do this. However, you may continue 
+have to be resourceful to figure out how to do this. However, you may 
+continue 
 to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const arrNum1 = sumArr[0];
+    const arrNum2 = sumArr[1];
+    const arrNum3 = sumArr[2];
+    const totalArrNum1 = sum(arrNum1, arrNum2)[0];
+    const totalArrNum2 = sum(totalArrNum1, arrNum3)[0];
+    const arrString = `${arrNum1},${arrNum2},${arrNum3} was passed in as an array of numbers, and ${totalArrNum2} is their sum.`;
 
+    const totalAllArrs = [totalArrNum2, arrString];
+    return totalAllArrs;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
