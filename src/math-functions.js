@@ -111,7 +111,6 @@ export function sumArrayWithThreeNumbers(sumArr) {
     } //I think I should be able to do this with forEach instead. Maybe I'll refactor later
     
     const sentence = `${numberList} was passed in as an array of numbers, and ${sumResult} is their sum.`;
-    console.log(sentence);
     total.push(sumResult, sentence);
     return total;
     
@@ -137,7 +136,20 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    const total = [];
+    let numberList = '';
+    const multiResult = multArr.reduce((acc, cur) => {
+        return multiply(acc, cur)[0];
+    });
+    
+    for(let i = 0; i < multArr.length; i++) {
+        numberList += multArr[i];
+        if(i < multArr.length - 1) numberList += ',';
+    } //I think I should be able to do this with forEach instead. Maybe I'll refactor later
+    
+    const sentence = `The numbers ${numberList} have a product of ${multiResult}.`;
+    total.push(multiResult, sentence);
+    return total;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
