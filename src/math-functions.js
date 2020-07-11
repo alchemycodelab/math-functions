@@ -46,16 +46,16 @@ use the values that were input into the function:
 Third element: "4 and 7 and 5 sum to 16."
 Fourth element: "The product of 4 and 7 and 5 is 140."
 
-IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this function. 
+IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this function. git
 To do addition, use your sum() function, and to do multiplication, use your multiply() 
 function that you've already created. You're going to have to be resourceful to figure out 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-    const resultSum = sum(a, b + c);
+    const sumArr = sum(a, b + c);
     const resultTimes = multiply(a, b * c);
-    return [resultSum[0], resultTimes[0], `4 and 7 and 5 sum to 16.`, `The product of 4 and 7 and 5 is 140.`];
+    return [sumArr[0], resultTimes[0], `4 and 7 and 5 sum to 16.`, `The product of 4 and 7 and 5 is 140.`];
 
 }
 
@@ -78,6 +78,11 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+
+    const sumTotal = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0];
+    return [sumTotal, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumTotal} is their sum.`];
+    
+    // `2,3,4 was passed in as an array of numbers, and 9 is their sum.`;
 
 }
 
