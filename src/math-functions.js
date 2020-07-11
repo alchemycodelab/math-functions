@@ -60,9 +60,49 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
+//Attempting to use .pop() method
+/* export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const sumOfAAndB = (sum(a, b)).pop();
+    const sumResult = (sum(sumOfAAndB, c)).pop();
+
+    const productOfAAndB = (multiply(a, b)).pop();
+    const productResult = (multiply(productOfAAndB, c)).pop();
+
+    let thirdElementString = `${a} and ${b} and ${c} sum to ${sumResult}.`;
+    let fourthElementString = `The product of ${a} and ${b} and ${c} is ${productResult}.`;
+    let resultArray = [sumResult, productResult, thirdElementString, fourthElementString];
+
+    return resultArray;
+
+}*/
+
+/*export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const sum1 = sum(a, b)[0];
+    const sumResult = sum(sum1, c);
+    const mul1 = multiply(a, b)[0];
+    const mulResult = multiply(mul1, c);
+    let myArray = [sumResult[0], mulResult[0], `${a} and ${b} and ${c} sum to ${sumResult[0]}.`, `The product of ${a} and ${b} and ${c} is ${mulResult[0]}.`];
+
+    return myArray;
+}*/
+
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const sumOfAAndB = sum(a, b);
+    const removedSumString = sum(sumOfAAndB[0], c);
+    const sumResult = removedSumString[0];
+
+    const productOfAAndB = multiply(a, b);
+    const removedProductString = multiply(productOfAAndB[0], c);
+    const productResult = removedProductString[0];
+
+    let thirdElementString = `${a} and ${b} and ${c} sum to ${sumResult}.`;
+    let fourthElementString = `The product of ${a} and ${b} and ${c} is ${productResult}.`;
+    let resultArray = [sumResult, productResult, thirdElementString, fourthElementString];
+
+    return resultArray;
 
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
