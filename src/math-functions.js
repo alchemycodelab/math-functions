@@ -100,17 +100,12 @@ to use the + operator for string concatenation.
 
 export function sumArrayWithThreeNumbers(sumArr) {
     const total = [];
-    let numberList ='';
+    let numberString = sumArr.toString();
     const sumResult = sumArr.reduce((acc, cur) => {
         return sum(acc, cur)[0];
     });
     
-    for(let i = 0; i < sumArr.length; i++) {
-        numberList += sumArr[i];
-        if(i < sumArr.length - 1) numberList += ',';
-    } //I think I should be able to do this with forEach instead. Maybe I'll refactor later
-    
-    const sentence = `${numberList} was passed in as an array of numbers, and ${sumResult} is their sum.`;
+    const sentence = `${numberString} was passed in as an array of numbers, and ${sumResult} is their sum.`;
     total.push(sumResult, sentence);
     return total;
     
@@ -137,17 +132,12 @@ you may continue to use the + operator for string concatenation.
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
     const total = [];
-    let numberList = '';
+    let numberString = multArr.toString();
     const multiResult = multArr.reduce((acc, cur) => {
         return multiply(acc, cur)[0];
     });
-    
-    for(let i = 0; i < multArr.length; i++) {
-        numberList += multArr[i];
-        if(i < multArr.length - 1) numberList += ',';
-    } //I think I should be able to do this with forEach instead. Maybe I'll refactor later
-    
-    const sentence = `The numbers ${numberList} have a product of ${multiResult}.`;
+       
+    const sentence = `The numbers ${numberString} have a product of ${multiResult}.`;
     total.push(multiResult, sentence);
     return total;
 }
@@ -171,17 +161,12 @@ This function should be dynamic, accepting an array of any length.
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     const total = [];
-    let numberList = '';
+    let numberString = dynamicArray.toString();
     const multiResult = dynamicArray.reduce((acc, cur) => {
         return multiply(acc, cur)[0];
     });
-    
-    for(let i = 0; i < dynamicArray.length; i++) {
-        numberList += dynamicArray[i];
-        if(i < dynamicArray.length - 1) numberList += ',';
-    } //I think I should be able to do this with forEach instead. Maybe I'll refactor later
-    
-    const sentence = `The numbers ${numberList} have a product of ${multiResult}.`;
+  
+    const sentence = `The numbers ${numberString} have a product of ${multiResult}.`;
     total.push(multiResult, sentence);
     return total;
 }
