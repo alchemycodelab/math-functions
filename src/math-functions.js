@@ -170,7 +170,20 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    const total = [];
+    let numberList = '';
+    const multiResult = dynamicArray.reduce((acc, cur) => {
+        return multiply(acc, cur)[0];
+    });
+    
+    for(let i = 0; i < dynamicArray.length; i++) {
+        numberList += dynamicArray[i];
+        if(i < dynamicArray.length - 1) numberList += ',';
+    } //I think I should be able to do this with forEach instead. Maybe I'll refactor later
+    
+    const sentence = `The numbers ${numberList} have a product of ${multiResult}.`;
+    total.push(multiResult, sentence);
+    return total;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
