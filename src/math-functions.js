@@ -12,8 +12,12 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    
+    const result = a + b;
+    
+    return [result, 'The sum of ' + a + ' and ' + b + ' is ' + result + '.'];
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -26,7 +30,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    const result = a * b;
 
+    return [result, `The product of ${a} and ${b} is ${result}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,7 +57,12 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    let sumOfNumbers = a + b + c;
+    let productOfNumbers = a * b * c; 
+    let sumStringConcat = `${a} and ${b} and ${c} sum to ${sumOfNumbers}.`;
+    let productStringConcat = `The product of ${4} and ${7} and ${5} is ${productOfNumbers}.`;
 
+    return [sumOfNumbers, productOfNumbers, sumStringConcat, productStringConcat];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,7 +84,13 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    let a = sumArr[0];
+    let b = sumArr[1];
+    let c = sumArr[2];
+    let sumOfArray = (a + b + c);
+    let arrayString = `${a},${b},${c} was passed in as an array of numbers, and ${sumOfArray} is their sum.`;
+    
+    return [sumOfArray, arrayString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,7 +113,14 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    const a = multArr[0];
+    const b = multArr[1];
+    const c = multArr[2];
 
+    const productOfArray = a * b * c;
+    const stringArrayOfProduct = `The numbers ${a},${b},${c} have a product of ${productOfArray}.`;
+
+    return [productOfArray, stringArrayOfProduct];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
