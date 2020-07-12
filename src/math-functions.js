@@ -39,6 +39,9 @@ export function multiply(a, b) {
 
 }
 
+
+
+
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
@@ -179,6 +182,13 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let product = 1;
+    for(let i = 0; i < dynamicArray.length; i++) {
+        product = multiply(dynamicArray[i], product)[0];
+    }
+    const returnString = `The numbers ${dynamicArray} have a product of ${product}.`;
+    const resultArray = [product, returnString];
+    return resultArray;
 
 }
 
