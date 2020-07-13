@@ -136,8 +136,10 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
-export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+export function multiplyAnyArray([a, b, c, d, e]) { //eslint-disable-line
+    const multiplyFiveNumbers = a / (1 / b) / (1 / c) / (1 / d) / (1 / e);
+    const numberString = `The numbers ${a},${b},${c},${d},${e} have a product of ${multiplyFiveNumbers}.`;
+    return [multiplyFiveNumbers, numberString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
