@@ -103,12 +103,21 @@ To do multiplication, use your multiply() function that you've already created.
 You're going to have to be resourceful to figure out how to do this. 
 This function should handle an array containing three elements. However, 
 you may continue to use the + operator for string concatenation.
-*/
+// */
 
-export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+export function multiplyArrayWithThreeNumbers(multArr) { 
+    const calc1 = multiply(multArr[0], multArr[1]);
+    const result1 = calc1[0];
+    const calc2 = multiply(result1, multArr[2]);
+    const result2 = calc2[0];
+    const finishedArr = [result2, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${result2}.`];
+    return finishedArr;
 
+    // "The numbers 2,3,4 have a product of 24."
 }
 
+
+// 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
