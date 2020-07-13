@@ -11,9 +11,14 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
-export function sum(a, b) {
 
+export function sum(a, b) {
+    const result = a + b;
+    const sumString = `The sum of ${a} and ${b} is ${result}.`;
+    return [result, sumString];
+    
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -26,6 +31,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    const result = a * b;
+    const multString = `The product of ${a} and ${b} is ${result}.`;
+    return [result, multString];
 
 }
 
@@ -51,7 +59,13 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    const sum1 = sum(a, b)[0];
+    const sum2 = sum(sum1, c)[0];
+    const product1 = multiply(a, b)[0];
+    const product2 = multiply(product1, c)[0];
+    const addString = `${a} and ${b} and ${c} sum to ${sum2}.`;
+    const productString = `The product of ${a} and ${b} and ${c} is ${product2}.`;
+    return [sum2, product2, addString, productString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,7 +87,13 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    const number = sumArr[0];
+    const secondNumber = sumArr[1];
+    const thirdNumber = sumArr[2];
+    const sumTwoNumbers = sum(number, secondNumber)[0];
+    const sumThreeNumbers = sum(sumTwoNumbers, thirdNumber)[0];
+    const includeString = `${number},${secondNumber},${thirdNumber} was passed in as an array of numbers, and ${sumThreeNumbers} is their sum.`;
+    return [sumThreeNumbers, includeString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,7 +116,13 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    const first = multArr[0];
+    const next = multArr[1];
+    const last = multArr[2];
+    const multTwo = multiply(first, next)[0];
+    const multThree = multiply(multTwo, last)[0];
+    const addText = `The numbers ${first},${next},${last} have a product of ${multThree}.`;
+    return [multThree, addText];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -122,3 +148,5 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
+
+
