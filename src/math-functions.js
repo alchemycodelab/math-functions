@@ -152,8 +152,24 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    for (let i = 0; i < dynamicArray.length; i++) {
+        const newArr = multiply([i]);
+        const multArr = multiply(newArr);
 
+        const totalDynString = `The numbers ${numArr} have a product of ${multArr}.`;
+        const returnArr = [multArr, totalDynString];
+
+        return returnArr;
+    }
 }
+
+
+/* const multArr = multiply([i]);
+ const numArr = dynamicArray.map();
+ const totalDynString = `The numbers ${numArr} have a product of ${multArr}.`;
+ const returnArr = [multArr, totalDynString];
+ return returnArr;*/
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
