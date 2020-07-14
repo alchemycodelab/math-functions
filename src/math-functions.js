@@ -12,6 +12,10 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
+    const sumTotal = (Number(a + b));
+    const sumString = `The sum of ${a} and ${b} is ${sumTotal}.`;
+    let myArray = [sumTotal, sumString];
+    return myArray;
 
 }
 
@@ -26,7 +30,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    const mulTotal = (Number(a * b));
+    const mulString = `The product of ${a} and ${b} is ${mulTotal}.`;
+    let myArray = [mulTotal, mulString];
+    return myArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,7 +58,13 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const sum1 = sum(a, b)[0];
+    const sumResult = sum(sum1, c);
+    const mul1 = multiply(a, b)[0];
+    const mulResult = multiply(mul1, c);
+    let myArray = [sumResult[0], mulResult[0], `${a} and ${b} and ${c} sum to ${sumResult[0]}.`, `The product of ${a} and ${b} and ${c} is ${mulResult[0]}.`];
 
+    return myArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,7 +86,15 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const arr0 = sumArr[0];
+    const arr1 = sumArr[1];
+    const arr2 = sumArr[2];
 
+    const sum1 = sum(sumArr[0], sumArr[1])[0];
+    const sum3 = sum(sum1, sumArr[2])[0];
+   
+    const myArray = [sum3, `${arr0},${arr1},${arr2} was passed in as an array of numbers, and ${sum3} is their sum.`];
+    return myArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,7 +117,15 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    const arr0 = multArr[0];
+    const arr1 = multArr[1];
+    const arr2 = multArr[2];
 
+    const mult1 = multiply(multArr[0], multArr[1])[0];
+    const mult3 = multiply(mult1, multArr[2])[0];
+   
+    const myArray = [mult3, `The numbers ${arr0},${arr1},${arr2} have a product of ${mult3}.`];
+    return myArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -117,8 +146,13 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    let product = 1;
+    for(let i = 0; i < dynamicArray.length; i++) {
+        product = multiply(dynamicArray[i], product)[0];
+    }
+    const returnString = `The numbers ${dynamicArray} have a product of ${product}.`;
+    const resultArray = [product, returnString];
+    return resultArray;
 }
-
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
