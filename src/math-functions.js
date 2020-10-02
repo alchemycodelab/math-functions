@@ -91,12 +91,12 @@ have to be resourceful to figure out how to do this. However, you may continue
 to use the + operator for string concatenation.
 */
 
-export function sumArrayWithThreeNumbers([a, b, c]) {
-   const sumArr = [a, b, c];
+export function sumArrayWithThreeNumbers(sumArr) {
+  
    const sum1 = sum(sumArr[0], sumArr[1])[0];
    const sum2 = sum(sum1, sumArr[2])[0];
 
-   return [sum2, `${a},${b},${c} was passed in as an array of numbers, and ${sum2} is their sum.`];
+   return [sum2, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum2} is their sum.`];
 
 }
 
@@ -119,12 +119,12 @@ This function should handle an array containing three elements. However,
 you may continue to use the + operator for string concatenation.
 */
 
-export function multiplyArrayWithThreeNumbers([a, b, c]) { //eslint-disable-line
-    const multArr = [a, b, c];
+export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    
     const mult1 = multiply(multArr[0], multArr[1])[0];
     const mult2 = multiply(mult1, multArr[2])[0];
  
-    return [mult2, `The numbers ${a},${b},${c} have a product of ${mult2}.`];
+    return [mult2, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${mult2}.`];
  
  }
 
@@ -146,8 +146,12 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
-export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+export function multiplyAnyArray(array) { //eslint-disable-line
+let product=  1;
+for(let i = 0; i < array.length; i++){
+product =  multiply(product, array[i])[0];
+}
+return [product, `The numbers ${array} have a product of ${product}.`]
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
