@@ -54,3 +54,19 @@ test('multiplyAnyArray', (assert) => {
     assert.equal(result[0], 120);
     assert.equal(result[1], 'The numbers 1,2,3,4,5 have a product of 120.');
 });
+
+// Added additional tests for multiplyAnyArray for validation
+
+test('multiplyAnyArray with larger array', (assert) => {
+    const result = multiplyAnyArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
+
+    assert.equal(result[0], 6227020800);
+    assert.equal(result[1], 'The numbers 1,2,3,4,5,6,7,8,9,10,11,12,13 have a product of 6227020800.');
+});
+
+test('multiplyAnyArray with one element in array', (assert) => {
+    const result = multiplyAnyArray([4]);
+
+    assert.equal(result[0], 4);
+    assert.equal(result[1], 'The numbers 4 have a product of 4.');
+});
