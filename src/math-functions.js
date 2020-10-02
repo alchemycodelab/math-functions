@@ -52,7 +52,7 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(a, b, c) {  //eslint-disable-line
     const firstElement = sum(sum(a, b)[0], c)[0];
     const secondElement = multiply(multiply(a, b)[0], c)[0];
     const thirdElement = `${a} and ${b} and ${c} sum to ${firstElement}.`;
@@ -78,7 +78,7 @@ have to be resourceful to figure out how to do this. However, you may continue
 to use the + operator for string concatenation.
 */
 
-export function sumArrayWithThreeNumbers(sumArr) {
+export function sumArrayWithThreeNumbers(sumArr) {  //eslint-disable-line
     const firstElement = sumAndMultiplyThreeNumbers(sumArr[0], sumArr[1], sumArr[2])[0];
     const secondElement = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${firstElement} is their sum.`;
     return [firstElement, secondElement];
@@ -104,7 +104,9 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    const firstElement = sumAndMultiplyThreeNumbers(multArr[0], multArr[1], multArr[2])[1];
+    const secondElement = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${firstElement}.`;
+    return [firstElement, secondElement];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
