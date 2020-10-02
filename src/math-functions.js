@@ -12,7 +12,7 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-    let sum = a+b;
+    let sum = a + b;
     return [sum, `The sum of ${a} and ${b} is ${sum}.`];
 }
 
@@ -53,10 +53,10 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-    let threeFoldSum = sum(sum(a,b)[0],c)[0];
-    let threeFoldProduct = multiply(multiply(a,b)[0],c)[0];
+    let threeFoldSum = sum(sum(a, b)[0], c)[0];
+    let threeFoldProduct = multiply(multiply(a, b)[0], c)[0];
 
-    return [threeFoldSum, threeFoldProduct, `${a} and ${b} and ${c} sum to ${threeFoldSum}.`, `The product of ${a} and ${b} and ${c} is ${threeFoldProduct}.`]
+    return [threeFoldSum, threeFoldProduct, `${a} and ${b} and ${c} sum to ${threeFoldSum}.`, `The product of ${a} and ${b} and ${c} is ${threeFoldProduct}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -80,7 +80,7 @@ to use the + operator for string concatenation.
 export function sumArrayWithThreeNumbers(sumArr) {
     let arrSum = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0];
 
-    return [arrSum, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${arrSum} is their sum.`]
+    return [arrSum, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${arrSum} is their sum.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -128,20 +128,20 @@ This function should be dynamic, accepting an array of any length.
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     let product = 1;
 
-    for (let i = 0; i < dynamicArray.length; i++) {
+    for(let i = 0; i < dynamicArray.length; i++) {
         product = multiply(product, dynamicArray[i])[0];
     }
 
 
-    let numbersString = '';
+    // let numbersString = '';
 
-    for (let i = 0; i < dynamicArray.length - 1; i++) {
-        numbersString += `${dynamicArray[i]},`
-    }
+    // for (let i = 0; i < dynamicArray.length - 1; i++) {
+    //     numbersString += `${dynamicArray[i]},`
+    // }
 
-    numbersString += `${dynamicArray[dynamicArray.length - 1]}`
+    // numbersString += `${dynamicArray[dynamicArray.length - 1]}`
 
-    return [product, 'The numbers ' + numbersString + ` have a product of ${product}.`]
+    return [product, `The numbers ${dynamicArray} have a product of ${product}.`]
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
