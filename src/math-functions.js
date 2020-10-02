@@ -15,9 +15,7 @@ export function sum(A, B) {
     const result = A + B;
     const sentence = 'The sum of' + A + 'and' + B + 'is' + 'result' + '.' ;
 
-    
-    return [result, sentence];
-
+     return [result, sentence]
 };
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -30,8 +28,11 @@ Write a function called multiply() that takes in two numbers as arguments and re
 "The product of 5 and 9 is 45."
 */
 
-export function multiply(a, b) {
-    
+export function multiply(A, B) {
+    const product = A * B;
+    const sentence = 'The product of' + A + 'and' + B + 'is' + product + '.'
+
+    return [product, sentence];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
