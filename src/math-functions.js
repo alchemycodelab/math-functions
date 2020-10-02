@@ -2,7 +2,7 @@
 
 export function sum(a, b) {
 
-    let returnSum = a+b;
+    let returnSum = a + b;
     let returnString = `The sum of ${a} and ${b} is ${returnSum}.`;
     return [returnSum, returnString];
 }
@@ -10,7 +10,7 @@ export function sum(a, b) {
 
 
 export function multiply(a, b) {
-    let returnProduct = a*b;
+    let returnProduct = a * b;
     let returnString = `The product of ${a} and ${b} is ${returnProduct}.`;
     return [returnProduct, returnString];
 
@@ -64,15 +64,15 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     let returnProduct = 1;
     let returnString = 'The numbers ';
 
-    if (dynamicArray.length % 2 === 0) {
-        for (let i = 0; i < dynamicArray.length; i+=2){
-            returnProduct *= multiply(dynamicArray[i], dynamicArray[i+1])[0];
-            returnString += dynamicArray[i] + ',' + dynamicArray[i+1] + ',';
+    if(dynamicArray.length % 2 === 0) {
+        for(let i = 0; i < dynamicArray.length; i += 2){
+            returnProduct *= multiply(dynamicArray[i], dynamicArray[i + 1])[0];
+            returnString += dynamicArray[i] + ',' + dynamicArray[i + 1] + ',';
         }
-    } else {
-        for (let i = 0; i < dynamicArray.length -1; i+=2){
-            returnProduct *= multiply(dynamicArray[i], dynamicArray[i+1])[0];
-            returnString += dynamicArray[i] + ',' + dynamicArray[i+1] + ',';
+    }else{
+        for(let i = 0; i < dynamicArray.length -1; i+=2){
+            returnProduct *= multiply(dynamicArray[i], dynamicArray[i + 1])[0];
+            returnString += dynamicArray[i] + ',' + dynamicArray[i + 1] + ',';
 
         }
         returnProduct *= dynamicArray.slice(-1)[0];
