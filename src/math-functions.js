@@ -64,6 +64,13 @@ how to do this. However, you may continue to use the + operator for string conca
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
 
+    let firstElement = sum(sum(a, b)[0], c)[0],
+        secondElement = multiply(multiply(a, b)[0], c)[0],
+        thirdElement = `${a} and ${b} and ${c} sum to ${a + b + c}.`,
+        fourthElement = `The product of ${a} and ${b} and ${c} is ${a * b * c}.`;
+
+    return [firstElement, secondElement, thirdElement, fourthElement];
+
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
