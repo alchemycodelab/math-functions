@@ -1,15 +1,18 @@
 /* eslint-disable no-unused-vars */
 
 export function sum(a, b) {
-    let returnSum = (a+b);
-    let returnString = (`The sum of ${a} and ${b} is ${returnSum}.`);
-    return [returnSum, returnString];
 
+    let returnSum = a+b;
+    let returnString = `The sum of ${a} and ${b} is ${returnSum}.`;
+    return [returnSum, returnString];
 }
 
 
 
 export function multiply(a, b) {
+    let returnProduct = a*b;
+    let returnString = `The product of ${a} and ${b} is ${returnProduct}.`;
+    return [returnProduct, returnString];
 
 }
 
