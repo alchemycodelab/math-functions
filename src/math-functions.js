@@ -12,6 +12,11 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
+    
+    let firstElement = a + b,
+        secondElement = 'The sum of ' + a + ' and ' + b + ' is ' + (a + b) + '.';
+
+    return [firstElement, secondElement];
 
 }
 
@@ -20,12 +25,19 @@ export function sum(a, b) {
 
 /////////////////////////////////////
 /* Problem 2
-Write a function called multiply() that takes in two numbers as arguments and returns an array where the first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called multiply() that takes in two numbers as arguments and returns an array 
+where the first element is the product of those numbers, and the second element is a string that EXACTLY 
+follows this example and uses the values that were input into the function:
 
 "The product of 5 and 9 is 45."
 */
 
 export function multiply(a, b) {
+
+    let firstElement = a * b,
+        secondElement = 'The product of ' + a + ' and ' + b + ' is ' + (a * b) + '.';
+
+    return [firstElement, secondElement];
 
 }
 
@@ -52,6 +64,13 @@ how to do this. However, you may continue to use the + operator for string conca
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
 
+    let firstElement = sum(sum(a, b)[0], c)[0],
+        secondElement = multiply(multiply(a, b)[0], c)[0],
+        thirdElement = `${a} and ${b} and ${c} sum to ${a + b + c}.`,
+        fourthElement = `The product of ${a} and ${b} and ${c} is ${a * b * c}.`;
+
+    return [firstElement, secondElement, thirdElement, fourthElement];
+
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,7 +92,11 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    
+    const sumOne = sum(sumArr[0], sumArr[1])[0];
+    const sumTwo = sum(sumOne, sumArr[2])[0];
 
+    return [sumTwo, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumTwo} is their sum.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -97,6 +120,10 @@ you may continue to use the + operator for string concatenation.
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
 
+    const productOne = multiply(multArr[0], multArr[1])[0];
+    const productTwo = multiply(productOne, multArr[2])[0];
+
+    return [productTwo, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${productTwo}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -107,7 +134,10 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
 
 /////////////////////////////////////
 /* STRETCH GOAL: Problem 6
-Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
+Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument 
+and returns an array whose first element is the product of those numbers, 
+and the second element is a string that EXACTLY follows this example and 
+concatenates a message using the arguments that were passed into the function:
 
 "The numbers 1,2,3,4,5 have a product of 120."
 
@@ -117,7 +147,15 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let accumulator = 1;
 
+    for(let i = 0; i < dynamicArray.length; i++) {
+        
+        accumulator = multiply(accumulator, dynamicArray[i])[0];
+
+    }
+    
+    return [accumulator, `The numbers ${dynamicArray} have a product of ${accumulator}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
