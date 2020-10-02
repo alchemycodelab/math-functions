@@ -33,8 +33,14 @@ Write a function called multiply() that takes in two numbers as arguments and re
 "The product of 5 and 9 is 45."
 */
 
-export function multiply(a, b) {
+// Function will return an array with the first item as a*b and the second item as "The product of a and b is a*b."
 
+export function multiply(a, b) {
+    const multiplied = a * b;
+    const string = 'The product of ' + a + ' and ' + b + ' is ' + multiplied + '.';
+    const multipliedArray = [multiplied, string];
+    
+    return multipliedArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
