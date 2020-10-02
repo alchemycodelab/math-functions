@@ -174,7 +174,10 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
 
 /////////////////////////////////////
 /* STRETCH GOAL: Problem 6
-Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
+Write a function called multiplyAnyArray() that takes an array of numbers of any length as its 
+argument and returns an array whose first element is the product of those numbers, and the 
+second element is a string that EXACTLY follows this example and concatenates a message using 
+the arguments that were passed into the function:
 
 "The numbers 1,2,3,4,5 have a product of 120."
 
@@ -184,7 +187,20 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    // takes an array, and returns an array
+    let array = [];
 
+    // array[0] -- product of values in passed array
+    let val = 1;
+    for (let i = 0; i < dynamicArray.length; i++) {
+        val = multiply(dynamicArray[i], val)[0];
+    }
+    array[0] = val;
+
+    // array[1] -- a string "The numbers 1,2,3,4,5 have a product of 120."
+    array[1] = `The numbers ${dynamicArray} have a product of ${array[0]}.`;
+
+    return array;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
