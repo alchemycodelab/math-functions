@@ -59,20 +59,32 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { 
-    let numArray = [a, b, c];
-    let numSum = 0;
-    let numMult = 1;
     
-    for (let i=0; i <= 2; i++){
-    const arraySelector = numArray[i];
+    const firstSum = sum(a,b);
+    const totalSum = sum(firstSum[0], c)[0];
 
-    numSum += arraySelector;
-    numMult *= arraySelector;
-}
+    const firstMult = multiply(a,b);
+    const totalMult = multiply(firstMult[0], c)[0];
+    
+    const thirdElement = `${a} and ${b} and ${c} sum to ${totalSum}.`;
+    const fourthElement = `The product of ${a} and ${b} and ${c} is ${totalMult}.`;
 
-    const thirdElement = `${a} and ${b} and ${c} sum to ${numSum}.`;
-    const fourthElement = `The product of ${a} and ${b} and ${c} is ${numMult}.`;
-    return [numSum, numMult, thirdElement, fourthElement];
+    return [totalSum, totalMult, thirdElement, fourthElement];
+    
+//     let numArray = [a, b, c];
+//     let numSum = 0;
+//     let numMult = 1;
+    
+//     for (let i=0; i <= 2; i++){
+//     const arraySelector = numArray[i];
+
+//     numSum = sum(numSum, arraySelector);
+//     numMult = multiply(numMult, arraySelector);
+// }
+
+//     const thirdElement = `${a} and ${b} and ${c} sum to ${numSum}.`;
+//     const fourthElement = `The product of ${a} and ${b} and ${c} is ${numMult}.`;
+//     return [numSum, numMult, thirdElement, fourthElement];
 
 }
 
@@ -95,9 +107,22 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+        
+        let numSum = 0;
+    
+        for (let i=0; i <= 2; i++){
+        const arraySelector = numArray[i];
 
+        numSum = sum(numSum, arraySelector);
+        
+    }
+
+        const secondElement = `${sumArr[0]}, ${sumArr[1]}, ${sumArr[2]} was passed
+         in as an array of numbers, and ${numSum} is their sum.`;
+
+        return [numSum, secondElement];
+        
 }
-
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
