@@ -21,7 +21,7 @@ export function multiply(a, b) {
 
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-    let returnSum = sum(sum(a,b)[0], c)[0];
+    let returnSum = sum(sum(a, b)[0], c)[0];
     let returnProduct = multiply(multiply(a, b)[0], multiply(1, c)[0])[0];
     let returnSumString = `${a} and ${b} and ${c} sum to ${returnSum}.`;
     let returnProductString = `The product of ${a} and ${b} and ${c} is ${returnProduct}.`;
@@ -69,18 +69,14 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
             returnProduct *= multiply(dynamicArray[i], dynamicArray[i + 1])[0];
             returnString += dynamicArray[i] + ',' + dynamicArray[i + 1] + ',';
         }
-    }else{
-        for(let i = 0; i < dynamicArray.length -1; i+=2){
+    } else {
+        for(let i = 0; i < dynamicArray.length - 1; i += 2){
             returnProduct *= multiply(dynamicArray[i], dynamicArray[i + 1])[0];
             returnString += dynamicArray[i] + ',' + dynamicArray[i + 1] + ',';
 
         }
         returnProduct *= dynamicArray.slice(-1)[0];
         returnString += dynamicArray.slice(-1)[0];
-        console.log(dynamicArray.slice(-1)[0]);
-        console.log(returnProduct);
-        console.log(returnString);
-
     }
     returnString += ` have a product of ${returnProduct}.`;
     return [returnProduct, returnString];
