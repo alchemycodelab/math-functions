@@ -12,6 +12,11 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
+    
+    const result = a + b;
+    const sentence = 'The sum of ' + a + ' and ' + b + ' is ' + result + '.';
+
+    return [result, sentence];
 
 }
 
