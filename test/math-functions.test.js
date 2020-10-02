@@ -18,7 +18,7 @@ test('should take in two numbers and return an array where the first element is 
     assert.equal(result[1], 'The sum of 4 and 7 is 11.');
 });
 
-test('multiply', (assert) => {
+test('takes in two numbers as arguments and returns an array where the first element is the product of those numbers, and the second element is a string "The product of 5 and 9 is 45."', (assert) => {
     const result = multiply(5, 9);
 
     assert.equal(result[0], 45);
