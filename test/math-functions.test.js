@@ -13,7 +13,7 @@ const test = QUnit.test;
 
 test('sum', (assert) => {
     const result = sum(4, 7);
-
+    
     assert.equal(result[0], 11);
     assert.equal(result[1], 'The sum of 4 and 7 is 11.');
 });
