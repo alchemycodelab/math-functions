@@ -12,39 +12,39 @@ example and uses the values that were input into the function:
 */
 
 function populateReturnArray(
-  args,
-  finalValuesArray,
-  addOrMultiply,
-  normalString = " and ",
-  stringBeforeValue = " is ",
-  stringAfterValue = "."
+    args,
+    finalValuesArray,
+    addOrMultiply,
+    normalString = ' and ',
+    stringBeforeValue = ' is ',
+    stringAfterValue = '.'
 ) {
-  for (let i = 0; i < args.length; i++) {
-    if (addOrMultiply === "add") {
-      finalValuesArray[0] += args[i];
-    } else if (addOrMultiply === "multiply") {
-      finalValuesArray[0] *= args[i];
-    }
+    for(let i = 0; i < args.length; i++) {
+        if(addOrMultiply === 'add') {
+            finalValuesArray[0] += args[i];
+        } else if(addOrMultiply === 'multiply') {
+            finalValuesArray[0] *= args[i];
+        }
 
-    finalValuesArray[1] += args[i];
+        finalValuesArray[1] += args[i];
     // add ' and ' between number values in finalValuesArray.sumString, and add ' is ${sum}.' at the end
-    i < args.length - 1
-      ? (finalValuesArray[1] += normalString)
-      : (finalValuesArray[1] += `${stringBeforeValue}${finalValuesArray[0]}${stringAfterValue}`);
-  }
+        i < args.length - 1
+            ? (finalValuesArray[1] += normalString)
+            : (finalValuesArray[1] += `${stringBeforeValue}${finalValuesArray[0]}${stringAfterValue}`);
+    }
 }
 
 export function sum(...args) {
-  const returnArray = [0, ""];
+    const returnArray = [0, ''];
 
-  if (args.length === 2) {
-    returnArray[1] = "The sum of ";
-    populateReturnArray(args, returnArray, "add");
-  } else {
-    populateReturnArray(args, returnArray, "add", " and ", " sum to ");
-  }
+    if(args.length === 2) {
+        returnArray[1] = 'The sum of ';
+        populateReturnArray(args, returnArray, 'add');
+    } else {
+        populateReturnArray(args, returnArray, 'add', ' and ', ' sum to ');
+    }
 
-  return returnArray;
+    return returnArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
@@ -60,10 +60,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(...args) {
-  const returnArray = [1, "The product of "];
-  populateReturnArray(args, returnArray, "multiply");
+    const returnArray = [1, 'The product of '];
+    populateReturnArray(args, returnArray, 'multiply');
 
-  return returnArray;
+    return returnArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
@@ -89,10 +89,10 @@ how to do this. However, you may continue to use the + operator for string conca
 
 export function sumAndMultiplyThreeNumbers(a, b, c) {
   //eslint-disable-line
-  const sumArray = sum(a, b, c);
-  const multiplyArray = multiply(a, b, c);
+    const sumArray = sum(a, b, c);
+    const multiplyArray = multiply(a, b, c);
 
-  return [sumArray[0], multiplyArray[0], sumArray[1], multiplyArray[1]];
+    return [sumArray[0], multiplyArray[0], sumArray[1], multiplyArray[1]];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
@@ -114,18 +114,18 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-  const returnArray = [0, ""];
+    const returnArray = [0, ''];
 
-  populateReturnArray(
-    [...sumArr],
-    returnArray,
-    "add",
-    ",",
-    " was passed in as an array of numbers, and ",
-    " is their sum."
-  );
+    populateReturnArray(
+        [...sumArr],
+        returnArray,
+        'add',
+        ',',
+        ' was passed in as an array of numbers, and ',
+        ' is their sum.'
+    );
 
-  return returnArray;
+    return returnArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
@@ -150,17 +150,17 @@ you may continue to use the + operator for string concatenation.
 export function multiplyArrayWithThreeNumbers(multArr) {
   //eslint-disable-line
 
-  const returnArray = [1, "The numbers "];
+    const returnArray = [1, 'The numbers '];
 
-  populateReturnArray(
-    [...multArr],
-    returnArray,
-    "multiply",
-    ",",
-    " have a product of "
-  );
+    populateReturnArray(
+        [...multArr],
+        returnArray,
+        'multiply',
+        ',',
+        ' have a product of '
+    );
 
-  return returnArray;
+    return returnArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
@@ -186,7 +186,7 @@ This function should be dynamic, accepting an array of any length.
 
 export function multiplyAnyArray(dynamicArray) {
   //eslint-disable-line
-  return multiplyArrayWithThreeNumbers(dynamicArray);
+    return multiplyArrayWithThreeNumbers(dynamicArray);
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
