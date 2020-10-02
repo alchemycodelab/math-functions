@@ -11,8 +11,10 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
-export function sum(a, b) {
-
+export function sum(x, y) {
+    const add = x + y;
+    const string = 'The sum of ' + x + ' and ' + y + ' is ' + add + '.';
+    return [add, string];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -25,8 +27,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 "The product of 5 and 9 is 45."
 */
 
-export function multiply(a, b) {
-
+export function multiply(x, y) {
+    const multiply = x * y;
+    const string = 'The product of ' + x + ' and ' + y + ' is ' + multiply + '.';
+    return [multiply, string];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
