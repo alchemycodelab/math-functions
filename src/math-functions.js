@@ -33,7 +33,6 @@ export function multiply(a, b) {
     const product = (a * b);
     const answer = [(a * b), `The product of ${a} and ${b} is ${(product)}.`];
     return answer;
-
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
