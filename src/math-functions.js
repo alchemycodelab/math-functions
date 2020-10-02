@@ -35,7 +35,6 @@ export function multiply(a, b) {
 
     return multArray;
 }
-console.log(multiply(5, 9));
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
@@ -52,8 +51,6 @@ export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
     return sumMultArray;
 }
 
-console.log(sumAndMultiplyThreeNumbers(3, 4, 5));
-;
 // Write a function called sumAndMultiplyThreeNumbers() that takes in three 
 // numbers as separate arguments and returns 
 // an array where the first element is the sum of those three numbers, 
@@ -75,8 +72,16 @@ console.log(sumAndMultiplyThreeNumbers(3, 4, 5));
 // Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
-/* Problem 4
-Write a function called sumArrayWithThreeNumbers() that takes in an array of numbers 
+/* Problem 4*/
+export function sumArrayWithThreeNumbers(sumArr) {
+
+    const arraySum2 = sum(sumArr[0], sumArr[1])[0];
+    const arraySum3 = sum(arraySum2, sumArr[2])[0];
+    const arrayString = [arraySum3, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${arraySum3} is their sum.`];
+    return arrayString;
+}
+
+/*Write a function called sumArrayWithThreeNumbers() that takes in an array of numbers 
 as its single argument and then returns an array where the first element is the sum 
 of the numbers in the array, and the second element is a string that EXACTLY follows 
 this example and uses the values that were input into the function:
@@ -89,16 +94,19 @@ have to be resourceful to figure out how to do this. However, you may continue
 to use the + operator for string concatenation.
 */
 
-export function sumArrayWithThreeNumbers(sumArr) {
-
-}
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
-/* Problem 5
-Write a function called multiplyArrayWithThreeNumbers() that takes an array of numbers 
+///* Problem 5
+export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    const arrayMult2 = multiply(multArr[0], multArr[1])[0];
+    const arrayMult3 = multiply(arrayMult2, multArr[2])[0];
+    const arrayString = [arrayMult3, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${arrayMult3}.`];
+    return arrayString;
+}
+/* Write a function called multiplyArrayWithThreeNumbers() that takes an array of numbers 
 as its argument and returns an array whose first element is the product of those numbers, 
 and the second element is a string that EXACTLY follows this example and uses the values 
 that were input into the function:
@@ -112,9 +120,6 @@ This function should handle an array containing three elements. However,
 you may continue to use the + operator for string concatenation.
 */
 
-export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
-}
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
