@@ -144,7 +144,16 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let myArray = [];
+    let myValue = 1;
+    for(let i = 0; i < dynamicArray.length; i++) {
+        myValue = multiply(dynamicArray[i], myValue)[0];
+    }
+    myArray[0] = myValue;
 
+    myArray[1] = `The numbers ${dynamicArray} have a product of ${myArray[0]}.`;
+    
+    return myArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
