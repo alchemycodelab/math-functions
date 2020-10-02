@@ -91,7 +91,12 @@ have to be resourceful to figure out how to do this. However, you may continue
 to use the + operator for string concatenation.
 */
 
-export function sumArrayWithThreeNumbers(sumArr) {
+export function sumArrayWithThreeNumbers([a, b, c]) {
+   const sumArr = [a, b, c];
+   const sum1 = sum(sumArr[0], sumArr[1])[0];
+   const sum2 = sum(sum1, sumArr[2])[0];
+
+   return [sum2, `${a},${b},${c} was passed in as an array of numbers, and ${sum2} is their sum.`];
 
 }
 
