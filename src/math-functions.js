@@ -14,7 +14,8 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-    const answer = [(a + b), 'The sum of 4 and 7 is 11.'];
+    const sums = (a + b);
+    const answer = [(a + b), `The sum of ${a} and ${b} is ${sums}.`];
     return answer;
 }
 
@@ -29,8 +30,8 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-    const sum = (a + b)
-    const answer = [(a * b), `The product of ${a} and ${b} is ${(sum)}.`];
+    const product = (a * b);
+    const answer = [(a * b), `The product of ${a} and ${b} is ${(product)}.`];
     return answer;
 
 }
