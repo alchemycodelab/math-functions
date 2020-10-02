@@ -16,7 +16,7 @@ export function sum(a, b) {
     const sumOfTwoNum = a + b;
     return [sumOfTwoNum, `The sum of ${a} and ${b} is ${sumOfTwoNum}.`];
 }
-console.log(sum(4, 4)[0]); 
+
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
@@ -28,7 +28,8 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    const mulOfTwoNum = a * b;
+    return [mulOfTwoNum, `The product of ${a} and ${b} is ${mulOfTwoNum}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -55,7 +56,7 @@ how to do this. However, you may continue to use the + operator for string conca
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
 
 }
-
+// console.log(sum(4, 4)[0]); 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
