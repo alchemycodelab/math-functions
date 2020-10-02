@@ -2,11 +2,11 @@ import './math-functions.test.js';
  //let sum = [4, 7,]
 
 
-export function add(someNumber) {
+export function add() {
     let add = 0;
-    for(let i = 0; i < someNumber.length; i++) {
+    for(let i = 0; i < add.length; i++) {
         const someNumber = someNumber[i];
-        add = add += someNumber;
+        add = add + someNumber;
     }
     return add;
 }
