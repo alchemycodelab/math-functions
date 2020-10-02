@@ -13,8 +13,10 @@ example and uses the values that were input into the function:
 
 export function sum(a, b) {
 
-    const add = [(a, b)];
-    return [11, "The sum of 4 and 7 is 11."];
+    const add = a + b;
+    const string = 'The sum of ' + a + ' and ' + b + ' is ' + add + '.';
+    return [add, string];
+
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -28,8 +30,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-    const multi = [(a, b)];
-    return [45, "The product of 5 and 9 is 45."];
+    const multi = a * b;
+    const string = 'The product of ' + a + ' and ' + b + ' is ' + multi + '.';
+    return [multi, string];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -54,7 +57,16 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    const addResult1 = sum(a, b);
+    const addResult2 = sum(addResult1[0], c);
+    const finalAdd = addResult2[0];
+    const multiResult1 = multiply(a, b);
+    const multiResult2 = multiply(multiResult1[0], c);
+    const finalMulti = multiResult2[0];
+    const addString = a + ' and ' + b + ' and ' + c + ' sum to ' + finalAdd + '.';
+    const multiString = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + finalMulti + '.';
+    return [finalAdd, finalMulti, addString, multiString];
+    
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
