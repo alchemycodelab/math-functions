@@ -29,13 +29,25 @@ export function sum(a, b) {
 
 /////////////////////////////////////
 /* Problem 2
-Write a function called multiply() that takes in two numbers as arguments and returns an array where the first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called multiply() that takes in two numbers as arguments and returns an array where the first 
+element is the product of those numbers, and the second element is a string that EXACTLY follows this example 
+and uses the values that were input into the function:
 
 "The product of 5 and 9 is 45."
 */
 
 export function multiply(a, b) {
+    let input1 = a;
+    let input2 = b;
+    let output = [];
+    let product = a * b;
+    let string = `The product of ${input1} and ${input2} is ${product}.`;
 
+
+    output[0] = product;
+    output[1] = string;
+
+    return output;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
