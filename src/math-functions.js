@@ -16,7 +16,7 @@ export function sum(a, b) {
     const sumArray = a + b;
 
 
-return [sumArray, `The sum of ${a} and ${b} is ${sumArray}.`];
+    return [sumArray, `The sum of ${a} and ${b} is ${sumArray}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -30,12 +30,12 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+
+
+    const productArray = a * b;
     
 
-     const productArray = a * b;
-    
-
-return [productArray,`The product of ${a} and ${b} is ${productArray}.` ];
+    return [productArray, `The product of ${a} and ${b} is ${productArray}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -69,7 +69,7 @@ export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
     const productArray = product2;
     const stringArray2 = `The product of ${a} and ${b} and ${c} is ${productArray}.`;
 
-return [sum2, product2, stringArray1, stringArray2];
+    return [sum2, product2, stringArray1, stringArray2];
 }
 
 
@@ -93,10 +93,10 @@ to use the + operator for string concatenation.
 
 export function sumArrayWithThreeNumbers(sumArr) {
 
-const sum1 = sum(sumArr[0], sumArr[1])[0];
-const sum2 = sum(sum1, sumArr[2])[0];
+    const sum1 = sum(sumArr[0], sumArr[1])[0];
+    const sum2 = sum(sum1, sumArr[2])[0];
 
-return [sum2, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum2} is their sum.`];
+    return [sum2, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum2} is their sum.`];
 
 }
 
@@ -147,11 +147,11 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(array) { //eslint-disable-line
-let product=  1;
-for(let i = 0; i < array.length; i++){
-product =  multiply(product, array[i])[0];
-}
-return [product, `The numbers ${array} have a product of ${product}.`]
+let product = 1;
+    for(let i = 0; i < array.length; i++){
+        product = multiply(product, array[i])[0];
+    }
+    return [product, `The numbers ${array} have a product of ${product}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
