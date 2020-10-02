@@ -21,7 +21,11 @@ export function multiply(a, b) {
 
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    let returnSum = a + b + c;
+    let returnProduct = a * b * c;
+    let returnSumString = `${a} and ${b} and ${c} sum to ${returnSum}.`;
+    let returnProductString = `The product of ${a} and ${b} and ${c} is ${returnProduct}.`;
+    return [returnSum, returnProduct, returnSumString, returnProductString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
