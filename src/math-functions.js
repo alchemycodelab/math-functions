@@ -96,9 +96,9 @@ export function sumArrayWithThreeNumbers(sumArr) {
 // first array [sum of numbers]
 // second array [ 2,3,4 was passed in as an array of numbers, and 9 is their sum."]
 
-const sumOfArray1 = sumAndMultiplyThreeNumbers(sumArr[0], sumArr[1], sumArr[2]); 
+    const sumOfArray1 = sumAndMultiplyThreeNumbers(sumArr[0], sumArr[1], sumArr[2])[0]; 
 
-return [sumOfArray1, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumOfArray1} is their sum.`];
+    return [sumOfArray1, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumOfArray1} is their sum.`];
 
 
 }
@@ -124,6 +124,10 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    const productOfArray1 = sumAndMultiplyThreeNumbers(multArr[0], multArr[1], multArr[2])[1];
+
+    
+    return [productOfArray1, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${productOfArray1}.`];
 
 }
 
