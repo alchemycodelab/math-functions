@@ -11,32 +11,40 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
+function populateReturnArray(
+  args,
+  finalValuesArray,
+  addOrMultiply,
+  normalString = " and ",
+  stringBeforeValue = " is ",
+  stringAfterValue = "."
+) {
+  for (let i = 0; i < args.length; i++) {
+    if (addOrMultiply === "add") {
+      finalValuesArray[0] += args[i];
+    } else if (addOrMultiply === "multiply") {
+      finalValuesArray[0] *= args[i];
+    }
+
+    finalValuesArray[1] += args[i];
+    // add ' and ' between number values in finalValuesArray.sumString, and add ' is ${sum}.' at the end
+    i < args.length - 1
+      ? (finalValuesArray[1] += normalString)
+      : (finalValuesArray[1] += `${stringBeforeValue}${finalValuesArray[0]}${stringAfterValue}`);
+  }
+}
+
 export function sum(...args) {
-  let sumValue = 0;
-  let sumString = "";
+  const returnArray = [0, ""];
 
   if (args.length === 2) {
-    sumString = "The sum of ";
-    for (let i = 0; i < args.length; i++) {
-      sumValue += args[i];
-      sumString += args[i];
-      // add ' and ' between number values in sumString, and add ' is ${sum}.' at the end
-      i < args.length - 1
-        ? (sumString += " and ")
-        : (sumString += ` is ${sumValue}.`);
-    }
+    returnArray[1] = "The sum of ";
+    populateReturnArray(args, returnArray, "add");
   } else {
-    for (let i = 0; i < args.length; i++) {
-      sumValue += args[i];
-      sumString += args[i];
-      // for whatever reason, we want a different style of string output if there are 3 numbers to sum, so here ya go!
-      i < args.length - 1
-        ? (sumString += " and ")
-        : (sumString += ` sum to ${sumValue}.`);
-    }
+    populateReturnArray(args, returnArray, "add", " and ", " sum to ");
   }
 
-  return [sumValue, sumString];
+  return returnArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
@@ -52,19 +60,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(...args) {
-  let product = 1;
-  let productString = "The product of ";
+  const returnArray = [1, "The product of "];
+  populateReturnArray(args, returnArray, "multiply");
 
-  for (let i = 0; i < args.length; i++) {
-    product *= args[i];
-    productString += args[i];
-    // add ' and ' between number values in productString, and add ' is ${sum}.' at the end
-    i < args.length - 1
-      ? (productString += " and ")
-      : (productString += ` is ${product}.`);
-  }
-
-  return [product, productString];
+  return returnArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
@@ -92,7 +91,7 @@ export function sumAndMultiplyThreeNumbers(a, b, c) {
   //eslint-disable-line
   const sumArray = sum(a, b, c);
   const multiplyArray = multiply(a, b, c);
-  
+
   return [sumArray[0], multiplyArray[0], sumArray[1], multiplyArray[1]];
 }
 
@@ -115,18 +114,18 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-  const sumValue = sum(...sumArr)[0];
-  let sumString = '';
+  const returnArray = [0, ""];
 
-  for (let i = 0; i < sumArr.length; i++) {
-    if (i !== sumArr.length - 1) {
-      sumString += `${sumArr[i]},`
-    } else {
-      sumString += `${sumArr[i]} was passed in as an array of numbers, and ${sumValue} is their sum.`;
-    }
-  }
-  
-  return [sumValue, sumString];
+  populateReturnArray(
+    [...sumArr],
+    returnArray,
+    "add",
+    ",",
+    " was passed in as an array of numbers, and ",
+    " is their sum."
+  );
+
+  return returnArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
@@ -150,18 +149,18 @@ you may continue to use the + operator for string concatenation.
 
 export function multiplyArrayWithThreeNumbers(multArr) {
   //eslint-disable-line
-  const product = multiply(...multArr)[0];
-  let productString = 'The numbers '
 
-  for (let i = 0; i < multArr.length; i++) {
-    if (i !== multArr.length - 1) {
-      productString += `${multArr[i]},`
-    } else {
-      productString += `${multArr[i]} have a product of ${product}.`;
-    }
-  }
+  const returnArray = [1, "The numbers "];
 
-  return [product, productString];
+  populateReturnArray(
+    [...multArr],
+    returnArray,
+    "multiply",
+    ",",
+    " have a product of "
+  );
+
+  return returnArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
