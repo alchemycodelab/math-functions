@@ -147,7 +147,7 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(array) { //eslint-disable-line
-let product = 1;
+    let product = 1;
     for(let i = 0; i < array.length; i++){
         product = multiply(product, array[i])[0];
     }
