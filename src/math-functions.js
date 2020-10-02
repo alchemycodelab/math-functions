@@ -89,8 +89,7 @@ export function sumArrayWithThreeNumbers(sumArr) {
 
 /////////////////////////////////////
 /* Problem 5
-Write a function called multiplyArrayWithThreeNumbers() that takes an array of numbers 
-as its argument and returns an array whose first element is the product of those numbers, 
+Write a function called multiplyArrayWithThreeNumbers() that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers, 
 and the second element is a string that EXACTLY follows this example and uses the values 
 that were input into the function:
 
@@ -103,8 +102,11 @@ This function should handle an array containing three elements. However,
 you may continue to use the + operator for string concatenation.
 */
 
-export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+export function multiplyArrayWithThreeNumbers(multArr) { 
+    const myArray = sumAndMultiplyThreeNumbers(multArr[0], multArr[1], multArr[2])[1];
+    const myString = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${myArray}.`;
 
+    return [myArray, myString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
