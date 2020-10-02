@@ -11,7 +11,7 @@ const test = QUnit.test;
 
 /* DO NOT MODIFY THIS FILE */
 
-test('sum', (assert) => {
+test('should take in two numbers and return an array where the first element is the sum of those numbers and the second is a concatenated string with the sum or 4 and 7 is 11', (assert) => {
     const result = sum(4, 7);
 
     assert.equal(result[0], 11);
