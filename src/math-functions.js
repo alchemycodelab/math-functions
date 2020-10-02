@@ -21,8 +21,8 @@ export function multiply(a, b) {
 
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-    let returnSum = a + b + c;
-    let returnProduct = a * b * c;
+    let returnSum = sum(sum(a,b)[0], sum(0,c)[0])[0];
+    let returnProduct = multiply(multiply(a, b)[0], multiply(1, c)[0])[0];
     let returnSumString = `${a} and ${b} and ${c} sum to ${returnSum}.`;
     let returnProductString = `The product of ${a} and ${b} and ${c} is ${returnProduct}.`;
     return [returnSum, returnProduct, returnSumString, returnProductString];
