@@ -14,6 +14,7 @@ example and uses the values that were input into the function:
 export function sum(a, b) {
 
 
+
    const sums = (a+b);
    const answer = [(a+b), `The sum of ${a} and ${b} is ${sums}.`];
    return answer;
