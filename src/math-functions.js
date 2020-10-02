@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-vars */
 
 export function sum(a, b) {
-    returnSum = (a+b);
-    returnString = (`The sum of ${a} and ${b} is ${returnSum}.`);
+    let returnSum = (a+b);
+    let returnString = (`The sum of ${a} and ${b} is ${returnSum}.`);
     return [returnSum, returnString];
+
 }
 
 
