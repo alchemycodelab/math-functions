@@ -148,6 +148,22 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let accumulator = 1;
+    let stringAccumulator = 'The numbers ';
+
+    for(let i = 0; i < dynamicArray.length; i++) {
+        const someNumber = dynamicArray[i];
+
+        accumulator *= someNumber;
+
+        if(i !== dynamicArray.length - 1) {
+            stringAccumulator += `${dynamicArray[i]},`;
+        } else {
+            stringAccumulator += `${dynamicArray[i]} have a product of ${accumulator}.`;
+        }
+    }
+
+    return [accumulator, stringAccumulator];
 
 }
 
