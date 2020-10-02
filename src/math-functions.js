@@ -85,11 +85,6 @@ export function sumArrayWithThreeNumbers(sumArr) {
     return [sumOfArray1, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumOfArray1} is their sum.`];
 }
 
-// export function sumArrayWithThreeNumbers(sumArr) {
-//     const sumOfArray1 = sum(sumArr[0], sumArr[1], sumArr[2]);
-//     const sumOfArray2 = sum(sumOfArray1, );
-
-
 // }
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -111,8 +106,11 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    const mulOfArray1 = sumAndMultiplyThreeNumbers(multArr[0], multArr[1], multArr[2])[1];
+  
+    return [mulOfArray1, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${mulOfArray1}.`];
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
