@@ -21,7 +21,7 @@ export function multiply(a, b) {
 
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-    let returnSum = sum(sum(a,b)[0], sum(0,c)[0])[0];
+    let returnSum = sum(sum(a,b)[0], c)[0];
     let returnProduct = multiply(multiply(a, b)[0], multiply(1, c)[0])[0];
     let returnSumString = `${a} and ${b} and ${c} sum to ${returnSum}.`;
     let returnProductString = `The product of ${a} and ${b} and ${c} is ${returnProduct}.`;
@@ -34,6 +34,22 @@ export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
 
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    let returnSum = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0];
+    let returnString = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${returnSum} is their sum.`;
+    return [returnSum, returnString];
+    
+    // reread the instructions and realized it is limited to 3 number array
+    // my solution is overkill for this use, but I still like it :)
+    // if (sumArr.length % 2) {
+    //     for (let i = 0; i < sumArr.length; i+=2){
+    //         returnSum += sum(sumArr[i], sumArr[i+1]);
+    //     }
+    // } else {
+    //     for (let i = 0; i < sumArr.length -1; i+=2){
+    //         returnSum += sum(sumArr[i], sumArr[i+1]);
+    //     }
+    //     sumArr += sumArr[-1];
+    // }
 
 }
 
