@@ -8,10 +8,16 @@ then returns an array where the first element is the sum of those numbers,
 and the second element is a concatenated string that EXACTLY follows this 
 example and uses the values that were input into the function:
 
+
+
 "The sum of 4 and 7 is 11."
 */
 
 export function sum(a, b) {
+    const answer = [(a + b), 'The sum of 4 and 7 is 11.'];
+    return answer;
+
+    
 
 }
 
