@@ -11,21 +11,21 @@ const test = QUnit.test;
 
 /* DO NOT MODIFY THIS FILE */
 
-test('should take in two numbers and return an array where the first element is the sum of those numbers and the second is a concatenated string with the sum or 4 and 7 is 11', (assert) => {
+test('1. should take in two numbers and return an array where the first element is the sum of those numbers and the second is a concatenated string with the sum or 4 and 7 is 11', (assert) => {
     const result = sum(4, 7);
 
     assert.equal(result[0], 11);
     assert.equal(result[1], 'The sum of 4 and 7 is 11.');
 });
 
-test('takes in two numbers as arguments and returns an array where the first element is the product of those numbers, and the second element is a string "The product of 5 and 9 is 45."', (assert) => {
+test('2. takes in two numbers as arguments and returns an array where the first element is the product of those numbers, and the second element is a string "The product of 5 and 9 is 45."', (assert) => {
     const result = multiply(5, 9);
 
     assert.equal(result[0], 45);
     assert.equal(result[1], 'The product of 5 and 9 is 45.');
 });
 
-test('sumAndMultiplyThreeNumbers', (assert) => {
+test('3. sumAndMultiplyThreeNumbers', (assert) => {
     const result = sumAndMultiplyThreeNumbers(4, 7, 5);
 
     assert.equal(result[0], 16);
