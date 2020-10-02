@@ -8,8 +8,6 @@ export function sum(a, b) {
     return sumArray;
 }
 
-console.log(sum(4, 7));
-
 /* Problem 1
 Write a function called sum() that takes in two numbers as arguments and 
 then returns an array where the first element is the sum of those numbers, 
@@ -31,9 +29,13 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    const mult = a * b;
+    const multSentence = `The product of ${a} and ${b} is ${mult}.`;
+    const multArray = [mult, multSentence];
 
+    return multArray;
 }
-
+console.log(multiply(5, 9));
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
