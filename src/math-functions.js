@@ -38,18 +38,6 @@ export function sumArrayWithThreeNumbers(sumArr) {
     let returnString = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${returnSum} is their sum.`;
     return [returnSum, returnString];
     
-    // reread the instructions and realized it is limited to 3 number array
-    // my solution is overkill for this use, but I still like it :)
-    // if (sumArr.length % 2) {
-    //     for (let i = 0; i < sumArr.length; i+=2){
-    //         returnSum += sum(sumArr[i], sumArr[i+1]);
-    //     }
-    // } else {
-    //     for (let i = 0; i < sumArr.length -1; i+=2){
-    //         returnSum += sum(sumArr[i], sumArr[i+1]);
-    //     }
-    //     sumArr += sumArr[-1];
-    // }
 
 }
 
@@ -73,6 +61,30 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
 
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let returnProduct = 1;
+    let returnString = 'The numbers ';
+
+    if (dynamicArray.length % 2 === 0) {
+        for (let i = 0; i < dynamicArray.length; i+=2){
+            returnProduct *= multiply(dynamicArray[i], dynamicArray[i+1])[0];
+            returnString += dynamicArray[i] + ',' + dynamicArray[i+1] + ',';
+        }
+    } else {
+        for (let i = 0; i < dynamicArray.length -1; i+=2){
+            returnProduct *= multiply(dynamicArray[i], dynamicArray[i+1])[0];
+            returnString += dynamicArray[i] + ',' + dynamicArray[i+1] + ',';
+
+        }
+        returnProduct *= dynamicArray.slice(-1)[0];
+        returnString += dynamicArray.slice(-1)[0];
+        console.log(dynamicArray.slice(-1)[0]);
+        console.log(returnProduct);
+        console.log(returnString);
+
+    }
+    returnString += ` have a product of ${returnProduct}.`;
+    return [returnProduct, returnString];
+
 
 }
 
