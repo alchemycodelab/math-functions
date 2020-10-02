@@ -16,7 +16,7 @@ example and uses the values that were input into the function:
 export function sum(a, b) {
     const added = [(a + b), `The sum of ${a} and ${b} is ${a + b}.`];
     return added;
-};
+}
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -32,6 +32,7 @@ export function multiply(a, b) {
     const multiply = [(a * b), `The product of ${a} and ${b} is ${a * b}.`];
     return multiply;
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -55,8 +56,22 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const sumSum = sum(a, b);
+    const finalSum = sum(sumSum[0], c)[0];
 
+
+    const multiplyMultiply = multiply(a, b);
+    const finalProduct = multiply(multiplyMultiply[0], c)[0];
+    
+
+    return [finalSum, finalProduct, `${a} and ${b} and ${c} sum to ${a + b + c}.`, `The product of ${a} and ${b} and ${c} is ${a * b * c}.`];
 }
+
+    // sumAndMultiplyThreeNumbers(finalSum, finalProduct, c);
+
+    // finalSum, finalProduct, `${a} and ${b} and ${c} sum to ${a + b + c}.`, `The product of ${a} and ${b} and ${c} is ${a * b * c}.`];
+    
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
