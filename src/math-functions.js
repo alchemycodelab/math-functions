@@ -12,7 +12,16 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
+    let input1 = a;
+    let input2 = b;
+    let output = [];
+    let sum = a + b;
+    let string = `The sum of ${input1} and ${input2} is ${sum}.`;
 
+    output[0] = sum;
+    output[1] = string;
+
+    return output;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -20,13 +29,25 @@ export function sum(a, b) {
 
 /////////////////////////////////////
 /* Problem 2
-Write a function called multiply() that takes in two numbers as arguments and returns an array where the first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called multiply() that takes in two numbers as arguments and returns an array where the first 
+element is the product of those numbers, and the second element is a string that EXACTLY follows this example 
+and uses the values that were input into the function:
 
 "The product of 5 and 9 is 45."
 */
 
 export function multiply(a, b) {
+    let input1 = a;
+    let input2 = b;
+    let output = [];
+    let product = a * b;
+    let string = `The product of ${input1} and ${input2} is ${product}.`;
 
+
+    output[0] = product;
+    output[1] = string;
+
+    return output;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -52,6 +73,28 @@ how to do this. However, you may continue to use the + operator for string conca
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
 
+    // returns an array
+    let array = [];
+    let input1 = a;
+    let input2 = b;
+    let input3 = c;
+    // array[0] -- is the sum of a, b and c
+    let value1 = sum(input1, input2)[0];
+    array[0] = sum(value1, input3)[0];
+    // array[1] -- is the product of a, b and c
+
+    let placeholder1 = multiply(input1, input2)[0];
+    let placeholder2 = multiply(placeholder1, input3)[0];
+    array[1] = placeholder2;
+
+    // array[2] -- strings "4 and 7 and 5 sum to 16."
+    array[2] = `${input1} and ${input2} and ${input3} sum to ${array[0]}.`;
+
+    // array[3] -- strings "The product of 4 and 7 and 5 is 140."
+    array[3] = `The product of ${input1} and ${input2} and ${input3} is ${array[1]}.`;
+
+    return array;
+
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,7 +116,19 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    // takes in an array of numbers, and returns an array
+    let array = [];
 
+    // array[0] -- sum of numbers in the passed array // don't use + 
+    let val = 0;
+    for (let i = 0; i < sumArr.length; i++) {
+        val = sum(sumArr[i], val)[0];
+    }
+    array[0] = val;
+
+    // array[1] -- a string "2,3,4 was passed in as an array of numbers, and 9 is their sum."
+    array[1] = `${sumArr} was passed in as an array of numbers, and ${array[0]} is their sum.`;
+    return array;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,7 +151,19 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    // takes in an array of numbers, and returns an array
+    let array = [];
 
+    // array[0] -- product of elements in multArr
+    let val = 1;
+    for (let i = 0; i < multArr.length; i++) {
+        val = multiply(multArr[i], val)[0];
+    }
+    array[0] = val;
+    // array[1] -- a string "The numbers 2,3,4 have a product of 24."
+    array[1] = `The numbers ${multArr} have a product of ${array[0]}.`;
+
+    return array;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -107,7 +174,10 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
 
 /////////////////////////////////////
 /* STRETCH GOAL: Problem 6
-Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
+Write a function called multiplyAnyArray() that takes an array of numbers of any length as its 
+argument and returns an array whose first element is the product of those numbers, and the 
+second element is a string that EXACTLY follows this example and concatenates a message using 
+the arguments that were passed into the function:
 
 "The numbers 1,2,3,4,5 have a product of 120."
 
@@ -117,7 +187,20 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    // takes an array, and returns an array
+    let array = [];
 
+    // array[0] -- product of values in passed array
+    let val = 1;
+    for (let i = 0; i < dynamicArray.length; i++) {
+        val = multiply(dynamicArray[i], val)[0];
+    }
+    array[0] = val;
+
+    // array[1] -- a string "The numbers 1,2,3,4,5 have a product of 120."
+    array[1] = `The numbers ${dynamicArray} have a product of ${array[0]}.`;
+
+    return array;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
