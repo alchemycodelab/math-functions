@@ -15,7 +15,7 @@ example and uses the values that were input into the function:
 
 export function sum(a, b) {
     const sums = (a + b);
-    const answer = [(a + b), `The sum of ${a} and ${b} is ${sums}.`];
+    const answer = [sums, `The sum of ${a} and ${b} is ${sums}.`];
     return answer;
 }
 
@@ -85,6 +85,10 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const sumOfTwo = sum(sumArr[0], sumArr[1]);
+    const sumOfThree = sum(sumOfTwo[0], sumArr[2]);
+    return [`${sumOfThree[0]}`, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumOfThree[0]} is their sum.`]
+    
 
 }
 
