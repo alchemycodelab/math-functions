@@ -31,7 +31,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 
 export function multiply(a, b) {
     const product = (a * b);
-    const answer = [(a * b), `The product of ${a} and ${b} is ${(product)}.`];
+    const answer = [product, `The product of ${a} and ${b} is ${product}.`];
     return answer;
 }
 
@@ -57,6 +57,12 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const sumOftwo = sum(a, b);
+    const sumOfThree = sum(sumOftwo[0], c);
+    const productOfTwo = multiply(a, b);
+    const productOfThree = multiply(productOfTwo[0], c);
+
+    return [sumOfThree[0], productOfThree[0], `${a} and ${b} and ${c} sum to ${sumOfThree[0]}.`, `The product of ${a} and ${b} and ${c} is ${productOfThree[0]}.`];
 
 }
 
