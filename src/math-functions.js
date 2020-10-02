@@ -14,9 +14,9 @@ example and uses the values that were input into the function:
 export function sum(a, b) {
  
     const sumArray = a+b;
-    const stringArray = `The sum of ${a} and ${b} is ${sumArray}.`;
+   ;
      
-return [sumArray, stringArray];
+return [sumArray, `The sum of ${a} and ${b} is ${sumArray}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -33,9 +33,9 @@ export function multiply(a, b) {
     
  
      const productArray = a * b;
-     const stringArray = `The product of ${a} and ${b} is ${productArray}.`;
+    
       
- return [productArray, stringArray];
+ return [productArray,`The product of ${a} and ${b} is ${productArray}.` ];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -60,8 +60,18 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    const sum1 = sum(a,b)[0];
+    const sum2 = sum(sum1, c)[0];
+  
+    const stringArray1 = `${a} and ${b} and ${c} sum to ${sum2}.`;
+    const product1 = multiply(a, b)[0];
+    const product2 = multiply(product1, c)[0];
+    const productArray = product2;
+    const stringArray2 = `The product of ${a} and ${b} and ${c} is ${productArray}.`;
+     
+return [sum2, product2, stringArray1, stringArray2];
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
