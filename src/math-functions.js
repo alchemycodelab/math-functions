@@ -54,8 +54,13 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+export function sumAndMultiplyThreeNumbers(x, y, z) { //eslint-disable-line
+    const add = x + y + z;
+    const multiply = (x) * (y) * (z);
+    const string1 = x + ' and ' + y + ' and ' + z + ' sum to ' + add + '.';
+    const string2 = 'The product of ' + x + ' and ' + y + ' and ' + z + ' is ' + multiply + '.';
+    
+    return [add, multiply, string1, string2];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
