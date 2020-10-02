@@ -14,9 +14,9 @@ example and uses the values that were input into the function:
 
 
 export function sum(a, b) {
-    const added = [(a+b), `The sum of ${a} and ${b} is ${a+b}.`];
+    const added = [(a + b), `The sum of ${a} and ${b} is ${a + b}.`];
     return added;
-}
+};
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -29,7 +29,8 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    const multiply = [(a * b), `The product of ${a} and ${b} is ${a * b}.`];
+    return multiply;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
