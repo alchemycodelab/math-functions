@@ -1,20 +1,35 @@
+////import { multiply } from '../src/math-functions.js';
 import './math-functions.test.js';
- //let sum = [4, 7,]
-
-
-export function add() {
-    let add = 0;
-    for(let i = 0; i < add.length; i++) {
-        const someNumber = someNumber[i];
-        add = add + someNumber;
-    }
+////////////////////////////////////////////////////1
+export function sum(number) {
+    let add = number + number;
     return add;
 }
-export function multiply() {
-    let add = 0;
-    for(let i = 0; i < add.length; i++) {
-        const someNumber = someNumber[i];
-        add = add + someNumber;
-    }
-    return multiply;
+/////////////////////////////////////////////////2
+
+export function multiple(number) {
+    let times = number * number;
+    return times;
 }
+///////////////////////// sumAndMultipleOfThree3
+export function sumAndMultipleOfThree(number){
+    let product = number * number * number;
+    let outcome = number + number + number;
+    return product, outcome;
+    
+}
+///////////////////////// someArrayWithThreeNumber
+export function someArrayWithThreeNumber(){
+    let array = ['number', 'number', 'number']; 
+    return array;
+}
+
+
+
+
+
+//////////////////// multiplArrayThreeNumbers
+
+////////////////////////
+
+        
