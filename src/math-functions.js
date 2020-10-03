@@ -60,10 +60,10 @@ how to do this. However, you may continue to use the + operator for string conca
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { 
     
-    const firstSum = sum(a,b);
+    const firstSum = sum(a, b);
     const totalSum = sum(firstSum[0], c)[0];
 
-    const firstMult = multiply(a,b);
+    const firstMult = multiply(a, b);
     const totalMult = multiply(firstMult[0], c)[0];
     
     const thirdElement = `${a} and ${b} and ${c} sum to ${totalSum}.`;
@@ -108,10 +108,10 @@ to use the + operator for string concatenation.
 
 export function sumArrayWithThreeNumbers(sumArr) {
         
-       const firstSum = sum(sumArr[0], sumArr[1]);
-       const totalSum = sum(firstSum[0], sumArr[2])[0];
+    const firstSum = sum(sumArr[0], sumArr[1]);
+    const totalSum = sum(firstSum[0], sumArr[2])[0];
 
-       return [totalSum, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${totalSum} is their sum.`];
+    return [totalSum, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${totalSum} is their sum.`];
         
 }
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -159,15 +159,15 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-            let multAccumulator = 1;    
+    let multAccumulator = 1;    
     
-    for(let i=0; i < dynamicArray.length; i++) {
-            let arrayNum = dynamicArray[i];
+    for(let i = 0; i < dynamicArray.length; i++) {
+        let arrayNum = dynamicArray[i];
 
-            multAccumulator = multiply(arrayNum, multAccumulator)[0];
+        multAccumulator = multiply(arrayNum, multAccumulator)[0];
             
-        }
-        return [multAccumulator, `The numbers ${dynamicArray} have a product of ${multAccumulator}.`];
+    }
+    return [multAccumulator, `The numbers ${dynamicArray} have a product of ${multAccumulator}.`];
         
         
 
