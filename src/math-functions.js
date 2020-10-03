@@ -167,10 +167,10 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
             multAccumulator = multiply(arrayNum, multAccumulator)[0];
             
         }
-        return [multAccumulator, `The numbers ${dynamicArray} have a product of 120.`];
+        return [multAccumulator, `The numbers ${dynamicArray} have a product of ${multAccumulator}.`];
         
         
-        // `The numbers ${arrayRebuild} have a product of ${multAccumulator}.`];
+
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
