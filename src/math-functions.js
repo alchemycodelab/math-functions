@@ -127,7 +127,24 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let accumilator = 1;
+    let dynamicString = 'The numbers ';
 
+    for(let i = 0; i < dynamicArray.length; i++) {
+        const eachItemOfArray = dynamicArray[i];
+
+        accumilator = multiply(accumilator, eachItemOfArray)[0];
+        const isLastNum = i === dynamicArray.length - 1;
+
+        if(isLastNum) {
+            dynamicString = dynamicString + `${eachItemOfArray}`;
+        } else {
+            dynamicString = dynamicString + `${eachItemOfArray},`;
+        }
+    }
+    console.log(accumilator);
+
+    return [accumilator, `${dynamicString} have a product of ${accumilator}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
