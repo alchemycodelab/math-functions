@@ -119,7 +119,11 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { 
+   const productOfTwo = multiply(multArr[0], multArr[1]);
 
+   const productOfThree = multiply(productOfTwo[0], multArr[2]);
+
+   return [`${productOfThree[0]}`, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${productOfThree[0]}.`];
 
 
 }
