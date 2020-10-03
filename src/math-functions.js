@@ -103,7 +103,7 @@ to use the + operator for string concatenation.
 export function sumArrayWithThreeNumbers(sumArr) {
     const sumNumbers = sumArr[0] + sumArr[1] + sumArr[2];
 
-    const sumString = '' + sumArr[0] + ',' + sumArr[1] + ',' + sumArr[2] + ' was passed in as an array of numbers, and ' + sumNumbers + ' is their sum.'
+    const sumString = '' + sumArr[0] + ',' + sumArr[1] + ',' + sumArr[2] + ' was passed in as an array of numbers, and ' + sumNumbers + ' is their sum.';
 
     const myArray = [sumNumbers, sumString];
 
@@ -134,7 +134,7 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
     const productTwo = multiply(productOne[0], multArr[2]);
     const totalProduct = productTwo[0];
 
-    const productString = 'The numbers ' +multArr[0] + ',' + multArr[1] + ',' + multArr[2] + ' have a product of ' + totalProduct + '.';
+    const productString = 'The numbers ' +  multArr[0] + ',' + multArr[1] + ',' + multArr[2] + ' have a product of ' + totalProduct + '.';
 
     const productArray = [totalProduct, productString];
 
@@ -158,7 +158,19 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
+// array of any length, so probly use FOR LOOP
+
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+
+    let accumulator = 1;
+
+    for(let i = 0; i < dynamicArray.length; i++) {
+        const arrayNumber = dynamicArray[i];
+
+        accumulator = multiply(accumulator, arrayNumber)[0]
+    };
+
+    return [accumulator, `The numbers ${dynamicArray} have a product of ${accumulator}.`];
 
 }
 
