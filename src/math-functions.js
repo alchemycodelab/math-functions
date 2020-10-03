@@ -147,6 +147,13 @@ This function should be dynamic, accepting an array of any length.
 
 export function multiplyAnyArray(dynamicArray) { 
 
+   let productOfArray = 1;
+    for(let i = 0; i < dynamicArray.length; i++) {
+        productOfArray = multiply(productOfArray, dynamicArray[i])[0];
+    } 
+    const returnArray = [productOfArray, `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${productOfArray}.`];
+    return returnArray;
+
    
 }
 
