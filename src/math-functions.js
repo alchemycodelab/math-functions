@@ -158,7 +158,20 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
+// array of any length, so probly use FOR LOOP
+
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+
+    let accumulator = 1;
+
+    for (let i = 0; i < dynamicArray.length; i++) {
+        const arrayNumber = dynamicArray[i];
+console.log(arrayNumber);
+
+        accumulator = multiply(accumulator, arrayNumber)[0]
+    }
+
+    return [accumulator, `The numbers ${dynamicArray} have a product of ${accumulator}.`];
 
 }
 
