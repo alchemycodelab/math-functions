@@ -128,9 +128,27 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 
 This function should be dynamic, accepting an array of any length.
 */
+// const mulOfArray1 = sumAndMultiplyThreeNumbers(multArr[0], multArr[1], multArr[2])[1];
+// const mulOfThreeNum = multiply(multiply(a, b)[0], c)[0];  
+    
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let accumulator = 1;
+    let accumulator1 = 'The numbers ';
 
+    for(let i = 0; i < dynamicArray.length; i++) {
+        const stretch = dynamicArray[i];
+
+        accumulator = multiply(accumulator, stretch)[0];
+        const isLastNum = i === dynamicArray.length - 1;
+        
+        if(isLastNum) {
+            accumulator1 = accumulator1 + `${stretch}`;
+        } else {
+            accumulator1 = accumulator1 + `${stretch},`;
+        }
+    }
+    return [accumulator, `${accumulator1} have a product of ${accumulator}.`]; 
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
