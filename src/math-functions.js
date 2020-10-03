@@ -126,7 +126,24 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
-export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+export function multiplyAnyArray(dynamicArray) { 
+    let counter = 1;
+    let myString = 'The numbers ';
+
+    for(let i = 0; i < dynamicArray.length; i++) {
+        const eachItemOfArray = dynamicArray[i];
+
+        counter = multiply(counter, eachItemOfArray)[0];
+        const isLastNum = i === dynamicArray.length - 1;
+        
+        if(isLastNum) {
+            myString = myString + `${eachItemOfArray}`;
+        } else {
+            myString = myString + `${eachItemOfArray},`;
+        }
+    }
+
+    return [counter, `${myString} have a product of ${counter}.`];
 
 }
 
