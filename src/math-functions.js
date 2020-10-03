@@ -134,7 +134,7 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
     const productTwo = multiply(productOne[0], multArr[2]);
     const totalProduct = productTwo[0];
 
-    const productString = 'The numbers ' +  multArr[0] + ',' + multArr[1] + ',' + multArr[2] + ' have a product of ' + totalProduct + '.';
+    const productString = 'The numbers ' + multArr[0] + ',' + multArr[1] + ',' + multArr[2] + ' have a product of ' + totalProduct + '.';
 
     const productArray = [totalProduct, productString];
 
@@ -167,8 +167,8 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     for(let i = 0; i < dynamicArray.length; i++) {
         const arrayNumber = dynamicArray[i];
 
-        accumulator = multiply(accumulator, arrayNumber)[0]
-    };
+        accumulator = multiply(accumulator, arrayNumber)[0];
+    }
 
     return [accumulator, `The numbers ${dynamicArray} have a product of ${accumulator}.`];
 
