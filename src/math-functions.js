@@ -61,8 +61,17 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(a, b, c) { 
+   
+   const addTwo = sum(a, b);
+   const addAllThree = sum(addTwo[0], c);
+   
+   const productOfTwo = multiply(a, b);
+   const productOfThree = multiply(productOfTwo[0], c);
 
+   return [addAllThree[0], productOfThree[0], `${a} and ${b} and ${c} sum to ${addAllThree[0]}.`, `The product of ${a} and ${b} and ${c} is ${productOfThree[0]}.` ];
+
+    
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -106,7 +115,9 @@ This function should handle an array containing three elements. However,
 you may continue to use the + operator for string concatenation.
 */
 
-export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+export function multiplyArrayWithThreeNumbers(multArr) { 
+
+
 
 }
 
@@ -127,8 +138,9 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
-export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+export function multiplyAnyArray(dynamicArray) { 
 
+   
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
