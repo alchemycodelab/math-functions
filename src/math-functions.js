@@ -12,7 +12,11 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    
+    const numSum = a + b;
+    const sumString = `The sum of ${a} and ${b} is ${numSum}.`;
+    const sumArray = [numSum, sumString];
+    return sumArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -27,6 +31,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 
 export function multiply(a, b) {
 
+    const numMult = a * b;
+    const multString = `The product of ${a} and ${b} is ${numMult}.`;
+    const multArray = [numMult, multString];
+    return multArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -50,7 +58,33 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(a, b, c) { 
+    
+    const firstSum = sum(a, b);
+    const totalSum = sum(firstSum[0], c)[0];
+
+    const firstMult = multiply(a, b);
+    const totalMult = multiply(firstMult[0], c)[0];
+    
+    const thirdElement = `${a} and ${b} and ${c} sum to ${totalSum}.`;
+    const fourthElement = `The product of ${a} and ${b} and ${c} is ${totalMult}.`;
+
+    return [totalSum, totalMult, thirdElement, fourthElement];
+    
+//     let numArray = [a, b, c];
+//     let numSum = 0;
+//     let numMult = 1;
+    
+//     for (let i=0; i <= 2; i++){
+//     const arraySelector = numArray[i];
+
+//     numSum = sum(numSum, arraySelector);
+//     numMult = multiply(numMult, arraySelector);
+// }
+
+//     const thirdElement = `${a} and ${b} and ${c} sum to ${numSum}.`;
+//     const fourthElement = `The product of ${a} and ${b} and ${c} is ${numMult}.`;
+//     return [numSum, numMult, thirdElement, fourthElement];
 
 }
 
@@ -73,9 +107,13 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+        
+    const firstSum = sum(sumArr[0], sumArr[1]);
+    const totalSum = sum(firstSum[0], sumArr[2])[0];
 
+    return [totalSum, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${totalSum} is their sum.`];
+        
 }
-
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
@@ -96,7 +134,10 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    const firstMult = multiply(multArr[0], multArr[1]);
+    const totalMult = multiply(firstMult[0], multArr[2])[0];
 
+    return [totalMult, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${totalMult}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -107,7 +148,8 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
 
 /////////////////////////////////////
 /* STRETCH GOAL: Problem 6
-Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
+Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns an array whose first element is the product of those numbers,
+and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
 
 "The numbers 1,2,3,4,5 have a product of 120."
 
@@ -117,6 +159,17 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let multAccumulator = 1;    
+    
+    for(let i = 0; i < dynamicArray.length; i++) {
+        let arrayNum = dynamicArray[i];
+
+        multAccumulator = multiply(arrayNum, multAccumulator)[0];
+            
+    }
+    return [multAccumulator, `The numbers ${dynamicArray} have a product of ${multAccumulator}.`];
+        
+        
 
 }
 
