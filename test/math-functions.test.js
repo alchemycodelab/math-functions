@@ -1,5 +1,5 @@
 import { 
-    sum, 
+    sum 
     //multiply, 
     //sumAndMultiplyThreeNumbers, 
     //sumArrayWithThreeNumbers, 
@@ -12,6 +12,7 @@ const test = QUnit.test;
 /* DO NOT MODIFY THIS FILE */
 
 test('sum', (assert) => {
+  
     const result = sum(4, 7);
 
     assert.equal(result[0], 11);
@@ -49,8 +50,8 @@ test('sum', (assert) => {
 //});
 
 //test('multiplyAnyArray', (assert) => {
-    //const result = multiplyAnyArray([1, 2, 3, 4, 5]);
+  //  const result = multiplyAnyArray([1, 2, 3, 4, 5]);
 
-    //assert.equal(result[0], 120);
+   // assert.equal(result[0], 120);
    // assert.equal(result[1], 'The numbers 1,2,3,4,5 have a product of 120.');
-///});
+//});
