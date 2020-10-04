@@ -25,9 +25,15 @@ Write a function called multiply() that takes in two numbers as arguments and re
 "The product of 5 and 9 is 45."
 */
 
-export function multiply(a, b) {
 
+export function multiply(a, b) {
+    let returnNumber = a * b;
+    const returnString = 'The product of ' + a + ' and ' + b + ' is ' + returnNumber + '.';
+    return [returnNumber, returnString];
+                
+            
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -96,6 +102,7 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    
 
 }
 
@@ -117,7 +124,21 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    let prodNumber = 0;   
+    let numberString = '';
+    for(let i = 0; i < dynamicArray.length; i++) {
+        if(i === 0){
+            prodNumber = dynamicArray[i];
+            numberString = dynamicArray[i];
+        } 
+        else {
+            let returnNumber = multiply(prodNumber, dynamicArray[i]);
+            prodNumber = returnNumber[0]; 
+            numberString = numberString + ',' + dynamicArray[i];
+        }
+    } 
+    let returnString = 'The numbers ' + numberString + ' have a product of ' + prodNumber + '.';
+    return [prodNumber, returnString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
