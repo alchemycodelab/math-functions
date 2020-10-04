@@ -11,8 +11,11 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
-export function sum(a, b) {
 
+
+export function sum(a, b) {
+    const added = [(a + b), `The sum of ${a} and ${b} is ${a + b}.`];
+    return added;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,8 +29,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    const multiply = [(a * b), `The product of ${a} and ${b} is ${a * b}.`];
+    return multiply;
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -51,8 +56,22 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const sumSum = sum(a, b);
+    const finalSum = sum(sumSum[0], c)[0];
 
+
+    const multiplyMultiply = multiply(a, b);
+    const finalProduct = multiply(multiplyMultiply[0], c)[0];
+    
+
+    return [finalSum, finalProduct, `${a} and ${b} and ${c} sum to ${finalSum}.`, `The product of ${a} and ${b} and ${c} is ${finalProduct}.`];
 }
+
+    // sumAndMultiplyThreeNumbers(finalSum, finalProduct, c);
+
+    // finalSum, finalProduct, `${a} and ${b} and ${c} sum to ${a + b + c}.`, `The product of ${a} and ${b} and ${c} is ${a * b * c}.`];
+    
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -60,6 +79,7 @@ export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
 /////////////////////////////////////
 /* Problem 4
 Write a function called sumArrayWithThreeNumbers() that takes in an array of numbers 
+
 as its single argument and then returns an array where the first element is the sum 
 of the numbers in the array, and the second element is a string that EXACTLY follows 
 this example and uses the values that were input into the function:
@@ -73,8 +93,16 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+// first array [sum of numbers]
+// second array [ 2,3,4 was passed in as an array of numbers, and 9 is their sum."]
+
+    const sumOfArray1 = sumAndMultiplyThreeNumbers(sumArr[0], sumArr[1], sumArr[2])[0]; 
+
+    return [sumOfArray1, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumOfArray1} is their sum.`];
+
 
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -96,6 +124,10 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    const productOfArray1 = sumAndMultiplyThreeNumbers(multArr[0], multArr[1], multArr[2])[1];
+
+    
+    return [productOfArray1, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${productOfArray1}.`];
 
 }
 
