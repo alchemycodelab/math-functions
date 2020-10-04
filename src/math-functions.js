@@ -11,11 +11,12 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
-export function sum(A, B) {
-    const result = A + B;
-    const sentence = 'The sum of' + A + 'and' + B + 'is' + 'result' + '.' ;
-
-     return [result, sentence]
+export function sum(a, b) {
+    const total = a + b;
+    const sumString = 'The sum of ${a} and ${b} is ${total}.
+    const sumArray = [total,sumString];	    
+    	
+    return sumArray;	   
 };
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -29,11 +30,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(A, B) {
-    const product = A * B;
-    const sentence = 'The product of' + A + 'and' + B + 'is' + product + '.'
-
-    return [product, sentence];
-}
+    const sumString = 'The sum of ${a} and ${b} is ${total}.';
+    const sumArray = [total,sumString]
+    return sumArray	    
+};
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -122,7 +122,7 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
     const productOne = multiply(multArr[0], multArr[1])[0];
     const productTwo = multiply(productOne, multArr[2])[0];
 
-    const productString = 'The numbers ${multArr[0]}, ${multArr[1]}, ${multArr[2]} have a product of ${productTwo}.';
+    const productString = 'The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${productTwo}.';
 
     const productArray = [productTwo, productString];
 
@@ -150,13 +150,13 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     let finalProduct = 1;
 
     for(let i = 0; i < dynamicArray.length; i++) {
-        finalProduct = multiply(finalProduct, dynamicArray[i])[0];
+        finalProduct = multiply(finalProduct,dynamicArray[i])[0];
     }
 
      let outputString = 'The numbers';
 
      for(let i = 0; i < dynamicArray.length; i++) {
-         outputString+= (dynamicArray[1] + ',');
+         outputString += (dynamicArray[1] + ',');
      }
 
      outputString = outputString.slice(0, (outputString.length-1));
