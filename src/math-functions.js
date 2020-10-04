@@ -11,14 +11,19 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
-
+//1
 
 export function sum(a, b) {
     let returnNumber = a + b;
         
     const returnString = 'The sum of ' + a + ' and ' + b + ' is ' + returnNumber + '.';
     return [returnNumber, returnString];
+    
 }
+
+
+
+
 
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -30,12 +35,13 @@ Write a function called multiply() that takes in two numbers as arguments and re
 
 "The product of 5 and 9 is 45."
 
- export function multiply(a, b) {
+
+    export function multiply(a, b) {
     let returnNumber = a * b;
     const returnString = 'The product of ' + a + ' and ' + b + ' is ' + returnNumber + '.';
     return [returnNumber, returnString];
+                
             
-
 }
 
 
@@ -59,7 +65,7 @@ To do addition, use your sum() function, and to do multiplication, use your mult
 function that you've already created. You're going to have to be resourceful to figure out 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
-
+//3
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
     let sum1 = sum(a, b);
     let sum1value = sum1[0];
@@ -93,7 +99,7 @@ To do addition, use your sum() function that you've already created. You're goin
 have to be resourceful to figure out how to do this. However, you may continue 
 to use the + operator for string concatenation.
 */
-
+//4
 export function sumArrayWithThreeNumbers(sumArr) {
     let sum1 = sum(sumArr[0], sumArr[1]);
     let sum1value = sum1[0];
@@ -121,8 +127,14 @@ You're going to have to be resourceful to figure out how to do this.
 This function should handle an array containing three elements. However, 
 you may continue to use the + operator for string concatenation.
 */
-
+//5
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    let product1 = multiply(multArr[0], multArr[1]);
+    let product1value = product1[0];
+    let product2 = multiply(product1value, multArr[2]);
+    let product2value = product2[0];
+    let returnString = 'The numbers ' + multArr[0] + ',' + multArr[1] + ',' + multArr[2] + ' have a product of ' + product2value + '.';   
+    return [product2value, returnString];
 
 }
 
@@ -143,9 +155,25 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
+//6
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    let prodNumber = 0;   
+    let numberString = '';
+    for(let i = 0; i < dynamicArray.length; i++) {
+        if(i === 0){
+            prodNumber = dynamicArray[i];
+            numberString = dynamicArray[i];
+        } 
+        else {
+            let returnNumber = multiply(prodNumber, dynamicArray[i]);
+            prodNumber = returnNumber[0]; 
+            numberString = numberString + ',' + dynamicArray[i];
+        }
+    } 
+    let returnString = 'The numbers ' + numberString + ' have a product of ' + prodNumber + '.';
+    return [prodNumber, returnString];
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
