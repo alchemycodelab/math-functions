@@ -11,8 +11,13 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
-export function sum(a, b) {
 
+export function sum(a, b) {
+    let returnNumber = a + b;
+        
+    const returnString = 'The sum of ' + a + ' and ' + b + ' is ' + returnNumber + '.';
+    return [returnNumber, returnString];
+    
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -24,10 +29,14 @@ Write a function called multiply() that takes in two numbers as arguments and re
 
 "The product of 5 and 9 is 45."
 */
-
 export function multiply(a, b) {
-
+    let returnNumber = a * b;
+    const returnString = 'The product of ' + a + ' and ' + b + ' is ' + returnNumber + '.';
+    return [returnNumber, returnString];
+            
+        
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -51,7 +60,19 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    let sum1 = sum(a, b);
+    let sum1value = sum1[0];
+    let sum2 = sum(sum1value, c);
+    let sum2value = sum2[0];
 
+    let product1 = multiply(a, b);
+    let product1value = product1[0];
+    let product2 = multiply(product1value, c);
+    let product2value = product2[0];
+    
+    let returnAddString = a + ' and ' + b + ' and ' + c + ' sum to ' + sum2value + '.';
+    let returnProductString = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + product2value + '.';  
+    return [sum2value, product2value, returnAddString, returnProductString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,7 +94,12 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    let sum1 = sum(sumArr[0], sumArr[1]);
+    let sum1value = sum1[0];
+    let sum2 = sum(sum1value, sumArr[2]);
+    let sum2value = sum2[0];
+    let returnString = sumArr[0] + ',' + sumArr[1] + ',' + sumArr[2] + ' was passed in as an array of numbers, and ' + sum2value + ' is their sum.';
+    return [sum2value, returnString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
