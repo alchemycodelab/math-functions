@@ -1,6 +1,5 @@
-//import './math-functions.test.js';
-
-
+import './math-functions.test.js';
+ 
 
 
 
