@@ -11,11 +11,11 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
-export function sum(A, B) {
-    const result = A + B;
-    const sentence = 'The sum of' + A + 'and' + B + 'is' + 'result' + '.' ;
+export function sum(a, b) {
+    const sumString = 'The sum of ${a} and ${b} is ${total}.';
+    const sumArray = [total, sumString]	    
 
-     return [result, sentence]
+    return sumArray
 };
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -28,11 +28,12 @@ Write a function called multiply() that takes in two numbers as arguments and re
 "The product of 5 and 9 is 45."
 */
 
-export function multiply(A, B) {
-    const product = A * B;
-    const sentence = 'The product of' + A + 'and' + B + 'is' + product + '.'
+export function multiply(a, b) {
+    const total = a * b;
+    const productString = 'The product of ${a} and ${b} is ${total}.';
+    const productArray = [total,productString];
 
-    return [product, sentence];
+    return productArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -57,19 +58,23 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-    const sumOne = sum(a, b) [0];
-    const sumTwo = sum(sumOne, c) [0];
+    const sumOne = sum(a, b)[0];
+    const sumTwo = sum(sumOne, c)[0];
 
-    const productOne = multiply(a, b) [0];
-    const productTwo = multiple(productOne, c) [0];
+
+	const productOne = multiply(a, b)[0];
+    const productTwo = multiple(productOne, c)[0];
 
     const sumString = '${a} and ${b} and ${c} sum to ${sumTwo}.';
     const productString = 'The product of ${a} and {b} adn ${c} is ${productTwo}.';
 
+
     const sumArray = [sumTwo, productTwo, sumString, productString];
-    
+
     return sumArray;
 }
+
+
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
@@ -92,7 +97,7 @@ export function sumArrayWithThreeNumbers(sumArr) {
     const sumOne = sum(sumArr[0], sumArr[1][0]);
     const sumTwo = sum(sumOne, sumArr[2])[0];
 
-    const sumString = 'The numbers ${sumArr[0]}, ${sumArr[1]}, ${sumArr[2]} have a sum of ${sumTwo}.';
+    const sumString = 'The numbers ${sumArr[0]},${sumArr[1]},${sumArr[2]} have a sum of ${sumTwo}.';
     const sumArray = [sumTwo, sumString];
 
     return sumArray;
