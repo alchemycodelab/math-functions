@@ -1,6 +1,4 @@
-import './math-functions.test.js';
- 
 
-
+import { } from '../src/math-functions.js';
 
 
