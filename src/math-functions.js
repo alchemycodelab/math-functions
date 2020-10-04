@@ -12,6 +12,7 @@ example and uses the values that were input into the function:
 */
 
 
+
 export function sum(a, b) {
     let returnNumber = a + b;
         
@@ -19,6 +20,8 @@ export function sum(a, b) {
     return [returnNumber, returnString];
     
 }
+
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -29,12 +32,15 @@ Write a function called multiply() that takes in two numbers as arguments and re
 
 "The product of 5 and 9 is 45."
 */
+
 export function multiply(a, b) {
     let returnNumber = a * b;
     const returnString = 'The product of ' + a + ' and ' + b + ' is ' + returnNumber + '.';
     return [returnNumber, returnString];
             
         
+
+
 }
 
 
