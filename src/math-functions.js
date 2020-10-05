@@ -9,12 +9,17 @@ and the second element is a concatenated string that EXACTLY follows this
 example and uses the values that were input into the function:
 
 "The sum of 4 and 7 is 11."
-*/
+*/ 
 
 export function sum(a, b) {
 
+    const sumResult = (a + b);
+    const string = `The sum of ${a} and ${b} is ${sumResult}.`;
+    
+    return [sumResult, string];
 }
 
+/*
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
