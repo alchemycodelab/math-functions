@@ -73,9 +73,7 @@ export function sumAndMultiplyThreeNumbers(r, g, c) { //eslint-disable-line
     const String2 = `The product of ${r} and ${g} and ${c} is ${finalMult}.`;
 
     return [finalSum, finalMult, string1, String2];
-
 }
-
 /* export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
 
     const sumResult2 = sum(a, b, c);
