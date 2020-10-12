@@ -13,8 +13,14 @@ example and uses the values that were input into the function:
 
 export function sum(a, b) {
 
+    const sumResult = (a + b);
+    const string = `The sum of ${a} and ${b} is ${sumResult}.`;
+    
+    return [sumResult, string];
 }
 
+
+/*
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
@@ -24,9 +30,12 @@ Write a function called multiply() that takes in two numbers as arguments and re
 
 "The product of 5 and 9 is 45."
 */
-
 export function multiply(a, b) {
 
+    const multResult = (a * b);
+    const string = `The product of ${a} and ${b} is ${multResult}.`;
+    
+    return [multResult, string];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -50,9 +59,32 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(r, g, c) { //eslint-disable-line
 
+    const sum1 = sum(r, g)[0];
+    const finalSum = sum(sum1, c)[0];
+    console.log(finalSum);
+
+    const mult1 = multiply(r, g)[0];
+    const finalMult = multiply(mult1, c)[0];
+    console.log(finalMult);
+
+    const string1 = `${r} and ${g} and ${c} sum to ${finalSum}.` ;
+    const String2 = `The product of ${r} and ${g} and ${c} is ${finalMult}.`;
+
+    return [finalSum, finalMult, string1, String2];
 }
+/* export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+
+    const sumResult2 = sum(a, b, c);
+    const multResult2 = multiply(a, b, c);
+
+    const string1 = `${[0]} and ${[1]} and ${[2]} sum to ${sumResult2}.` ;
+    const String2 = `The product of ${[0]} and ${[1]} and ${[2]} is ${multResult2}.`;
+    
+    return [sumResult2, multResult2, string1, String2];
+} */
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
