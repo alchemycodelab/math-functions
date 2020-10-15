@@ -33,11 +33,10 @@ export function multiply(a, b) {
 
     const multiNum = a * b;
     const multiString = `The product of ${a} and ${b} is ${multiNum}.`;
-    var multiArray = [multiNum, multiString];
+    let multiArray = [multiNum, multiString];
     return multiArray;
 
 }
-
 
 //'The product of 5 and 9 is 45.
 
@@ -97,7 +96,7 @@ export function sumArrayWithThreeNumbers(sumArr) {
 
     const sumNum = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0];
     const sumString = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumNum} is their sum.`;
-    var resultArray = [sumNum, sumString];
+    let resultArray = [sumNum, sumString];
     return resultArray;
 }
 
@@ -125,7 +124,7 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
 
     const multiNumber = multiply(multiply(multArr[0], multArr[1])[0], multArr[2])[0];
     const multiString = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multiNumber}.`;
-    var finalArray = [multiNumber, multiString];
+    let finalArray = [multiNumber, multiString];
     return finalArray;
 }
 
