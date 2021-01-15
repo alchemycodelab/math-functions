@@ -11,8 +11,14 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
-export function sum(a, b) {
+// export function sum(a, b) {
+//     const addArray = a + b;
+//     const concatenatedString = `The sum of ${a} and ${b} is ${addArray}.`;
+//     return [addArray, concatenatedString];
+// }
 
+export function sum(a, b) {
+    return [a + b, `The sum of ${a} and ${b} is ${a + b}.`]
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
