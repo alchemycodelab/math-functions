@@ -19,14 +19,14 @@ test('sum', (assert) => {
     assert.equal(result[1], 'The sum of 4 and 7 is 11.');
 });
 
-skip test('multiply', (assert) => {
+skip('multiply', (assert) => {
     const result = multiply(5, 9);
 
     assert.equal(result[0], 45);
     assert.equal(result[1], 'The product of 5 and 9 is 45.');
 });
 
-skip test('sumAndMultiplyThreeNumbers', (assert) => {
+skip('sumAndMultiplyThreeNumbers', (assert) => {
     const result = sumAndMultiplyThreeNumbers(4, 7, 5);
 
     assert.equal(result[0], 16);
@@ -35,21 +35,21 @@ skip test('sumAndMultiplyThreeNumbers', (assert) => {
     assert.equal(result[3], 'The product of 4 and 7 and 5 is 140.');
 });
 
-skip test('sumArrayWithThreeNumbers', (assert) => {
+skip('sumArrayWithThreeNumbers', (assert) => {
     const result = sumArrayWithThreeNumbers([2, 3, 4]);
 
     assert.equal(result[0], 9);
     assert.equal(result[1], '2,3,4 was passed in as an array of numbers, and 9 is their sum.');
 });
 
-skip test('multiplyArrayWithThreeNumbers', (assert) => {
+skip('multiplyArrayWithThreeNumbers', (assert) => {
     const result = multiplyArrayWithThreeNumbers([2, 3, 4]);
 
     assert.equal(result[0], 24);
     assert.equal(result[1], 'The numbers 2,3,4 have a product of 24.');
 });
 
-skip test('multiplyAnyArray', (assert) => {
+skip('multiplyAnyArray', (assert) => {
     const result = multiplyAnyArray([1, 2, 3, 4, 5]);
 
     assert.equal(result[0], 120);
