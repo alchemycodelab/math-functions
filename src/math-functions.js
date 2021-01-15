@@ -61,7 +61,9 @@ export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
     //first element sum of 3 numbers 
     const sumOfNums = a + b + c;
     const productNums = a * b * c;
-    const myArray = [sumOfNums, productNums, `${a} and ${b} and ${c} sum to ${sumOfNums}.`, `The product of ${a} and ${b} and ${c} is ${productNums}.`];
+    const sumString = `${a} and ${b} and ${c} sum to ${sumOfNums}.`;
+    const proString = `The product of ${a} and ${b} and ${c} is ${productNums}.`;
+    const myArray = [sumOfNums, productNums, sumString, proString];
     return myArray;
 }
 
@@ -84,7 +86,10 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-    
+    const sumOfNums = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2]);
+    const sumString = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumOfNums[0]} is their sum.`;
+    const myArray = [sumOfNums[0], sumString];
+    return myArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
