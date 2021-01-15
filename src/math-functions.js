@@ -136,7 +136,20 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let productOfNums = 1;
+    let stringNums = 'The numbers ';
+    
+    for(let i = 0; i < dynamicArray.length; i++){
+        productOfNums *= dynamicArray[i];
+        stringNums += i + 1;
 
+        if(i !== dynamicArray.length - 1){
+            stringNums += ',';
+        }
+    }
+    const stringReturn = `${stringNums} have a product of ${productOfNums}.`;
+    const arrayReturn = [productOfNums, stringReturn];
+    return arrayReturn; 
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
