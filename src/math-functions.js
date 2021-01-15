@@ -11,12 +11,22 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
-export function sum(a, b) {
+export function sum() {
     const resultArray = [];
-    const totalSum = a + b;
-    resultArray.push(totalSum);
-    resultArray.push(`The sum of ${a} and ${b} is ${totalSum}.`);
-    return resultArray;
+    if(arguments.length === 2){
+        const a = arguments[0];
+        const b = arguments[1];
+        const totalSum = a + b;
+        resultArray.push(totalSum);
+        resultArray.push(`The sum of ${a} and ${b} is ${totalSum}.`);
+        return resultArray;
+    } else if(arguments.length === 3) {
+        const a = arguments[0];
+        const b = arguments[1];
+        const c = arguments[2];
+        const totalSum = a + b + c;
+        return totalSum;
+    }
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -31,10 +41,20 @@ Write a function called multiply() that takes in two numbers as arguments and re
 
 export function multiply(a, b) {
     const resultArray = [];
-    const product = a * b;
-    resultArray.push(product);
-    resultArray.push(`The product of ${a} and ${b} is ${product}.`);
-    return resultArray;
+    if(arguments.length === 2){
+        const a = arguments[0];
+        const b = arguments[1];
+        const product = a * b;
+        resultArray.push(product);
+        resultArray.push(`The product of ${a} and ${b} is ${product}.`);
+        return resultArray;
+    } else if(arguments.length === 3) {
+        const a = arguments[0];
+        const b = arguments[1];
+        const c = arguments[2];
+        const product = a * b * c;
+        return product;
+    }
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -59,7 +79,14 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    const resultArray = [];
+    const sumTotal = sum(a, b, c);
+    const productTotal = multiply(a, b, c); 
+    resultArray.push(sumTotal);
+    resultArray.push(productTotal);
+    resultArray.push(`${a} and ${b} and ${c} sum to ${sumTotal}.`);
+    resultArray.push(`The product of ${a} and ${b} and ${c} is ${productTotal}.`);
+    return resultArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
