@@ -13,7 +13,9 @@ example and uses the values that were input into the function:
 
 export function sum(a, b) {
 
-    return [a + b, `The sum of ${a} and ${b} is ${a + b}.`];
+    const sumResult = a + b;
+
+    return [sumResult, `The sum of ${a} and ${b} is ${a + b}.`];
 
 }
 
@@ -29,7 +31,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 
 export function multiply(a, b) {
 
-    return [a * b, `The product of ${a} and ${b} is ${a * b}.`];
+    const mulResult = a * b;
+
+    return [mulResult, `The product of ${a} and ${b} is ${a * b}.`];
 
 }
 
@@ -55,6 +59,13 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+
+    const sumOfTwoNumbers = sum(a, b)[0];
+    const sumOfThreeNumbers = sum(sumOfTwoNumbers, c)[0];
+    const mulOfTwoNumbers = multiply(a, b)[0];
+    const mulOfThreeNumbers = multiply(mulOfTwoNumbers, c)[0];
+
+    return [sumOfThreeNumbers, mulOfThreeNumbers, `${a} and ${b} and ${c} sum to ${a + b + c}.`, `The product of ${a} and ${b} and ${c} is ${a * b * c}.`]
 
 }
 
