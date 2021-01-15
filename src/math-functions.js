@@ -12,8 +12,10 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    const added = a + b;
+    return [added, `The sum of ${a} and ${b} is ${added}.`];
 }
+//added this comment to make a change for a pull request
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
