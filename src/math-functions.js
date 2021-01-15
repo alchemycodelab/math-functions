@@ -76,15 +76,9 @@ export function sumArrayWithThreeNumbers(sumArr) {
     let total = 0;
     let numbers = '';
     for(let sum of sumArr) {
-        total = total + sum;
-        if(sum === sumArr.length + 1) {
-            numbers = numbers + sum;
-        }
-        else {
-            numbers = numbers + sum + ',';
-        }
+        total = total + sum;  
     }
-    return [total, numbers + ' was passed in as an array of numbers, and ' + total + ' is their sum.'];
+    return [total, sumArr + ' was passed in as an array of numbers, and ' + total + ' is their sum.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -107,7 +101,9 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    let numbers = multiply(multArr[0], multArr[1]);
+    let sum = multiply(numbers[0], multArr[2]);
+    return [sum[0], 'The numbers ' + multArr + ' have a product of ' + sum[0] + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
