@@ -78,6 +78,7 @@ to use the + operator for string concatenation.
 
 export function sumArrayWithThreeNumbers(sumArr) {
     let sum = 0;
+    // eslint-disable-next-line keyword-spacing
     for (let i = 0; i < sumArr.length; i++) {
         sum += sumArr[i];
     }
