@@ -52,9 +52,14 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-// export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const firstPartSum = sum(a, b)[0];
+    const finalSum = sum(firstPartSum, c)[0];
+    const firstPartProduct = multiply(a, b)[0];
+    const finalProduct = multiply(firstPartProduct, c)[0];
 
-// }
+    return [finalSum, finalProduct, `${a} and ${b} and ${c} sum to ${finalSum}.`, `The product of ${a} and ${b} and ${c} is ${finalProduct}.`];
+}
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
