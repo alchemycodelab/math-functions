@@ -1,7 +1,7 @@
 import {
     sum,
     multiply,
-    sumAndMultiplyThreeNumbers,
+    // sumAndMultiplyThreeNumbers,
     //     sumArrayWithThreeNumbers,
     //     multiplyArrayWithThreeNumbers,
     //     multiplyAnyArray
@@ -25,14 +25,14 @@ test('multiply', (assert) => {
     assert.equal(result[1], 'The product of 5 and 9 is 45.');
 });
 
-test('sumAndMultiplyThreeNumbers', (assert) => {
-    const result = sumAndMultiplyThreeNumbers(4, 7, 5);
+// test('sumAndMultiplyThreeNumbers', (assert) => {
+//     const result = sumAndMultiplyThreeNumbers(4, 7, 5);
 
-    assert.equal(result[0], 16);
-    assert.equal(result[1], 140);
-    assert.equal(result[2], '4 and 7 and 5 sum to 16.');
-    assert.equal(result[3], 'The product of 4 and 7 and 5 is 140.');
-});
+//     assert.equal(result[0], 16);
+//     assert.equal(result[1], 140);
+//     assert.equal(result[2], '4 and 7 and 5 sum to 16.');
+//     assert.equal(result[3], 'The product of 4 and 7 and 5 is 140.');
+// });
 
 // test('sumArrayWithThreeNumbers', (assert) => {
 //     const result = sumArrayWithThreeNumbers([2, 3, 4]);
