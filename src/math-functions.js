@@ -61,7 +61,17 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    let numbers = [a, b, c];
 
+    for (let number of numbers) {
+        const sumTotal = sum(sum(a, b)[0], c)[0];
+        const proTotal = multiply(multiply(a, b)[0], c)[0];
+        const thirdStr = `${a} and ${b} and ${c} sum to ${sumTotal}.`;
+        const fourthStr = `The product of ${a} and ${b} and ${c} is ${proTotal}.`;
+
+        return [sumTotal, proTotal, thirdStr, fourthStr];
+
+    }
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -82,7 +92,7 @@ have to be resourceful to figure out how to do this. However, you may continue
 to use the + operator for string concatenation.
 */
 
-export function sumArrayWithThreeNumbers(sumArr) {
+export function sumArrayWithThreeNumbers(sumArr) { //eslint-disable-line
 
 }
 
