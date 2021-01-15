@@ -60,7 +60,29 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
+
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+
+    const sumOne = sum(a, b)[0];
+    const sumTwo = sum(sumOne, c)[0];
+
+    //const sumOne = sum(a, b);
+    // this first const yields the array [(a+b), long string to discard] which is called additionArray
+    //const sumTwo = sum(sumOne[0], c);
+    // sumOne[0] should equal (a+b)
+    // this second const yields the array [((a+b)+c), long string to discard] which is called MuliplicationArray
+
+
+    const multOne = multiply(a, b)[0];
+    const multTwo = multiply(multOne, c)[0];
+
+    //const multOne = multiply(a, b);
+    //const multTwo = multiply(multiplicationArray[0], c);
+    //return multTwo[0];
+
+    const addAndMult = [sumTwo, multTwo, `${a} and ${b} and ${c} sum to ${sumTwo}.`, `The product of ${a} and ${b} and ${c} is ${multTwo}.`];
+
+    return addAndMult;
 
 }
 
