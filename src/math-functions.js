@@ -35,27 +35,15 @@ export function sumArrayWithThreeNumbers(sumArr) {
     return [addend, `${numString} was passed in as an array of numbers, and ${addend} is their sum.`];
 }
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
-// Don't forget to create a new branch for your work on the next question!
-
-/////////////////////////////////////
-/* Problem 5
-Write a function called multiplyArrayWithThreeNumbers() that takes an array of numbers 
-as its argument and returns an array whose first element is the product of those numbers, 
-and the second element is a string that EXACTLY follows this example and uses the values 
-that were input into the function:
-
-"The numbers 2,3,4 have a product of 24."
-
-IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. 
-To do multiplication, use your multiply() function that you've already created. 
-You're going to have to be resourceful to figure out how to do this. 
-This function should handle an array containing three elements. However, 
-you may continue to use the + operator for string concatenation.
-*/
+// Problem 5
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    let product = 1;
+    let numString = multArr.join();
+    for (let num of multArr) {
+        product = multiply(product, num)[0];
+    }
+    return [product, `The numbers ${numString} have a product of ${product}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
