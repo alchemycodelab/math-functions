@@ -6,6 +6,7 @@ Today in lab you will fork and clone a GitHub repo, and then create solutions to
 
 **Be sure to follow instructions carefully.**
 
+
 Here are a couple of things to keep in mind:
 
 * Create a new branch for each code problem, then make a PR into *master* on github. Then make sure the tests are passing. If they are, merge that branch into *master* on GitHub (and then pull back into master on your laptop!) when the problem is completed. Do the problems in order. Don't forget to pull the updated master branch from GitHub into your local master branch each time you merge a pull request, then make a new branch from master for the next problem.
