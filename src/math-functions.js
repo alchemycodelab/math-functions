@@ -81,7 +81,7 @@ export function sumArrayWithThreeNumbers(sumArr) {
     for (let i = 0; i < sumArr.length; i++) {
         sum += sumArr[i];
     }
-    return [sum, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum} is their sum.`];
+    return [sum, `${sumArr} was passed in as an array of numbers, and ${sum} is their sum.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -108,7 +108,7 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
     for (let i = 0; i < multArr.length; i++) {
         product *= multArr[i];
     }
-    return [product, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${product}.`];
+    return [product, `The numbers ${multArr} have a product of ${product}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -129,7 +129,12 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let product = 1;
+    for (let i = 0; i < dynamicArray.length; i++) {
+        product *= dynamicArray[i];
 
+    }
+    return [product, `The numbers ${dynamicArray} have a product of ${product}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
