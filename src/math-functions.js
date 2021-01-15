@@ -1,38 +1,18 @@
 /* eslint-disable no-unused-vars */
 
-/////////////////////////////////////
-/* X Problem 1
-
-Write a function called sum() that takes in two numbers as arguments and 
-then returns an array where the first element is the sum of those numbers, 
-and the second element is a concatenated string that EXACTLY follows this 
-example and uses the values that were input into the function:
-
-"The sum of 4 and 7 is 11."
-*/
+// X Problem 1
 
 export function sum(a, b) {
     let addend = a + b;
     return [addend, `The sum of ${a} and ${b} is ${addend}.`];
 }
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
-// Don't forget to create a new branch for your work on the next question!
-
-/////////////////////////////////////
-/* Problem 2
-Write a function called multiply() that takes in two numbers as arguments and returns an array where the first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
-
-"The product of 5 and 9 is 45."
-*/
+// X Problem 2
 
 export function multiply(a, b) {
     let product = a * b;
     return [product, `The product of ${a} and ${b} is ${product}.`];
 }
-
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
-// Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
 /* Problem 3
@@ -50,10 +30,15 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 To do addition, use your sum() function, and to do multiplication, use your multiply() 
 function that you've already created. You're going to have to be resourceful to figure out 
 how to do this. However, you may continue to use the + operator for string concatenation.
+
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    let sum1 = sum(a, b)[0];
+    let addend = sum(sum1, c)[0];
+    let ans1 = multiply(a, b)[0];
+    let product = multiply(ans1, c)[0];
+    return [addend, product, `${a} and ${b} and ${c} sum to ${addend}.`, `The product of ${a} and ${b} and ${c} is ${product}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
