@@ -11,10 +11,10 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
-export function sum(a, b) {
-
+export function sum(number1, number2) {
+    return [number1 + number2, `The sum of ${number1} and ${number2} is ${number1 + number2}.`];
+   
 }
-
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
