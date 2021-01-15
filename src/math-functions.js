@@ -25,8 +25,8 @@ Write a function called multiply() that takes in two numbers as arguments and re
 "The product of 5 and 9 is 45."
 */
 
-export function multiply(a, b) {
-
+export function multiply(number1, number2) {
+    return [number1 * number2, `The product of ${number1} and ${number2} is ${number1 * number2}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
