@@ -29,7 +29,7 @@ export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
 export function sumArrayWithThreeNumbers(sumArr) {
     let addend = 0;
     let numString = sumArr.join();
-    for (let num of sumArr) {
+    for(let num of sumArr) {
         addend = sum(addend, num)[0];
     }
     return [addend, `${numString} was passed in as an array of numbers, and ${addend} is their sum.`];
@@ -40,7 +40,7 @@ export function sumArrayWithThreeNumbers(sumArr) {
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
     let product = 1;
     let numString = multArr.join();
-    for (let num of multArr) {
+    for(let num of multArr) {
         product = multiply(product, num)[0];
     }
     return [product, `The numbers ${numString} have a product of ${product}.`];
@@ -51,8 +51,9 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     let product = 1;
     let numString = dynamicArray.join();
-    for (let num of dynamicArray) {
+    for(let num of dynamicArray) {
         product = multiply(product, num)[0];
     }
     return [product, `The numbers ${numString} have a product of ${product}.`];
 }
+//note
