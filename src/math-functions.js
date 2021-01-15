@@ -13,7 +13,7 @@ example and uses the values that were input into the function:
 
 export function sum(a, b) {
     const sumNum = a + b;
-    let index1 = [sumNum, 'The sum of 4 and 7 is 11.'];
+    let index1 = [sumNum, `The sum of ${a} and ${b} is ${sumNum}.`];
     return index1;
 }
 
@@ -29,7 +29,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 
 export function multiply(a, b) {
     const multNumber = a * b;
-    let index2 = [multNumber, 'The product of 5 and 9 is 45.'];
+    let index2 = [multNumber, `The product of ${a} and ${b} is ${multNumber}.`];
     return index2;
 }
 
@@ -59,7 +59,7 @@ export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
     const mult2 = multiply(mult1[0], c);
     const sum1 = sum(a, b);
     const sum2 = sum(sum1[0], c);
-    let index3 = [sum2[0], mult2[0], '4 and 7 and 5 sum to 16.', 'The product of 4 and 7 and 5 is 140.'];
+    let index3 = [sum2[0], mult2[0], `${a} and ${b} and ${c} sum to ${sum2[0]}.`, `The product of ${a} and ${b} and ${c} is ${mult2[0]}.`];
     return index3;
 }
 
@@ -84,7 +84,7 @@ to use the + operator for string concatenation.
 export function sumArrayWithThreeNumbers(sumArr) {
     const sum1 = sum(sumArr[0], sumArr[1]);
     const sum2 = sum(sum1[0], sumArr[2]);
-    let index4 = [sum2[0], '2,3,4 was passed in as an array of numbers, and 9 is their sum.'];
+    let index4 = [sum2[0], `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum2[0]} is their sum.`];
     return index4;
 }
 
@@ -108,7 +108,10 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    const mult1 = multiply(multArr[0], multArr[1]);
+    const mult2 = multiply(mult1[0], multArr[2]);
+    let index5 = [mult2[0], `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${mult2[0]}.`];
+    return index5;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
