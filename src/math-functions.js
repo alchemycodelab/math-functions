@@ -91,45 +91,45 @@ export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
 
 /////////////////////////////////////
 /* Problem 4
-Write a function called sumArrayWithThreeNumbers() that takes in an array of numbers 
-as its single argument and then returns an array where the first element is the sum 
-of the numbers in the array, and the second element is a string that EXACTLY follows 
+Write a function called sumArrayWithThreeNumbers() that takes in an array of numbers
+as its single argument and then returns an array where the first element is the sum
+of the numbers in the array, and the second element is a string that EXACTLY follows
 this example and uses the values that were input into the function:
 
 "2,3,4 was passed in as an array of numbers, and 9 is their sum."
 
-IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. 
-To do addition, use your sum() function that you've already created. You're going to 
-have to be resourceful to figure out how to do this. However, you may continue 
+IMPORTANT DETAIL: You may not use the arithmetic operator + in this function.
+To do addition, use your sum() function that you've already created. You're going to
+have to be resourceful to figure out how to do this. However, you may continue
 to use the + operator for string concatenation.
 */
 
-export function sumArrayWithThreeNumbers(sumArr) {
+// export function sumArrayWithThreeNumbers(sumArr) {
 
-}
+// }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
 /* Problem 5
-Write a function called multiplyArrayWithThreeNumbers() that takes an array of numbers 
-as its argument and returns an array whose first element is the product of those numbers, 
-and the second element is a string that EXACTLY follows this example and uses the values 
+Write a function called multiplyArrayWithThreeNumbers() that takes an array of numbers
+as its argument and returns an array whose first element is the product of those numbers,
+and the second element is a string that EXACTLY follows this example and uses the values
 that were input into the function:
 
 "The numbers 2,3,4 have a product of 24."
 
-IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. 
-To do multiplication, use your multiply() function that you've already created. 
-You're going to have to be resourceful to figure out how to do this. 
-This function should handle an array containing three elements. However, 
+IMPORTANT DETAIL: You may not use the arithmetic operator * in this function.
+To do multiplication, use your multiply() function that you've already created.
+You're going to have to be resourceful to figure out how to do this.
+This function should handle an array containing three elements. However,
 you may continue to use the + operator for string concatenation.
 */
 
-export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+// export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
 
-}
+// }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -148,9 +148,9 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
-export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+// export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
-}
+// }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
