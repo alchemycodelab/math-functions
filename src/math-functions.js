@@ -56,3 +56,4 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     }
     return [product, `The numbers ${numString} have a product of ${product}.`];
 }
+//note
