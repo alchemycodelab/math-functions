@@ -50,10 +50,10 @@ function that you've already created. You're going to have to be resourceful to 
 // */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-    const sumOfSums = sum(sum(a, b)[0],c)[0];
+    const sumOfSums = sum(sum(a, b)[0], c)[0];
     // const
 
-    const multOfMults = multiply(multiply(a, b)[0],c)[0];;
+    const multOfMults = multiply(multiply(a, b)[0], c)[0];
 
     return [sumOfSums, multOfMults, `${a} and ${b} and ${c} sum to ${sumOfSums}.`, `The product of ${a} and ${b} and ${c} is ${multOfMults}.`];
 }
