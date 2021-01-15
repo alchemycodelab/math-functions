@@ -12,6 +12,10 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
+    const returnArray = [];
+    returnArray.push(a + b);
+    returnArray.push(`The sum of ${a} and ${b} is ${returnArray[0]}.`);
+    return returnArray;
 
 }
 
