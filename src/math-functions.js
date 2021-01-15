@@ -12,7 +12,7 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    return [a + b, 'The sum of ' + a + ' and ' + b + ' is ' + (a + b) + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +26,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    return [a * b, 'The product of ' + a + ' and ' + b + ' is ' + (a * b) + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,7 +51,7 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    return [a + b + c, a * b * c, a + ' and ' + b + ' and ' + c + ' sum to ' + (a + b + c) + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + (a * b * c) + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,7 +73,12 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    let total = 0;
+    let numbers = '';
+    for(let sum of sumArr) {
+        total = total + sum;  
+    }
+    return [total, sumArr + ' was passed in as an array of numbers, and ' + total + ' is their sum.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,7 +101,9 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    let numbers = multiply(multArr[0], multArr[1]);
+    let sum = multiply(numbers[0], multArr[2]);
+    return [sum[0], 'The numbers ' + multArr + ' have a product of ' + sum[0] + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
