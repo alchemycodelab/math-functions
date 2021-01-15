@@ -53,7 +53,20 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-${}ne
+
+    const sum1 = sum(a, b)[0];
+    const sumTotal = sum(sum1, c)[0];
+
+    const mult1 = multiply(a, b)[0];
+    const multTotal = multiply(mult1, c)[0];
+
+    const sumAnswer = [`${a} and ${b} and ${c} sum to ${sumTotal}.`];
+    const multAnswer = [`The product of ${a} and ${b} and ${c} is ${multTotal}.`];
+
+    let resultArray = [sumTotal, multTotal, sumAnswer, multAnswer];
+
+    return resultArray;
 
 }
 
