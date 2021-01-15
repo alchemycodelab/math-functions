@@ -19,7 +19,7 @@ test('sum', (assert) => {
     assert.equal(result[1], 'The sum of 4 and 7 is 11.');
 });
 
-test('multiply', (assert) => {
+skip ('multiply', (assert) => {
     const result = multiply(5, 9);
 
     assert.equal(result[0], 45);
