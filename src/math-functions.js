@@ -65,7 +65,7 @@ export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
     const mulOfTwoNumbers = multiply(a, b)[0];
     const mulOfThreeNumbers = multiply(mulOfTwoNumbers, c)[0];
 
-    return [sumOfThreeNumbers, mulOfThreeNumbers, `${a} and ${b} and ${c} sum to ${a + b + c}.`, `The product of ${a} and ${b} and ${c} is ${a * b * c}.`]
+    return [sumOfThreeNumbers, mulOfThreeNumbers, `${a} and ${b} and ${c} sum to ${a + b + c}.`, `The product of ${a} and ${b} and ${c} is ${a * b * c}.`];
 
 }
 
@@ -101,25 +101,25 @@ export function sumArrayWithThreeNumbers(sumArr) {
 
 /////////////////////////////////////
 /* Problem 5
-Write a function called multiplyArrayWithThreeNumbers() that takes an array of numbers 
-as its argument and returns an array whose first element is the product of those numbers, 
-and the second element is a string that EXACTLY follows this example and uses the values 
+Write a function called multiplyArrayWithThreeNumbers() that takes an array of numbers
+as its argument and returns an array whose first element is the product of those numbers,
+and the second element is a string that EXACTLY follows this example and uses the values
 that were input into the function:
 
 "The numbers 2,3,4 have a product of 24."
 
-IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. 
-To do multiplication, use your multiply() function that you've already created. 
-You're going to have to be resourceful to figure out how to do this. 
-This function should handle an array containing three elements. However, 
+IMPORTANT DETAIL: You may not use the arithmetic operator * in this function.
+To do multiplication, use your multiply() function that you've already created.
+You're going to have to be resourceful to figure out how to do this.
+This function should handle an array containing three elements. However,
 you may continue to use the + operator for string concatenation.
 */
 
-export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+/*export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
 
 }
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
+// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
 
@@ -136,9 +136,9 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
-export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+/*export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
 }
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
+// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 // You're done! Submit the link to the repo following the instructions in Canvas.
