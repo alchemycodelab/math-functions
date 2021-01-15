@@ -13,6 +13,10 @@ example and uses the values that were input into the function:
 
 export function sum(a, b) {
 
+    const newSum = a + b;
+
+    return [newSum, `The sum of ${a} and ${b} is ${newSum}.`];
+
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +30,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    const product = a * b;
 
+    return [product, `The product of ${a} and ${b} is ${product}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,7 +57,13 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const initailSum = sum(a, b);
+    const finalSum = sum(initailSum[0], c);
 
+    const initialMult = multiply(a, b);
+    const finalMult = multiply(initialMult[0], c);
+
+    return [finalSum[0], finalMult[0], `${a} and ${b} and ${c} sum to ${finalSum[0]}.`, `The product of ${a} and ${b} and ${c} is ${finalMult[0]}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,7 +85,13 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    let accumulator = 0;
 
+    for(const element of sumArr) {
+        accumulator = sum(accumulator, element)[0];
+    }
+
+    return [accumulator, `${sumArr} was passed in as an array of numbers, and ${accumulator} is their sum.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,7 +114,12 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    let accumulator = 1;
 
+    for(const element of multArr) {
+        accumulator = multiply(element, accumulator)[0]; 
+    }
+    return [accumulator, `The numbers ${multArr} have a product of ${accumulator}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -117,7 +140,13 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let accumulator = 1;
 
+    for(const element of dynamicArray) {
+        accumulator = multiply(element, accumulator)[0];
+    }
+
+    return [accumulator, `The numbers ${dynamicArray} have a product of ${accumulator}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 

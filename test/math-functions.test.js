@@ -54,3 +54,4 @@ test('multiplyAnyArray', (assert) => {
     assert.equal(result[0], 120);
     assert.equal(result[1], 'The numbers 1,2,3,4,5 have a product of 120.');
 });
+
