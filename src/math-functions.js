@@ -12,6 +12,8 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
+    const answer = a + b;
+    return [answer, `The sum of ${a} and ${b} is ${answer}.`];
 
 }
 
