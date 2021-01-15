@@ -1,3 +1,4 @@
+/* eslint-disable keyword-spacing */
 /* eslint-disable no-unused-vars */
 
 /////////////////////////////////////
@@ -78,6 +79,7 @@ to use the + operator for string concatenation.
 
 export function sumArrayWithThreeNumbers(sumArr) {
     let sum = 0;
+    // eslint-disable-next-line keyword-spacing
     for (let i = 0; i < sumArr.length; i++) {
         sum += sumArr[i];
     }
@@ -139,3 +141,4 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
+
