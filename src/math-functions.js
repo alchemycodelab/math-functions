@@ -54,9 +54,11 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) {
-    const sum = a + b + c;
-    const multiplied = a * b * c;
-    return [sum, multiplied, `${a} and ${b} and ${c} sum to ${sum}.`, `The product of ${a} and ${b} and ${c} is ${multiplied}.`];
+    const AB = sum(a, b)[0];
+    const f = sum(AB, c)[0];
+    const multiAB = multiply(a, b,)[0];
+    const multiC = multiply(multiAB, c)[0];
+    return [f, multiC, `${a} and ${b} and ${c} sum to ${f}.`, `The product of ${a} and ${b} and ${c} is ${multiC}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
