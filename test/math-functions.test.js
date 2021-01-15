@@ -1,7 +1,7 @@
 import {
     sum,
     multiply,
-    //     sumAndMultiplyThreeNumbers,
+    // sumAndMultiplyThreeNumbers,
     //     sumArrayWithThreeNumbers,
     //     multiplyArrayWithThreeNumbers,
     //     multiplyAnyArray
