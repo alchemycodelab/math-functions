@@ -48,11 +48,15 @@ export function multiply(a, b) {
         resultArray.push(product);
         resultArray.push(`The product of ${a} and ${b} is ${product}.`);
         return resultArray;
-    } else if(arguments.length === 3) {
-        const a = arguments[0];
-        const b = arguments[1];
-        const c = arguments[2];
-        const product = a * b * c;
+    } else if(arguments.length > 2) {
+        // const a = arguments[0];
+        // const b = arguments[1];
+        // const c = arguments[2];
+        // const product = a * b * c;
+        let product = 1;
+        for(let i = 0; i < arguments.length; i++){
+            product *= arguments[i];
+        }
         return product;
     }
 }
@@ -166,7 +170,26 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    let product = 1;
+    const firstString = 'The numbers ';
+    const secondString = ' have a product of ';
+    for(let i = 0; i < dynamicArray.length; i += 2){
+        if((i + 1) < (dynamicArray.length)){
+            product = multiply(product, dynamicArray[i], dynamicArray[i + 1]);
+        } else {
+            product = multiply(product, dynamicArray[i], 1); 
+        }
+    }
+    let numberList = '';
+    for(let i = 0; i < dynamicArray.length; i++){
+        if(i < dynamicArray.length - 1) {
+            numberList = numberList + `${dynamicArray[i]},`;   
+        } else {
+            numberList = numberList + `${dynamicArray[i]}`;
+        }
+    }
+    return [product, firstString + numberList + secondString + product + '.'];
+    
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
