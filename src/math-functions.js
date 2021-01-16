@@ -138,7 +138,14 @@ This function should be dynamic, accepting an array of any length.
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
+    let accumulator = 1;
+    // eslint-disable-next-line keyword-spacing
+    for (let i = 0; i < dynamicArray.length; i++) {
+        accumulator = multiply(dynamicArray[i], accumulator)[0];
+    }
+    return [accumulator, `The numbers ${dynamicArray} have a product of ${accumulator}.`];
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
