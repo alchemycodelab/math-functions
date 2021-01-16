@@ -141,7 +141,7 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
     let accumulator = 1;
 
-    for (const dA of dynamicArray) {
+    for(const dA of dynamicArray) {
         accumulator = accumulator * dA;
     }
 
