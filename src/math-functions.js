@@ -86,9 +86,10 @@ export function sumArrayWithThreeNumbers(sumArr) {
     const firstElement = sum(sumArr[0], sumArr[1])[0];
     const thirdElement = sum(firstElement, sumArr[2])[0];
    
-    return [thirdElement, `${sumArr} was passed in as an array of numbers, and ${thirdElement} is their sum.`];
-}
 
+    return [thirdElement, `${sumArr} was passed in as an array of numbers, and ${thirdElement} is their sum.`];
+
+  
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
