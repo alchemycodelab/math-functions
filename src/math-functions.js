@@ -127,7 +127,14 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
-export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+export function multiplyAnyArray(dynamicArray) {
+    let productAll = 1;
+    for(let product of dynamicArray){
+        productAll = multiply(productAll, product)[0];
+        if(product === dynamicArray.length){
+            return [productAll, `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${productAll}.`];
+        } 
+    }
 
 }
 
