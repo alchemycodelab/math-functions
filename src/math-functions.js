@@ -52,15 +52,18 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-    const sumOfTwoNums = sum (a, b)[0];
-    const sumOfThreeNums = sum (sumOfTwoNums, c)[0];
+export function sumAndMultiplyThreeNumbers(a, b, c) { 
+    const sumOfTwoNums = sum(a, b)[0];
+    const sumOfThreeNums = sum(sumOfTwoNums, c)[0];
     const mulTwoNums = multiply(a, b)[0];
     const mulThreeNums = multiply(mulTwoNums, c)[0];
     const SumThreeString = `${a} and ${b} and ${c} sum to ${sumOfThreeNums}.`;
     const mulThreeString = `The product of ${a} and ${b} and ${c} is ${mulThreeNums}.`;
     return [sumOfThreeNums, mulThreeNums, SumThreeString, mulThreeString];
 }
+
+
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -73,7 +76,6 @@ of the numbers in the array, and the second element is a string that EXACTLY fol
 this example and uses the values that were input into the function:
 
 "2,3,4 was passed in as an array of numbers, and 9 is their sum."
-
 IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. 
 To do addition, use your sum() function that you've already created. You're going to 
 have to be resourceful to figure out how to do this. However, you may continue 
@@ -81,6 +83,22 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const firstNumber = sumArr[0];
+    const secondNumber = sumArr[1];
+    const thirdNumber = sumArr[2];
+    const sumOfTwoNumbers = sum(firstNumber, secondNumber)[0];
+    const sumOfThreeNumbers = sum(sumOfTwoNumbers, thirdNumber)[0];
+
+    const thisString = `${firstNumber},${secondNumber},${thirdNumber} was passed in as an array of numbers, and ${sumOfThreeNumbers} is their sum.`;
+
+    return [sumOfThreeNumbers, thisString];
+
+
+    // `${sumOfThreeNumbers} ${firstNumber}, ${secondNumber}, ${thirdNumber} was passed in as an array of numbers, and ${sumOfThreeNumbers} is their sum.`;
+
+    
+
+
 
 }
 
@@ -103,7 +121,15 @@ This function should handle an array containing three elements. However,
 you may continue to use the + operator for string concatenation.
 */
 
-export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+export function multiplyArrayWithThreeNumbers(multArr) { 
+    const firstNumber = multArr[0];
+    const secondNumber = multArr[1];
+    const thirdNumber = multArr[2];
+    const multOfTwoNumbers = multiply(firstNumber, secondNumber)[0];
+    const multOfThreeNumbers = multiply(multOfTwoNumbers, thirdNumber)[0];
+
+    return `${multOfThreeNumbers} ${firstNumber}, ${secondNumber}, ${thirdNumber} was passed in as an array of numbers, and ${sumOfThreeNumbers} is their sum.`;
+
 
 }
 
