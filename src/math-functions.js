@@ -141,13 +141,14 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
     let accumulator = 1;
 
-    for (const dA of dynamicArray) {
+    for(const dA of dynamicArray) {
         accumulator = accumulator * dA;
     }
 
     return [accumulator, `The numbers ${dynamicArray} have a product of ${accumulator}.`];
 }
 
+///hey weird comment here! 
 
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
