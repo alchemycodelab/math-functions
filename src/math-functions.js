@@ -94,7 +94,7 @@ export function sumArrayWithThreeNumbers(sumArr) {
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
-// Don't forget to create a new branch for your work on the next question!
+// Don't forget to create a  brand new branch for your work on the next question!
 
 /////////////////////////////////////
 /* Problem 5
