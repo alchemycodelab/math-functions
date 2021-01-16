@@ -11,8 +11,14 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
-export function sum(a, b) {
+// export function sum(a, b) {
+//     const addArray = a + b;
+//     const concatenatedString = `The sum of ${a} and ${b} is ${addArray}.`;
+//     return [addArray, concatenatedString];
+// }
 
+export function sum(a, b) {
+    return [a + b, `The sum of ${a} and ${b} is ${a + b}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,6 +32,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    return [a * b, `The product of ${a} and ${b} is ${a * b}.`];
 
 }
 
@@ -50,7 +57,17 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(a, b, c) {
+    const sumOfTwoNumbers = sum(a, b)[0];
+    const sumOfThreeNumbers = sum(sumOfTwoNumbers, c)[0];
+
+    const productOfTwoNumbers = multiply(a, b)[0];
+    const prodcutOfThreeNumbers = multiply(productOfTwoNumbers, c)[0];
+
+    const sumString = `${a} and ${b} and ${c} sum to ${sumOfThreeNumbers}.`;
+    const productString = `The product of ${a} and ${b} and ${c} is ${prodcutOfThreeNumbers}.`;
+
+    return [sumOfThreeNumbers, prodcutOfThreeNumbers, sumString, productString];
 
 }
 
@@ -59,10 +76,7 @@ export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
 
 /////////////////////////////////////
 /* Problem 4
-Write a function called sumArrayWithThreeNumbers() that takes in an array of numbers 
-as its single argument and then returns an array where the first element is the sum 
-of the numbers in the array, and the second element is a string that EXACTLY follows 
-this example and uses the values that were input into the function:
+Write a function called sumArrayWithThreeNumbers() that takes in an array of numbers as its single argument and then returns an array where the first element is the sum of the numbers in the array, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 
 "2,3,4 was passed in as an array of numbers, and 9 is their sum."
 
@@ -73,7 +87,11 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const sumOne = sum(sumArr[0], sumArr[1])[0];
+    const sumTwo = sum(sumOne, sumArr[2])[0];
+    const sumString = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumTwo} is their sum.`;
 
+    return [sumTwo, sumString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -95,7 +113,11 @@ This function should handle an array containing three elements. However,
 you may continue to use the + operator for string concatenation.
 */
 
-export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+export function multiplyArrayWithThreeNumbers(multArr) {
+    const prodOne = multiply(multArr[0], multArr[1])[0];
+    const prodTwo = multiply(prodOne, multArr[2])[0];
+    const someString = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${prodTwo}.`;
+    return [prodTwo, someString];
 
 }
 
