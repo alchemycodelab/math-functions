@@ -167,7 +167,7 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
     let rollCall = [dynamicArray[0]];
 
-    for (let index = 1; index < dynamicArray.length; index++) {
+    for(let index = 1; index < dynamicArray.length; index++) {
 
         rollCall.push(dynamicArray[index]);
 
