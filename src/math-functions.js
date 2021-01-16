@@ -174,13 +174,11 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
         let multFirst = multiply(dynamicArray[index - 1], dynamicArray[index]);
 
         dynamicArray[index] = multFirst[0];
+
     }
 
     const dynamicArrayContents = rollCall.toString();
-    console.log(dynamicArrayContents);
-    //const dynamicArrayContents = `${dynamicArray[]}`
     const dynamicMulitpliedArray = [dynamicArray[dynamicArray.length - 1], `The numbers ${dynamicArrayContents} have a product of ${dynamicArray[dynamicArray.length - 1]}.`];
-    console.log(dynamicArray[dynamicArray.length - 1]);
     return dynamicMulitpliedArray;
 }
 
