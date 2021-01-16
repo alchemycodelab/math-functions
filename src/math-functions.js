@@ -11,8 +11,22 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
-export function sum(a, b) {
-
+export function sum() {
+    const resultArray = [];
+    if(arguments.length === 2){
+        const a = arguments[0];
+        const b = arguments[1];
+        const totalSum = a + b;
+        resultArray.push(totalSum);
+        resultArray.push(`The sum of ${a} and ${b} is ${totalSum}.`);
+        return resultArray;
+    } else if(arguments.length === 3) {
+        const a = arguments[0];
+        const b = arguments[1];
+        const c = arguments[2];
+        const totalSum = a + b + c;
+        return totalSum;
+    }
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +40,25 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    const resultArray = [];
+    if(arguments.length === 2){
+        const a = arguments[0];
+        const b = arguments[1];
+        const product = a * b;
+        resultArray.push(product);
+        resultArray.push(`The product of ${a} and ${b} is ${product}.`);
+        return resultArray;
+    } else if(arguments.length > 2) {
+        // const a = arguments[0];
+        // const b = arguments[1];
+        // const c = arguments[2];
+        // const product = a * b * c;
+        let product = 1;
+        for(let i = 0; i < arguments.length; i++){
+            product *= arguments[i];
+        }
+        return product;
+    }
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,7 +83,14 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    const resultArray = [];
+    const sumTotal = sum(a, b, c);
+    const productTotal = multiply(a, b, c); 
+    resultArray.push(sumTotal);
+    resultArray.push(productTotal);
+    resultArray.push(`${a} and ${b} and ${c} sum to ${sumTotal}.`);
+    resultArray.push(`The product of ${a} and ${b} and ${c} is ${productTotal}.`);
+    return resultArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,7 +112,14 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    const a = sumArr[0];
+    const b = sumArr[1];
+    const c = sumArr[2];
+    const resultArray = [];
+    const totalSum = sum(a, b, c);
+    resultArray.push(totalSum);
+    resultArray.push(`${a},${b},${c} was passed in as an array of numbers, and ${totalSum} is their sum.`);
+    return resultArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,7 +142,14 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    const a = multArr[0];
+    const b = multArr[1];
+    const c = multArr[2];
+    const resultArray = [];
+    const totalProduct = multiply(a, b, c);
+    resultArray.push(totalProduct);
+    resultArray.push(`The numbers ${a},${b},${c} have a product of ${totalProduct}.`);
+    return resultArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -117,7 +170,26 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    let product = 1;
+    const firstString = 'The numbers ';
+    const secondString = ' have a product of ';
+    for(let i = 0; i < dynamicArray.length; i += 2){
+        if((i + 1) < (dynamicArray.length)){
+            product = multiply(product, dynamicArray[i], dynamicArray[i + 1]);
+        } else {
+            product = multiply(product, dynamicArray[i], 1); 
+        }
+    }
+    let numberList = '';
+    for(let i = 0; i < dynamicArray.length; i++){
+        if(i < dynamicArray.length - 1) {
+            numberList = numberList + `${dynamicArray[i]},`;   
+        } else {
+            numberList = numberList + `${dynamicArray[i]}`;
+        }
+    }
+    return [product, firstString + numberList + secondString + product + '.'];
+    
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
