@@ -2,7 +2,7 @@ import {
     sum, 
     multiply, 
     sumAndMultiplyThreeNumbers, 
-    // sumArrayWithThreeNumbers, 
+    sumArrayWithThreeNumbers, 
     // multiplyArrayWithThreeNumbers, 
     // multiplyAnyArray
 } from '../src/math-functions.js';
@@ -34,7 +34,7 @@ test('sumAndMultiplyThreeNumbers', (assert) => {
     assert.equal(result[3], 'The product of 4 and 7 and 5 is 140.');
 });
 
-skip('sumArrayWithThreeNumbers', (assert) => {
+test('sumArrayWithThreeNumbers', (assert) => {
     const result = sumArrayWithThreeNumbers([2, 3, 4]);
 
     assert.equal(result[0], 9);
