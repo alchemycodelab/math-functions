@@ -1,9 +1,9 @@
-import { 
-    sum, 
-    multiply, 
-    sumAndMultiplyThreeNumbers, 
-    sumArrayWithThreeNumbers, 
-    multiplyArrayWithThreeNumbers, 
+import {
+    sum,
+    multiply,
+    sumAndMultiplyThreeNumbers,
+    sumArrayWithThreeNumbers,
+    multiplyArrayWithThreeNumbers,
     multiplyAnyArray
 } from '../src/math-functions.js';
 
@@ -41,6 +41,7 @@ test('sumArrayWithThreeNumbers', (assert) => {
     assert.equal(result[1], '2,3,4 was passed in as an array of numbers, and 9 is their sum.');
 });
 
+
 test('multiplyArrayWithThreeNumbers', (assert) => {
     const result = multiplyArrayWithThreeNumbers([2, 3, 4]);
 
@@ -53,4 +54,4 @@ test('multiplyAnyArray', (assert) => {
 
     assert.equal(result[0], 120);
     assert.equal(result[1], 'The numbers 1,2,3,4,5 have a product of 120.');
-});
+}); 
