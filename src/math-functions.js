@@ -141,11 +141,11 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
-export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+export function multiplyAnyArray(dynamicArray) { 
 
     let multDynamicArray = 1;
 
-    for (let dynamicNumber of dynamicArray) {
+    for(let dynamicNumber of dynamicArray) {
         multDynamicArray = multiply(multDynamicArray, dynamicNumber)[0];
     }
 
