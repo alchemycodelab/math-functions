@@ -131,7 +131,7 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
     for(let multArray of dynamicArray){
         multTotal = multiply(multTotal, multArray)[0];
-        if (multArray === dynamicArray.length) {
+        if(multArray === dynamicArray.length) {
             return [multTotal, `The numbers ${dynamicArray} have a product of ${multTotal}.`];
         }
     }
