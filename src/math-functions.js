@@ -104,10 +104,12 @@ You're going to have to be resourceful to figure out how to do this.
 This function should handle an array containing three elements. However,
 you may continue to use the + operator for string concatenation.
 */
-
-// export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
-// }
+// for new save
+export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    const firstMultiply = multiply(multArr[0], multArr[1]);
+    const multTotal = multiply(firstMultiply[0], multArr[2]);
+    return [multTotal[0], `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multTotal[0]}.`];
+}
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
