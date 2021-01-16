@@ -165,20 +165,25 @@ This function should be dynamic, accepting an array of any length.
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
-    let rollCall = 0;
+    let rollCall = [dynamicArray[0]];
 
     for (let index = 1; index < dynamicArray.length; index++) {
+
+        rollCall.push(dynamicArray[index]);
 
         let multFirst = multiply(dynamicArray[index - 1], dynamicArray[index]);
 
         dynamicArray[index] = multFirst[0];
-
-
     }
 
-    const dynamicMulitpliedArray = [dynamicArray[dynamicArray.length - 1], `The numbers ${},2,3,4,5 have a product of ${dynamicArray[dynamicArray.length - 1]}.`];
-
+    const dynamicArrayContents = rollCall.toString();
+    console.log(dynamicArrayContents);
+    //const dynamicArrayContents = `${dynamicArray[]}`
+    const dynamicMulitpliedArray = [dynamicArray[dynamicArray.length - 1], `The numbers ${dynamicArrayContents} have a product of ${dynamicArray[dynamicArray.length - 1]}.`];
+    console.log(dynamicArray[dynamicArray.length - 1]);
+    return dynamicMulitpliedArray;
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
