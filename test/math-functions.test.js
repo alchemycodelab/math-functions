@@ -2,7 +2,7 @@ import {
     sum, 
     multiply, 
     sumAndMultiplyThreeNumbers, 
-    sumArrayWithThreeNumbers, 
+    sumArrayWithThreeNumbers,
     multiplyArrayWithThreeNumbers, 
     multiplyAnyArray
 } from '../src/math-functions.js';
