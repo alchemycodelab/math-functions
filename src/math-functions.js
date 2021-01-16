@@ -89,12 +89,7 @@ export function sumArrayWithThreeNumbers(sumArr) {
 
     
     
-    return [sumOfAllArray[0], `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and 9 is their sum.`]
-
-    
-
-
-
+    return [sumOfAllArray[0], `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and 9 is their sum.`];
 
 }
 
