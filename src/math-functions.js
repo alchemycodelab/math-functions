@@ -104,7 +104,7 @@ You're going to have to be resourceful to figure out how to do this.
 This function should handle an array containing three elements. However,
 you may continue to use the + operator for string concatenation.
 */
-// for new save
+
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
     const firstMultiply = multiply(multArr[0], multArr[1]);
     const multTotal = multiply(firstMultiply[0], multArr[2]);
@@ -126,11 +126,31 @@ Write a function called multiplyAnyArray() that takes an array of numbers of any
 IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
 
 This function should be dynamic, accepting an array of any length.
-*/
+// */
+// const dynamicArray = [3, 4, 2, 7, 9];
+export function multiplyAnyArray(dynamicArray) {
+    let accumulator = 1;
 
-// export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    for (const iterator of dynamicArray) {
+        accumulator = multiply(accumulator, iterator)[0];
+        if (iterator === dynamicArray.length) {
+            return [accumulator, `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${accumulator}.`];
+        }
+    }
+}
 
-// }
+
+
+        // console.log(accumulator);
+
+
+// console.log(multiplyAnyArray(dynamicArray));
+    // const multOne = multiply(dynamicArray[0], dynamicArray[1]);
+    // const multTwo = multiply(multOne[0], dynamicArray[2]);
+    // const multThree = multiply(multTwo[0], dynamicArray[3]);
+    // const finalTime = multiply(multThree[0], dynamicArray[4]);
+    // return [finalTime, ``]
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
