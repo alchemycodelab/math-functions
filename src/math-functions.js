@@ -163,9 +163,22 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
-// export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
-// }
+    let rollCall = 0;
+
+    for (let index = 1; index < dynamicArray.length; index++) {
+
+        let multFirst = multiply(dynamicArray[index - 1], dynamicArray[index]);
+
+        dynamicArray[index] = multFirst[0];
+
+
+    }
+
+    const dynamicMulitpliedArray = [dynamicArray[dynamicArray.length - 1], `The numbers ${},2,3,4,5 have a product of ${dynamicArray[dynamicArray.length - 1]}.`];
+
+}
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
