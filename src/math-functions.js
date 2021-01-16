@@ -94,7 +94,7 @@ export function sumArrayWithThreeNumbers(sumArr) {
     let addTwoNumsResult = sum(sumArr[0], sumArr[1])[0];
     let addThreeNumsResult = sum(addTwoNumsResult, sumArr[2])[0]; 
     let resultArray = [];
-    resultArray.push(addThreeNumsResult, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${addThreeNumsResult} is their sum.`);
+    resultArray.push(addThreeNumsResult, `${sumArr} was passed in as an array of numbers, and ${addThreeNumsResult} is their sum.`);
     return resultArray;
 }
 
@@ -121,7 +121,7 @@ export function multiplyArrayWithThreeNumbers(multArr) {
     let multTwoNumsResult = multiply(multArr[0], multArr[1])[0];
     let multThreeNumber = multiply(multTwoNumsResult, multArr[2])[0];
     let resultArray = [];
-    resultArray.push(multThreeNumber, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multThreeNumber}.`);
+    resultArray.push(multThreeNumber, `The numbers ${multArr} have a product of ${multThreeNumber}.`);
 
     return resultArray;
 }
@@ -145,16 +145,13 @@ This function should be dynamic, accepting an array of any length.
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     let resultArray = [];
-    let otherArray = [];
     let multResult = 1;
     
     for(let iterator of dynamicArray) {
         multResult = multiply(multResult, iterator)[0];
-        otherArray.push(iterator);
     }
     
-    let strings = otherArray.toString();
-    resultArray.push(multResult, `The numbers ${strings} have a product of ${multResult}.`);
+    resultArray.push(multResult, `The numbers ${dynamicArray} have a product of ${multResult}.`);
     return resultArray;
 }
 
