@@ -49,7 +49,7 @@ test('multiplyArrayWithThreeNumbers', (assert) => {
     assert.equal(result[1], 'The numbers 2,3,4 have a product of 24.');
 });
 
-skip('multiplyAnyArray', (assert) => {
+test('multiplyAnyArray', (assert) => {
     const result = multiplyAnyArray([1, 2, 3, 4, 5]);
 
     assert.equal(result[0], 120);
