@@ -149,9 +149,6 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
         multDynamicArray = multiply(multDynamicArray, dynamicNumber)[0];
 
-        /*let resultOne = multiply(dynamicArray[dynamicNumber], dynamicArray[dynamicNumber])[0];
-        let result = multiply(resultOne, dynamicArray[dynamicNumber])[0];*/
-
     };
 
     return [multDynamicArray, `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${multDynamicArray}.`];
