@@ -148,6 +148,7 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     return [accumulator, `The numbers ${dynamicArray} have a product of ${accumulator}.`];
 }
 
+///hey weird comment here! 
 
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
