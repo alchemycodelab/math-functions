@@ -8,7 +8,7 @@ import {
 } from '../src/math-functions.js';
 
 const test = QUnit.test;
-const skip = QUnit.skip;
+// const skip = QUnit.skip;
 
 /* DO NOT MODIFY THIS FILE */
 
