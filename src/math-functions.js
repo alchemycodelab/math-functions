@@ -52,9 +52,18 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-    let sum = a + b + c;
-    let product = a * b * c;
-    return [sum, product, `${a} and ${b} and ${c} sum to ${sum}.`, `The product of ${a} and ${b} and ${c} is ${product}.`];
+    const resultsArr = [];
+    
+    //index [0]: outer sum takes return value [0], and c as parameters. push return value [0].
+    resultsArr.push(sum(sum(a, b)[0], c)[0]);
+    // index [1]: outer sum takes return value [0],
+    resultsArr.push(multiply(multiply(a, b)[0], c)[0]);
+
+    resultsArr.push(`${a} and ${b} and ${c} sum to ${resultsArr[0]}.`);
+
+    resultsArr.push(`The product of ${a} and ${b} and ${c} is ${resultsArr[1]}.`);
+
+    return resultsArr;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -76,7 +85,12 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const resultsArr = [];
+    //index [0]: outer sum takes return value [0], and c as parameters. push return value [0].
+    resultsArr.push(sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0]);
+    resultsArr.push(`${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${resultsArr[0]} is their sum.`);
 
+    return resultsArr;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
