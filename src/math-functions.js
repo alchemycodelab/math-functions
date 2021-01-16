@@ -146,10 +146,8 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     let multDynamicArray = 1;
 
     for (let dynamicNumber of dynamicArray) {
-
         multDynamicArray = multiply(multDynamicArray, dynamicNumber)[0];
-
-    };
+    }
 
     return [multDynamicArray, `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${multDynamicArray}.`];
 }
