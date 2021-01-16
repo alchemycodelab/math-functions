@@ -139,6 +139,7 @@ This function should be dynamic, accepting an array of any length.
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
     let accumulator = 1;
+    // eslint-disable-next-line keyword-spacing
     for (let i = 0; i < dynamicArray.length; i++) {
         accumulator = multiply(dynamicArray[i], accumulator)[0];
     }
