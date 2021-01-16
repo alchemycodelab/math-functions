@@ -64,9 +64,7 @@ export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-${}ne
     const sumAnswer = [`${a} and ${b} and ${c} sum to ${sumTotal}.`];
     const multAnswer = [`The product of ${a} and ${b} and ${c} is ${multTotal}.`];
 
-    let resultArray = [sumTotal, multTotal, sumAnswer, multAnswer];
-
-    return resultArray;
+    return [sumTotal, multTotal, sumAnswer, multAnswer];
 
 }
 
@@ -90,6 +88,12 @@ to use the + operator for string concatenation.
 
 export function sumArrayWithThreeNumbers(sumArr) {
 
+    const sum1 = sum(sumArr[0], sumArr[1])[0];
+    const sumTotal = sum(sum1, sumArr[2])[0];
+
+    const result = [sumTotal, `${sumArr} was passed in as an array of numbers, and ${sumTotal} is their sum.`];
+
+    return result;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
