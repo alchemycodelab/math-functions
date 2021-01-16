@@ -142,7 +142,7 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     for (let i = 0; i < dynamicArray.length; i++) {
         accumulator = multiply(dynamicArray[i], accumulator)[0];
     }
-    return [accumulator, `The numbers ${dynamicArray} have a product of ${accumulator}.`]
+    return [accumulator, `The numbers ${dynamicArray} have a product of ${accumulator}.`];
 }
 
 
