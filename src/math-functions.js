@@ -128,7 +128,9 @@ export function multiplyArrayWithThreeNumbers(multArr) {
     const multOfTwoNumbers = multiply(firstNumber, secondNumber)[0];
     const multOfThreeNumbers = multiply(multOfTwoNumbers, thirdNumber)[0];
 
-    return `${multOfThreeNumbers} ${firstNumber}, ${secondNumber}, ${thirdNumber} was passed in as an array of numbers, and ${sumOfThreeNumbers} is their sum.`;
+    const thisString = `The numbers ${firstNumber},${secondNumber},${thirdNumber} have a product of ${multOfThreeNumbers}.`;
+
+    return [multOfThreeNumbers, thisString];
 
 
 }
