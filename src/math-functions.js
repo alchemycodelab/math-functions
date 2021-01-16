@@ -92,7 +92,7 @@ export function sumArrayWithThreeNumbers(sumArr) {
     const sumOfTwoNumbers = sum(sumArr[0], sumArr[1])[0];
     const sumOfThreeNumbers = sum(sumOfTwoNumbers, sumArr[2])[0];
 
-    return [sumOfThreeNumbers, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumOfThreeNumbers} is their sum.`];
+    return [sumOfThreeNumbers, `${sumArr} was passed in as an array of numbers, and ${sumOfThreeNumbers} is their sum.`];
 
 }
 
@@ -120,7 +120,7 @@ export function multiplyArrayWithThreeNumbers(multArr) {
     const multOfTwoNumbers = multiply(multArr[0], multArr[1])[0];
     const multOfThreeNumbers = multiply(multOfTwoNumbers, multArr[2])[0];
 
-    return [multOfThreeNumbers, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multOfThreeNumbers}.`];
+    return [multOfThreeNumbers, `The numbers ${multArr} have a product of ${multOfThreeNumbers}.`];
 
 }
 
@@ -149,7 +149,7 @@ export function multiplyAnyArray(dynamicArray) {
         multDynamicArray = multiply(multDynamicArray, dynamicNumber)[0];
     }
 
-    return [multDynamicArray, `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${multDynamicArray}.`];
+    return [multDynamicArray, `The numbers ${dynamicArray} have a product of ${multDynamicArray}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
