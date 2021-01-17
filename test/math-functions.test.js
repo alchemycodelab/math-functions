@@ -8,7 +8,6 @@ import {
 } from '../src/math-functions.js';
 
 const test = QUnit.test;
-
 /* DO NOT MODIFY THIS FILE */
 
 test('sum', (assert) => {

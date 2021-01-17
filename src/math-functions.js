@@ -12,7 +12,10 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    const theSum = a + b;
+    const addString = `The sum of ${a} and ${b} is ${theSum}.`;
+    
+    return [theSum, addString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +29,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    const theProduct = a * b; 
+    const addString = `The product of ${a} and ${b} is ${theProduct}.`;
 
+    return [theProduct, addString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -50,8 +56,18 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(a, b, c) { 
 
+    const sumofThree = sum(a, b)[0];
+    const addAllThree = sum(sumofThree, c)[0];
+    const nowMultiply = multiply(a, b)[0];
+    const multiplyThree = multiply(nowMultiply, c)[0];
+    const string1 = `${a} and ${b} and ${c} sum to ${addAllThree}.`;
+    const string2 = `The product of ${a} and ${b} and ${c} is ${multiplyThree}.`;
+
+
+    return [addAllThree, multiplyThree, string1, string2];
+    
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,7 +89,14 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const numberOne = sumArr[0];
+    const numberTwo = sumArr[1];
+    const numberThree = sumArr[2];
+    const sumOfTwo = sum(numberOne, numberTwo)[0];
+    const sumOfAllThree = sum(sumOfTwo, numberThree)[0];
+    const arrayString = `${numberOne},${numberTwo},${numberThree} was passed in as an array of numbers, and ${sumOfAllThree} is their sum.`;
 
+    return [sumOfAllThree, arrayString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -95,8 +118,15 @@ This function should handle an array containing three elements. However,
 you may continue to use the + operator for string concatenation.
 */
 
-export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+export function multiplyArrayWithThreeNumbers(multArr) {
+    const numOne = multArr[0];
+    const numTwo = multArr[1];
+    const numThree = multArr[2];
+    const multTwoNums = multiply(numOne, numTwo)[0];
+    const productOfThree = multiply(multTwoNums, numThree)[0];
+    const productString = `The numbers ${numOne},${numTwo},${numThree} have a product of ${productOfThree}.`;
 
+    return [productOfThree, productString]; 
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -116,8 +146,22 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
-export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+export function multiplyAnyArray(dynamicArray) { 
+    const multOne = dynamicArray[0];
+    const multTwo = dynamicArray[1];
+    const multThree = dynamicArray[2];
+    const multFour = dynamicArray[3];
+    const multFive = dynamicArray[4];
+    const prodOne = multiply(multOne, multTwo)[0];
+    const prodTwo = multiply(prodOne, multThree)[0];
+    const prodThree = multiply(prodTwo, multFour)[0];
+    const prodFour = multiply(prodThree, multFive)[0];
+    
+    const special = [dynamicArray];
+    const hmm = multiply(special.length, prodFour)[0];
+    const yesICanString = `The numbers ${multOne},${multTwo},${multThree},${multFour},${multFive} have a product of ${hmm}.`;
 
+    return [hmm, yesICanString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
