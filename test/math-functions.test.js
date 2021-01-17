@@ -1,8 +1,8 @@
-import { 
-    sum, 
-    multiply, 
-    sumAndMultiplyThreeNumbers, 
-    sumArrayWithThreeNumbers, 
+import {
+    sum,
+    multiply,
+    sumAndMultiplyThreeNumbers,
+    sumArrayWithThreeNumbers,
     multiplyArrayWithThreeNumbers, 
     multiplyAnyArray
 } from '../src/math-functions.js';
