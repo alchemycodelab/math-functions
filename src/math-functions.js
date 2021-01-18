@@ -14,7 +14,7 @@ example and uses the values that were input into the function:
 export function sum(a, b) {
     return [a + b, `The sum of ${a} and ${b} is ${a + b}.`];
 
-}
+};
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -29,7 +29,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 export function multiply(a, b) {
     return [a * b, `The product of ${a} and ${b} is ${a * b}.`];
 
-}
+};
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -61,7 +61,7 @@ export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
 
 
 
-}
+};
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -86,9 +86,9 @@ export function sumArrayWithThreeNumbers(sumArr) {
     let total = 0
     for (let i = 0; i < sumArr.length; i++) {
         total = sum(total, sumArr[i])[0]
-    }
+    };
     const string = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${total} is their sum.`
-    return [total, string]
+    return [total, string];
 
 
 
@@ -97,7 +97,7 @@ export function sumArrayWithThreeNumbers(sumArr) {
 
 
 
-}
+};
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -122,12 +122,12 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
     let total = 1
     for (let i = 0; i < multArr.length; i++) {
         total = multiply(total, multArr[i])[0]
-    }
+    };
     const string = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of 24.`
-    return [total, string]
+    return [total, string];
 
 
-}
+};
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 

@@ -11,21 +11,21 @@ const test = QUnit.test;
 const skip = QUnit.skip;
 /* DO NOT MODIFY THIS FILE */
 
-skip('sum', (assert) => {
+test('sum', (assert) => {
     const result = sum(4, 7);
 
     assert.equal(result[0], 11);
     assert.equal(result[1], 'The sum of 4 and 7 is 11.');
 });
 
-skip('multiply', (assert) => {
+test('multiply', (assert) => {
     const result = multiply(5, 9);
 
     assert.equal(result[0], 45);
     assert.equal(result[1], 'The product of 5 and 9 is 45.');
 });
 
-skip('sumAndMultiplyThreeNumbers', (assert) => {
+test('sumAndMultiplyThreeNumbers', (assert) => {
     const result = sumAndMultiplyThreeNumbers(4, 7, 5);
 
     assert.equal(result[0], 16);
@@ -33,7 +33,7 @@ skip('sumAndMultiplyThreeNumbers', (assert) => {
     assert.equal(result[2], '4 and 7 and 5 sum to 16.');
     assert.equal(result[3], 'The product of 4 and 7 and 5 is 140.');
 });
-skip('sumArrayWithThreeNumbers', (assert) => {
+test('sumArrayWithThreeNumbers', (assert) => {
     const result = sumArrayWithThreeNumbers([2, 3, 4]);
 
     assert.equal(result[0], 9);
