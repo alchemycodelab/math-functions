@@ -12,10 +12,10 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-   const theSum = a + b;
-   const addString = `The sum of ${a} and ${b} is ${theSum}.`;
+    const theSum = a + b;
+    const addString = `The sum of ${a} and ${b} is ${theSum}.`;
 
-   return [theSum, addString];
+    return [theSum, addString];
 
 }
 
