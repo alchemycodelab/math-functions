@@ -120,11 +120,11 @@ You're going to have to be resourceful to figure out how to do this.
 This function should handle an array containing three elements. However, 
 you may continue to use the + operator for string concatenation.
 */
-
+/*
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
 
 }
-
+*/
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
