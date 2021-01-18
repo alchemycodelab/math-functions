@@ -90,7 +90,7 @@ export function sumArrayWithThreeNumbers(sumArr) {
     let sumResult = 0;
     for(let num of sumArr) {
         sumResult = sum(sumResult, num)[0];
-    };
+    }
     array.push(sumResult);
     array.push(`${sumArr.join(',')} was passed in as an array of numbers, and ${sumResult} is their sum.`);
     return array;
