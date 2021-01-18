@@ -137,9 +137,14 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
-// export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
-// }
+export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let accumulator = 1;
+    for (let i = 0; i < dynamicArray.length; index++) {
+        accumulator = multiply(dynamicArray[i], accumulator)[0];
+        const myString = `The numbers ${dynamicArray} have a product of ${accumulator}.`;
+        return [accumulator, myString];
+    }
+}
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
