@@ -88,9 +88,9 @@ to use the + operator for string concatenation.
 export function sumArrayWithThreeNumbers(sumArr) {
     let array = [];
     let sumResult = 0;
-    for (let num of sumArr) {
+    for(let num of sumArr) {
         sumResult = sum(sumResult, num)[0];
-    }
+    };
     array.push(sumResult);
     array.push(`${sumArr.join(',')} was passed in as an array of numbers, and ${sumResult} is their sum.`);
     return array;
@@ -118,7 +118,7 @@ you may continue to use the + operator for string concatenation.
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
     let array = [];
     let multiplyResult = 1;
-    for (let num of multArr) {
+    for(let num of multArr) {
         multiplyResult = multiply(multiplyResult, num)[0];
     }
     array.push(multiplyResult);
