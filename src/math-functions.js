@@ -120,11 +120,19 @@ You're going to have to be resourceful to figure out how to do this.
 This function should handle an array containing three elements. However, 
 you may continue to use the + operator for string concatenation.
 */
-/*
-export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
 
+export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+ const numOne = multArr[0];
+ const numTwo = multArr[1];
+ const numThree = multArr[2];
+ const multTwoNums = multiply(numOne, numTwo)[0];
+ const productOfThree = multiply(multTwoNums, numThree)[0];
+ const productString = `The numbers ${numOne},${numTwo},${numThree} have a product of ${productOfThree}.`;
+
+ return [productOfThree, productString];
+ 
 }
-*/
+
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
