@@ -3,8 +3,8 @@ import {
     multiply, 
     sumAndMultiplyThreeNumbers, 
     sumArrayWithThreeNumbers, 
-    multiplyArrayWithThreeNumbers, 
-    multiplyAnyArray
+    multiplyArrayWithThreeNumbers 
+    //multiplyAnyArray
 } from '../src/math-functions.js';
 
 const test = QUnit.test;
