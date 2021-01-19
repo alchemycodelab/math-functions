@@ -12,6 +12,10 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
+    const addSum = a + b;
+    const sumString = `The sum of ${a} and ${b} is ${a + b}.`;
+    
+    return [addSum, sumString];
 
 }
 
@@ -26,7 +30,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    const multiSum = a * b;
+    const sumString = `The product of ${a} and ${b} is ${a * b}.`;
+    
+    return [multiSum, sumString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,7 +58,14 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const sumOfTwo = sum(a, b)[0];
+    const sumOfThree = sum(sumOfTwo, c)[0];
+    const multiOfTwo = multiply(a, b)[0];
+    const multiOfThree = multiply(multiOfTwo, c)[0];
+    const sumThreeString = `${a} and ${b} and ${c} sum to ${sumOfThree}.`;
+    const multiThreeString = `The product of ${a} and ${b} and ${c} is ${multiOfThree}.`;
 
+    return [sumOfThree, multiOfThree, sumThreeString, multiThreeString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,6 +87,15 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const a = sumArr[0];
+    const b = sumArr[1];
+    const c = sumArr[2];
+    const sumOfTwo = sum(a, b)[0];
+    const sumOfThree = sum(sumOfTwo, c)[0];
+
+    const arrString = `${a},${b},${c} was passed in as an array of numbers, and ${sumOfThree} is their sum.`;
+
+    return [sumOfThree, arrString];
 
 }
 
@@ -96,6 +119,15 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    const a = multArr[0];
+    const b = multArr[1];
+    const c = multArr[2];
+    const multiOfTwo = multiply(a, b)[0];
+    const multiOfThree = multiply(multiOfTwo, c)[0];
+
+    const arrString = `The numbers ${a},${b},${c} have a product of ${multiOfThree}.`;
+
+    return [multiOfThree, arrString];
 
 }
 
@@ -117,7 +149,20 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    const a = dynamicArray[0];
+    const b = dynamicArray[1];
+    const c = dynamicArray[2];
+    const d = dynamicArray[3];
+    const e = dynamicArray[4];
 
+    const multiOfTwo = multiply(a, b)[0];
+    const multiOfThree = multiply(multiOfTwo, c)[0];
+    const multiOfFour = multiply(multiOfThree, d)[0];
+    const multiOfFive = multiply(multiOfFour, e)[0];
+
+    const arrString = `The numbers ${a},${b},${c},${d},${e} have a product of ${multiOfFive}.`;
+    
+    return [multiOfFive, arrString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
