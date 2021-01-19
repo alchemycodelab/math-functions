@@ -149,7 +149,20 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    const a = dynamicArray[0];
+    const b = dynamicArray[1];
+    const c = dynamicArray[2];
+    const d = dynamicArray[3];
+    const e = dynamicArray[4];
 
+    const multiOfTwo = multiply(a, b)[0];
+    const multiOfThree = multiply(multiOfTwo, c)[0];
+    const multiOfFour = multiply(multiOfThree, d)[0];
+    const multiOfFive = multiply(multiOfFour, e)[0];
+
+    const arrString = `The numbers ${a},${b},${c},${d},${e} have a product of ${multiOfFive}.`;
+    
+    return [multiOfFive, arrString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
