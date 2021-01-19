@@ -131,6 +131,7 @@ This function should be dynamic, accepting an array of any length.
 export function multiplyAnyArray(dynamicArray) {
     let accumulator = 1;
 
+
     for (const iterator of dynamicArray) {
         accumulator = multiply(accumulator, iterator)[0];
         if (iterator === dynamicArray.length) {
@@ -140,16 +141,6 @@ export function multiplyAnyArray(dynamicArray) {
 }
 
 
-
-        // console.log(accumulator);
-
-
-// console.log(multiplyAnyArray(dynamicArray));
-    // const multOne = multiply(dynamicArray[0], dynamicArray[1]);
-    // const multTwo = multiply(multOne[0], dynamicArray[2]);
-    // const multThree = multiply(multTwo[0], dynamicArray[3]);
-    // const finalTime = multiply(multThree[0], dynamicArray[4]);
-    // return [finalTime, ``]
 
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
