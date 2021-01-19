@@ -32,7 +32,12 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    const multArray = [];
+    const multTotal = a * b;
+    const multString = `The product of ${a} and ${b} is 45.`;
+    multArray[0] = multTotal;
+    multArray[1] = multString;
+    return multArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
