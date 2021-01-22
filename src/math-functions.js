@@ -155,12 +155,12 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     let arrayString = '';
     let arrayMult = [1];
 
-    for (let index = 0; index < dynamicArray.length; index++) {
+    for(let index = 0; index < dynamicArray.length; index++) {
         arrayMult = multiply(arrayMult[0], dynamicArray[index]);
     }
-    for (let text of dynamicArray) {
+    for(let text of dynamicArray) {
         arrayString += text;
-        if (text !== dynamicArray.length) arrayString += ',';
+        if(text !== dynamicArray.length) arrayString += ',';
     }
 
     finalArray[0] = arrayMult[0];
