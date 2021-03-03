@@ -12,7 +12,10 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    const added = a + b;
+    const addedString = 'The sum of ' + a + ' and ' + b + ' is ' + added + '.';
+    const sumArray = [added, addedString];
+    return sumArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +29,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    const multiplied = a * b;
+    const multipliedString = 'The product of ' + a + ' and ' + b + ' is ' + multiplied + '.';
+    const multipliedArray = [multiplied, multipliedString];
+    return multipliedArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,7 +57,17 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const sumTwoNumbers = sum(a, b);
+    const sumThreeNumbers = sum(sumTwoNumbers[0], c); //This has sum 3 numberes in sub-0
+    
+    const multTwoNumbers = multiply(a, b);
+    const multThreeNumbers = multiply(multTwoNumbers[0], c); //This has multiply 3 numbers in sub-0
 
+    const sumString = a + ' and ' + b + ' and ' + c + ' sum to ' + sumThreeNumbers[0] + '.';
+    const multiplyString = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multThreeNumbers[0] + '.';
+    
+
+    return [sumThreeNumbers[0], multThreeNumbers[0], sumString, multiplyString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,7 +89,12 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    let sumOfArray = 0;
+    for(let i = 0; i < sumArr.length; i++) {
+        sumOfArray = sum(sumOfArray, sumArr[i])[0];
+    }
+    const sumString = sumArr + ' was passed in as an array of numbers, and ' + sumOfArray + ' is their sum.';
+    return [sumOfArray, sumString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,7 +117,12 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    let productOfArray = 1;
+    for(let i = 0; i < multArr.length; i++) {
+        productOfArray = multiply(productOfArray, multArr[i])[0];
+    }
+    const multString = 'The numbers ' + multArr + ' have a product of ' + productOfArray + '.';
+    return [productOfArray, multString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -117,7 +143,12 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    let productOfArray = 1;
+    for(let i = 0; i < dynamicArray.length; i++) {
+        productOfArray = multiply(productOfArray, dynamicArray[i])[0];
+    }
+    const multString = 'The numbers ' + dynamicArray + ' have a product of ' + productOfArray + '.';
+    return [productOfArray, multString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
