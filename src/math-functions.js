@@ -8,11 +8,15 @@ then returns an array where the first element is the sum of those numbers,
 and the second element is a concatenated string that EXACTLY follows this 
 example and uses the values that were input into the function:
 
+
+
 "The sum of 4 and 7 is 11."
 */
 
 export function sum(a, b) {
-
+    const sums = (a + b);
+    const answer = [(a + b), `The sum of ${a} and ${b} is ${sums}.`];
+    return answer;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +30,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    const product = (a * b);
+    const answer = [(a * b), `The product of ${a} and ${b} is ${(product)}.`];
+    return answer;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
