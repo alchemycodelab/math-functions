@@ -90,20 +90,15 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-    const returnArray = [];
     let result = 0;
 
     for (let array of sumArr) {
         result = sum(result, array).shift();
     }
 
-
     const someString = `${sumArr} was passed in as an array of numbers, and ${result} is their sum.`;
 
-    returnArray.push(result);
-    returnArray.push(someString);
-
-    return returnArray;
+    return [result, someString];
 }
 
 
@@ -157,7 +152,14 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let product = 1;
+    // let dynamicMultiply = multiply()
 
+    for (let array of dynamicArray) {
+        product = multiply(product, array).shift();
+    }
+
+    return [product, `The numbers ${dynamicArray} have a product of ${product}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
