@@ -27,6 +27,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    return [a * b, `The sum of ${a} and ${b} is ${a * b}.`];
 
 }
 
