@@ -155,6 +155,22 @@ you may continue to use the + operator for string concatenation.
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
 
+    const returnArray = [];
+
+    const firstNumber = multArr[0];
+    const secondNumber = multArr[1];
+    const thirdNumber = multArr[2];
+
+    const mulOne = multiply(firstNumber, secondNumber);
+    const mulTwo = multiply(mulOne[0], thirdNumber);
+    const finalMul = mulTwo[0];
+
+    const threeMulString = `The numbers ${firstNumber},${secondNumber},${thirdNumber} have a product of ${finalMul}.`;
+
+    returnArray.push(finalMul);
+    returnArray.push(threeMulString);
+
+    return returnArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
