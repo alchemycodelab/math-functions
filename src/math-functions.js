@@ -13,12 +13,7 @@ example and uses the values that were input into the function:
 
 export function sum(a, b) {
     const numbers = [a, b];
-    let sumValue = 0;
-    for(let num of numbers) {
-        sumValue += num;
-        console.log(sumValue);
-        
-    }
+    const sumValue = a + b;
     const answer = [sumValue, `The sum of ${a} and ${b} is ${sumValue}.`];
     return answer;
 }
@@ -67,8 +62,19 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    const numbers = [a, b, c];
+    let sumValue = 0;
+    let productValue = 0;
+    for(let num of numbers) {
+        sumValue = sum(sum(a, b)[0], c)[0];
+        productValue = multiply(multiply(a, b)[0], c)[0];        //return sumValue, productValue;
+    }
+    
+    return [sumValue, productValue, `${a} and ${b} and ${c} sum to ${sumValue}.`, `The product of ${a} and ${b} and ${c} is ${productValue}.`];
+    
 }
+
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
