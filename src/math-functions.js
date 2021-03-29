@@ -141,6 +141,18 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    const array = [];
+    let result = 1;
+    for (let num of multArr) {
+        let resultArray = multiply(num, result);
+        result = resultArray[0];
+
+
+    }
+
+    const string = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${result}.`;
+    array.push(result, string);
+    return array;
 
 }
 
