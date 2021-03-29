@@ -115,7 +115,7 @@ you may continue to use the + operator for string concatenation.
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
     const midProduct = multiply(multArr[0], multArr[1])[0];
     const finalProduct = multiply(midProduct, multArr[2])[0];
-    const string = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${finalProduct}.`
+    const string = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${finalProduct}.`;
 
 
     return [finalProduct, string];
@@ -139,7 +139,14 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let product = 1;
+    for(let number of dynamicArray) {
+        product = multiply(product, number)[0];
+    }
+    
+    const string = `The numbers ${dynamicArray} have a product of ${product}.`;
 
+    return [product, string];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
