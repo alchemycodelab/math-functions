@@ -34,8 +34,18 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    const returnArray = [];
 
+    const product = a * b;
+    const theString = `The product of ${a} and ${b} is ${product}.`;
+
+    returnArray.push(product);
+    returnArray.push(theString);
+
+    return returnArray;
+    
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
