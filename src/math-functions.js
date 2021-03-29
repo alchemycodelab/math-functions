@@ -12,8 +12,17 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    const numbers = [a, b];
+    let sumValue = 0;
+    for(let num of numbers) {
+        sumValue += num;
+        console.log(sumValue);
+        
+    }
+    const answer = [sumValue, `The sum of ${a} and ${b} is ${sumValue}.`];
+    return answer;
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
