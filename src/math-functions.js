@@ -92,7 +92,7 @@ to use the + operator for string concatenation.
 export function sumArrayWithThreeNumbers(sumArr) {
     let result = 0;
 
-    for (let array of sumArr) {
+    for(let array of sumArr) {
         result = sum(result, array).shift();
     }
 
@@ -125,7 +125,7 @@ you may continue to use the + operator for string concatenation.
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
     let result = 1;
 
-    for (let array of multArr) {
+    for(let array of multArr) {
         result = multiply(result, array).shift();
     }
 
@@ -155,7 +155,7 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     let product = 1;
     // let dynamicMultiply = multiply()
 
-    for (let array of dynamicArray) {
+    for(let array of dynamicArray) {
         product = multiply(product, array).shift();
     }
 
