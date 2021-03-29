@@ -144,7 +144,8 @@ you may continue to use the + operator for string concatenation.
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
     let finalSum = 1;
     for(let num of multArr) {
-        multiply(num, finalSum)[0];
+        finalSum = multiply(num, finalSum)[0];
+
     }
 
     return [finalSum, `The numbers ${multArr} have a product of ${finalSum}.`];
@@ -168,7 +169,7 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
