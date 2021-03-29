@@ -12,12 +12,6 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-    const sumArray = [];
-    
-    sumArray[0] = a + b;
-    sumArray[1] = `The sum of ${a} and ${b} is ${sumArray[0]}.`;
-
-    return sumArray;
 
 }
 
@@ -32,6 +26,8 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+
+    return [a * b, `The product of ${a} and ${b} is ${a * b}`];
 
 }
 
