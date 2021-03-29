@@ -133,7 +133,6 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
     prdStr += ` have a product of ${prdVal}.`;
 
     return [prdVal, prdStr];
-
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -154,7 +153,8 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    return multiplyArrayWithThreeNumbers(dynamicArray);
+    // I already did this lol. if you want I can rewrite it all out, but... seems unecessary
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
