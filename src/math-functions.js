@@ -63,12 +63,8 @@ how to do this. However, you may continue to use the + operator for string conca
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
     const numbers = [a, b, c];
-    let sumValue = 0;
-    let productValue = 0;
-    for(let num of numbers) {
-        sumValue = sum(sum(a, b)[0], c)[0];
-        productValue = multiply(multiply(a, b)[0], c)[0];        //return sumValue, productValue;
-    }
+    const sumValue = sum(sum(a, b)[0], c)[0];
+    const productValue = multiply(multiply(a, b)[0], c)[0];        //return sumValue, productValue;
     
     return [sumValue, productValue, `${a} and ${b} and ${c} sum to ${sumValue}.`, `The product of ${a} and ${b} and ${c} is ${productValue}.`];
     
@@ -95,7 +91,8 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    const sumValue = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0];
+    return [sumValue, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumValue} is their sum.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
