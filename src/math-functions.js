@@ -90,7 +90,7 @@ export function sumArrayWithThreeNumbers(sumArr) {
         sumVal = sum(sumVal, num)[0];
         sumStr += num;
 
-        if (num !== sumArr[sumArr.length - 1]) sumStr += ',';
+        if (i !== (sumArr.length - 1)) sumStr += ',';
     }
 
     sumStr +=  ` was passed in as an array of numbers, and ${sumVal} is their sum.`;
@@ -127,7 +127,7 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
         prdVal = multiply(prdVal, num)[0];
         prdStr += String(num);
 
-        if (num !== multArr[multArr.length - 1]) prdStr += ',';
+        if (i !== (multArr.length - 1)) prdStr += ',';
     }
 
     prdStr += ` have a product of ${prdVal}.`;
