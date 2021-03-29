@@ -106,6 +106,18 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const array = [];
+    let result = 0;
+    for (let num of sumArr) {
+        let resultArray = sum(num, result);
+        result = resultArray[0];
+
+
+    }
+
+    const string = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${result} is their sum.`;
+    array.push(result, string);
+    return array;
 
 }
 
