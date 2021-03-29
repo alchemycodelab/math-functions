@@ -126,12 +126,12 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
     let product = 1;
 
     for(let arr of multArr) { 
-        console.log(product);
+        // console.log(product);
         product = multiply(product, arr).shift();
     }
 
     const productString = `The numbers ${multArr} have a product of ${product}.`;
-    console.log(productString);
+    // console.log(productString);
 
     myArr.push(product);
     myArr.push(productString);
@@ -157,7 +157,20 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    const myArr = [];
+    let product = 1;
 
+    for(let arr of dynamicArray) { 
+        console.log(product);
+        product = multiply(product, arr).shift();
+    }
+
+    const productString = `The numbers ${dynamicArray} have a product of ${product}.`;
+    console.log(productString);
+
+    myArr.push(product);
+    myArr.push(productString);
+    return myArr;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
