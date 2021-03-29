@@ -63,6 +63,13 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const returnArray = [];
+    const sumOfThree = sum(sum(a, b)[0], c)[0];
+    const productOfThree = multiply(multiply(a, b)[0], c)[0];
+    const stringOne = `${a} and ${b} and ${c} sum to ${sumOfThree}.`;
+    const stringTwo = `The product of ${a} and ${b} and ${c} is ${productOfThree}.`;
+    returnArray.push(sumOfThree, productOfThree, stringOne, stringTwo);
+    return returnArray;
 
 }
 
@@ -85,6 +92,11 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const returnArray = [];
+    const sumArray = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0];
+    const arrayString = `${sumArr} was passed in as an array of numbers, and ${sumArray} is their sum.`;
+    returnArray.push(sumArray, arrayString);
+    return returnArray;
 
 }
 
@@ -108,6 +120,11 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    const returnArray = [];
+    const productArray = multiply(multiply(multArr[0], multArr[1])[0], multArr[2])[0];
+    const arrayString = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${productArray}.`;
+    returnArray.push(productArray, arrayString);
+    return returnArray;
 
 }
 
