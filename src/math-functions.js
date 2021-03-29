@@ -12,7 +12,10 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    const sum = a + b;
+    const sumString = `The sum of ${a} and ${b} is ${sum}.`;
+    const returnArray = [sum, sumString];
+    return returnArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,6 +29,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    const mult = a * b;
+    const multString = `The product of ${a} and ${b} is ${mult}.`;
+    const multArr = [mult, multString];
+    return multArr;
 
 }
 
@@ -50,7 +57,15 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(a, b, c) { 
+    const sumArray = sum(sum(a, b)[0], c)[0];
+    const prodArray = multiply(multiply(a, b)[0], c)[0];
+    const thirdElement = `${a} and ${b} and ${c} sum to ${sumArray}.`;
+    const fourthElementm = `The product of ${a} and ${b} and ${c} is ${prodArray}.`;
+    const message = [sumArray, prodArray, thirdElement, fourthElementm];
+    return message;
+    // const indexOne = [sumArray, prodArray, thirdElement, fourthElement]
+    //eslint-disable-line
 
 }
 
