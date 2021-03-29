@@ -12,7 +12,8 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    const c = Number(a) + Number(b);
+    return [c, `The sum of ${a} and ${b} is ${c}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +27,8 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    const c = Number(a) * Number(b);
+    return [c, `The product of ${a} and ${b} is ${c}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -52,6 +54,12 @@ how to do this. However, you may continue to use the + operator for string conca
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
 
+    const sumVal = sum(sum(a, b)[0], c)[0];
+    const prdVal = multiply(multiply(a, b)[0], c)[0];
+    const sumStr = `${a} and ${b} and ${c} sum to ${sumVal}.`;
+    const prdStr = `The product of ${a} and ${b} and ${c} is ${prdVal}.`;
+
+    return [sumVal, prdVal, sumStr, prdStr];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,7 +81,19 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    let sumVal = 0;
+    let sumStr = ``;
 
+    for(let num of sumArr) {
+        sumVal = sum(sumVal, num)[0];
+        sumStr += num;
+
+        if(num !== sumArr[sumArr.length - 1]) sumStr += ',';
+    }
+
+    sumStr += ` was passed in as an array of numbers, and ${sumVal} is their sum.`;
+
+    return [sumVal, sumStr];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,7 +116,19 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    let prdVal = 1;
+    let prdStr = `The numbers `;
 
+    for(let num of multArr) {
+        prdVal = multiply(prdVal, num)[0];
+        prdStr += String(num);
+
+        if(num !== multArr[multArr.length - 1]) prdStr += ',';
+    }
+
+    prdStr += ` have a product of ${prdVal}.`;
+
+    return [prdVal, prdStr];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -117,7 +149,8 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    return multiplyArrayWithThreeNumbers(dynamicArray);
+    // I already did this lol. if you want I can rewrite it all out, but... seems unecessary
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
