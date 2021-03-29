@@ -12,9 +12,9 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-    const sum = a + b;
-    const text = `The sum of ${a} and ${b} is ${sum}.`;
-    return [sum, text];
+    const sum1 = a + b;
+    const text = `The sum of ${a} and ${b} is ${sum1}.`;
+    return [sum1, text];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -55,7 +55,13 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    const sumOne = sum(a, b);
+    const sumFinal = sum(sumOne[0], c);
+    const productOne = multiply(a, b);
+    const productFinal = multiply(productOne[0], c);
+    const textOne = `${a} and ${b} and ${c} sum to ${sumFinal[0]}.`;
+    const textTwo = `The product of ${a} and ${b} and ${5} is ${productFinal[0]}.`;
+    return [sumFinal[0], productFinal[0], textOne, textTwo];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
