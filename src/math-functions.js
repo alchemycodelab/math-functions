@@ -56,6 +56,12 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const sum = a + b + c;
+    const product = a * b * c;
+    const sumString = `${a} and ${b} and ${c} sum to ${sum}.`;
+    const productString = `The product of ${a} and ${b} and ${c} is ${product}.`;
+
+    return [sum, product, sumString, productString];
 
 }
 
