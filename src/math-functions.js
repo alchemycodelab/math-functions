@@ -127,7 +127,9 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
     returnArray.push(productArray, arrayString);
     return returnArray;
 
+
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
