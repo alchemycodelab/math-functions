@@ -32,7 +32,6 @@ Write a function called multiply() that takes in two numbers as arguments and re
 export function multiply(a, b) {
     const numbers = [a, b];
     const productValue = a * b;
-    console.log(productValue);
     const answer = [productValue, `The product of ${a} and ${b} is ${productValue}.`];
     return answer;
 }
@@ -137,7 +136,12 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    let product = 1; 
+    for(let number of dynamicArray) {
+        product = multiply(product, number)[0];
+      
+    }
+    return [product, `The numbers ${dynamicArray} have a product of ${product}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
