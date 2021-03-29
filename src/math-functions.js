@@ -34,6 +34,15 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    const returnMulArray = [];
+
+    const multiply = a * b;
+    const bString = `The product of ${a} and ${b} is ${multiply}.`;
+
+    returnMulArray.push(multiply);
+    returnMulArray.push(bString);
+
+    return returnMulArray;
 
 }
 
