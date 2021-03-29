@@ -54,12 +54,14 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+
+  // Use .shift() to kick strings out
     const sum1 = sum(a, b).shift();
     const sum2 = sum(sum1, c).shift();
     const product1 = multiply(a, b).shift();
     const product2 = multiply(product1, c).shift();
-    console.log(sum2);
-    console.log(product2);
+    // console.log(sum2);
+    // console.log(product2);
 
     // const product = a * b * c;
     return [`${sum2}`, `${product2}`, `${a} and ${b} and ${c} sum to ${sum2}.`, `The product of ${a} and ${b} and ${c} is ${product2}.`];
@@ -84,6 +86,19 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const myArr = [];
+    let total = 0;
+
+    for(let arr of sumArr) {
+        total = sum(total, arr).shift();
+    }
+
+    const totalString = `${sumArr} was passed in as an array of numbers, and ${total} is their sum.`;
+    // console.log(totalString);
+
+    myArr.push(total);
+    myArr.push(totalString);
+    return myArr;
     
 }
 
@@ -107,6 +122,20 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    const myArr = [];
+    let product = 1;
+
+    for(let arr of multArr) { 
+        console.log(product);
+        product = multiply(product, arr).shift();
+    }
+
+    const productString = `The numbers ${multArr} have a product of ${product}.`;
+    console.log(productString);
+
+    myArr.push(product);
+    myArr.push(productString);
+    return myArr;
 
 }
 
