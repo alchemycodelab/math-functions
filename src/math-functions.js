@@ -12,7 +12,9 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    const sum = a + b;
+    const string = `The sum of ${a} and ${b} is ${sum}.`;
+    return [sum, string];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +28,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    const product = a * b;
+    const string = `The product of ${a} and ${b} is ${product}.`;
 
+    return [product, string];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,6 +56,14 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const midSum = sum(a, b)[0];
+    const finalSum = sum(midSum, c)[0];
+    const midProduct = multiply(a, b)[0];
+    const finalProduct = multiply(midProduct, c)[0];
+    const sumString = `${a} and ${b} and ${c} sum to ${finalSum}.`;
+    const productString = `The product of ${a} and ${b} and ${c} is ${finalProduct}.`;
+
+    return [finalSum, finalProduct, sumString, productString];
 
 }
 
@@ -73,7 +86,11 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const midSum = sum(sumArr[0], sumArr[1])[0];
+    const finalSum = sum(midSum, sumArr[2])[0];
+    const string = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${finalSum} is their sum.`;
 
+    return [finalSum, string];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,7 +113,12 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    const midProduct = multiply(multArr[0], multArr[1])[0];
+    const finalProduct = multiply(midProduct, multArr[2])[0];
+    const string = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${finalProduct}.`;
 
+
+    return [finalProduct, string];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -117,7 +139,14 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let product = 1;
+    for(let number of dynamicArray) {
+        product = multiply(product, number)[0];
+    }
+    
+    const string = `The numbers ${dynamicArray} have a product of ${product}.`;
 
+    return [product, string];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
