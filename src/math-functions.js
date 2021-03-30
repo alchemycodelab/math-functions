@@ -12,7 +12,15 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
+    const returnArray = [];
 
+    const added = a + b;
+    const theString = `The sum of ${a} and ${b} is ${added}.`;
+
+    returnArray.push(added);
+    returnArray.push(theString);
+
+    return returnArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,8 +34,18 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    const returnArray = [];
 
+    const product = a * b;
+    const theString = `The product of ${a} and ${b} is ${product}.`;
+
+    returnArray.push(product);
+    returnArray.push(theString);
+
+    return returnArray;
+    
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -50,7 +68,21 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(a, b, c) { 
+    const returnArray = [];
+
+    const firstElement = sum(sum(a, b)[0], c)[0];
+    const secondElement = multiply(multiply(a, b)[0], c)[0];
+    const thirdElement = `${a} and ${b} and ${c} sum to ${firstElement}.`;
+    const fourthElement = `The product of ${a} and ${b} and ${c} is ${secondElement}.`;
+
+
+    returnArray.push(firstElement);
+    returnArray.push(secondElement);
+    returnArray.push(thirdElement);
+    returnArray.push(fourthElement);
+
+    return returnArray;
 
 }
 
@@ -73,8 +105,17 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const returnArray = [];
 
+    const firstElement = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0];
+    const secondElement = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${firstElement} is their sum.`;
+
+    returnArray.push(firstElement);
+    returnArray.push(secondElement);
+    
+    return returnArray;
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -96,7 +137,15 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    const returnArray = [];
 
+    const firstElement = multiply(multiply(multArr[0], multArr[1])[0], multArr[2])[0];
+    const secondElement = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${firstElement}.`;
+
+    returnArray.push(firstElement);
+    returnArray.push(secondElement);
+
+    return returnArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
