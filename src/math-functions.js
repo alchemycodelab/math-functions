@@ -102,13 +102,22 @@ export function sumArrayWithThreeNumbers(sumArr) {
     
     // sumArr = [];
 
-    const returnArray = [];
-    //sumValue = sum(sum(a, b)[0], c)[0];
-    const sumValue = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0];
+    // const returnArray = [];
+    // //sumValue = sum(sum(a, b)[0], c)[0];
+    // const sumValue = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0];
+
+    // returnArray.push(sumValue, secondElement);
+    // return returnArray;
+
+    let sumValue = 0;
+
+    for(let item of sumArr) {
+        sumValue = sum(sumValue, item)[0];
+    }
 
     const secondElement = `${sumArr} was passed in as an array of numbers, and ${sumValue} is their sum.`;
-    returnArray.push(sumValue, secondElement);
-    return returnArray;
+
+    return [sumValue, secondElement];
 }
 
 
@@ -132,12 +141,16 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-    const returnArray = [];
-    const prodValue = multiply(multiply(multArr[0], multArr[1])[0], multArr[2])[0];
+    // const prodValue = multiply(multiply(multArr[0], multArr[1])[0], multArr[2])[0];
+
+    let prodValue = 1;
+
+    for(let item of multArr) {
+        prodValue = multiply(prodValue, item)[0];
+    }
 
     const secondElement = `The numbers ${multArr} have a product of ${prodValue}.`;
-    returnArray.push(prodValue, secondElement);
-    return returnArray;
+    return [prodValue, secondElement];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -158,21 +171,19 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-    // const returnArray = [];
-// value =  dynamicArray[i]
-    
-   
-    // multiply(value
+
     let product = 1;
 
-    // product = multiply(multiply(multArr[0], multArr[1])[0], multArr[2])[0];
-    //loop through array, initialize product value
+    // //loop through array, initialize product value
     
-    for(let value of dynamicArray) {
-        product = multiply(product, value)[0];
+    for(let item of dynamicArray) {
+        product = multiply(product, item)[0];
     }
     
-     
+    // for(let i = 0; i < dynamicArray.length; i++) {
+    //     product = multiply(product, dynamicArray[i])[0];
+    // }
+
     const secondElement = `The numbers ${dynamicArray} have a product of ${product}.`;
     return [product, secondElement];
 }
