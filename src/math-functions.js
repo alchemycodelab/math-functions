@@ -62,12 +62,10 @@ export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
     const sumString = `${a} and ${b} and ${c} sum to ${sumFunction}.`;
     const multiplyString = `The product of ${a} and ${b} and ${c} is ${multiplyFunction}.`;
 
-    console.log(sum(a, b).shift());
-    console.log(multiply(a, b).shift());
+    // console.log(sum(a, b).shift());
+    // console.log(multiply(a, b).shift());
 
     return [sumFunction, multiplyFunction, sumString, multiplyString];
-
-    
 
 }
 
@@ -90,6 +88,15 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    let total = 0;
+
+    for(let number of sumArr) {
+        total = sum(total, number)[0];
+    }
+
+    console.log(total);
+
+    return [total, `${sumArr} was passed in as an array of numbers, and ${total} is their sum.`];
 
 }
 
@@ -113,6 +120,8 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+
+
 
 }
 
