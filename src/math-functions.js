@@ -94,7 +94,7 @@ export function sumArrayWithThreeNumbers(sumArr) {
         total = sum(total, number)[0];
     }
 
-    console.log(total);
+    //console.log(total);
 
     return [total, `${sumArr} was passed in as an array of numbers, and ${total} is their sum.`];
 
@@ -121,6 +121,15 @@ you may continue to use the + operator for string concatenation.
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
 
+    let total = 1;
+
+    for(let number of multArr) {
+        total = multiply(total, number)[0];
+    }
+
+    console.log(total);
+
+    return [total, `The numbers ${multArr} have a product of ${total}.`];
 
 
 }
