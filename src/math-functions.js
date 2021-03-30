@@ -13,6 +13,17 @@ example and uses the values that were input into the function:
 
 export function sum(a, b) {
 
+    const returnArray = [];
+
+    const sumResult = a + b;
+
+    const sumString = `The sum of ${a} and ${b} is ${sumResult}.`;
+
+    returnArray.push(sumResult);
+    returnArray.push(sumString);
+
+    return returnArray;
+
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -27,6 +38,16 @@ Write a function called multiply() that takes in two numbers as arguments and re
 
 export function multiply(a, b) {
 
+    const returnArray = [];
+
+    const productResult = a * b;
+
+    const productString = `The product of ${a} and ${b} is ${productResult}.`;
+
+    returnArray.push(productResult);
+    returnArray.push(productString);
+
+    return returnArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -52,6 +73,26 @@ how to do this. However, you may continue to use the + operator for string conca
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
 
+    const returnArray = [];
+
+    const addOne = sum(a, b);
+    const addTwo = sum(addOne[0], c);
+    const finalAdd = addTwo[0];
+
+    const mulOne = multiply(a, b);
+    const mulTwo = multiply(mulOne[0], c);
+    const finalMul = mulTwo[0];
+
+
+    const sumString = `${a} and ${b} and ${c} sum to ${finalAdd}.`;
+    const productString = `The product of ${a} and ${b} and ${c} is ${finalMul}.`;
+
+    returnArray.push(finalAdd);
+    returnArray.push(finalMul);
+    returnArray.push(sumString);
+    returnArray.push(productString);
+
+    return returnArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,6 +114,23 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+
+    const returnArray = [];
+
+    const firstNumber = sumArr[0];
+    const secondNumber = sumArr[1];
+    const thirdNumber = sumArr[2];
+
+    const addOne = sum(firstNumber, secondNumber);
+    const addTwo = sum(addOne[0], thirdNumber);
+    const finalAdd = addTwo[0];
+
+    const threeSumString = `${firstNumber},${secondNumber},${thirdNumber} was passed in as an array of numbers, and ${finalAdd} is their sum.`;
+
+    returnArray.push(finalAdd);
+    returnArray.push(threeSumString);
+
+    return returnArray;
 
 }
 
@@ -97,6 +155,22 @@ you may continue to use the + operator for string concatenation.
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
 
+    const returnArray = [];
+
+    const firstNumber = multArr[0];
+    const secondNumber = multArr[1];
+    const thirdNumber = multArr[2];
+
+    const mulOne = multiply(firstNumber, secondNumber);
+    const mulTwo = multiply(mulOne[0], thirdNumber);
+    const finalMul = mulTwo[0];
+
+    const threeMulString = `The numbers ${firstNumber},${secondNumber},${thirdNumber} have a product of ${finalMul}.`;
+
+    returnArray.push(finalMul);
+    returnArray.push(threeMulString);
+
+    return returnArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -118,7 +192,22 @@ This function should be dynamic, accepting an array of any length.
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
-}
+    const returnArray = [];
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
+    let mul = 1;
+
+    for (let number of dynamicArray) {
+        mul = multiply(mul, number)[0];
+    }
+
+    const result = mul;
+    const firstString = `The numbers ${dynamicArray} have a product of ${result}.`;
+
+    returnArray.push(result);
+    returnArray.push(firstString);
+
+    return returnArray;
+
+}
+// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 // You're done! Submit the link to the repo following the instructions in Canvas.
