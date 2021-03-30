@@ -80,7 +80,7 @@ export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
     const sumString = `${a} and ${b} and ${c} sum to ${sum2}.`;
     const productString = `The product of ${a} and ${b} and ${c} is ${product2}.`;
     array.push(sum2, product2, sumString, productString);
-    return array;
+    return array; 
 
 }
 
@@ -106,14 +106,8 @@ export function sumArrayWithThreeNumbers(sumArr) {
     const array = [];
     let result = 0;
     for(let num of sumArr) {
-
         result = sum(num, result)[0];
     
-
-        let resultArray = sum(num, result);
-        result = resultArray[0];
-
-
 
     }
 
@@ -146,11 +140,7 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
     const array = [];
     let result = 1;
     for(let num of multArr) {
-
         result = multiply(num, result)[0];
-
-        let resultArray = multiply(num, result);
-        result = resultArray[0];
 
 
     }
@@ -183,12 +173,7 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     let result = 1;
     const indexArray = [];
     for(let num of dynamicArray) {
-
         result = multiply(num, result)[0];
-
-        let resultArray = multiply(num, result);
-        result = resultArray[0];
-
         indexArray.push(dynamicArray[num - 1]);
 
     }
