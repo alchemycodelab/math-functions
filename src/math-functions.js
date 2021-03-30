@@ -150,7 +150,8 @@ This function should be dynamic, accepting an array of any length.
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     let product = 1;
-    for (let i of dynamicArray) {
+    // eslint-disable-next-line keyword-spacing
+    for(let i of dynamicArray) {
         product = multiply(product, i)[0];
     }
     return [product, `The numbers ${dynamicArray} have a product of ${product}.`];
