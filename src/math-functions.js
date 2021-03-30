@@ -106,7 +106,7 @@ export function sumArrayWithThreeNumbers(sumArr) {
     const array = [];
     let result = 0;
     for(let num of sumArr) {
- refactor
+
         result = sum(num, result)[0];
     
 
