@@ -106,8 +106,14 @@ export function sumArrayWithThreeNumbers(sumArr) {
     const array = [];
     let result = 0;
     for(let num of sumArr) {
+ refactor
         result = sum(num, result)[0];
     
+
+        let resultArray = sum(num, result);
+        result = resultArray[0];
+
+
 
     }
 
@@ -140,7 +146,11 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
     const array = [];
     let result = 1;
     for(let num of multArr) {
+
         result = multiply(num, result)[0];
+
+        let resultArray = multiply(num, result);
+        result = resultArray[0];
 
 
     }
@@ -173,7 +183,12 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     let result = 1;
     const indexArray = [];
     for(let num of dynamicArray) {
+
         result = multiply(num, result)[0];
+
+        let resultArray = multiply(num, result);
+        result = resultArray[0];
+
         indexArray.push(dynamicArray[num - 1]);
 
     }
