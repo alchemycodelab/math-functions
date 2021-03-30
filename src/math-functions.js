@@ -58,6 +58,15 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+//     let number = sum() + multiply();
+        let sumOfTwoNumbers = sum(a, b)[0]
+        let finalAddResult = sum(sumOfTwoNumbers, c)[0]
+        let productOfTwoNumbers = multiply(a, b)[0]
+        let finalProductResult = multiply(productOfTwoNumbers, c)[0]
+
+    return [finalAddResult, finalProductResult, `${a} and ${b} and ${c} sum to ${finalAddResult}.`,
+      `The product of ${a} and ${b} and ${c} is ${finalProductResult}.`]
+
 
 }
 
