@@ -13,6 +13,8 @@ example and uses the values that were input into the function:
 
 export function sum(a, b) {
 
+    return [a + b, `The sum of ${a} and ${b} is ${a + b}.`];
+
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -27,7 +29,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 
 export function multiply(a, b) {
 
+    return [a * b, `The product of ${a} and ${b} is ${a * b}.`];
+
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -51,6 +56,16 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const sumFunction = sum(sum(a, b).shift(), c)[0];
+    const multiplyFunction = multiply(multiply(a, b).shift(), c)[0];
+
+    const sumString = `${a} and ${b} and ${c} sum to ${sumFunction}.`;
+    const multiplyString = `The product of ${a} and ${b} and ${c} is ${multiplyFunction}.`;
+
+    // console.log(sum(a, b).shift());
+    // console.log(multiply(a, b).shift());
+
+    return [sumFunction, multiplyFunction, sumString, multiplyString];
 
 }
 
@@ -73,6 +88,15 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    let total = 0;
+
+    for(let number of sumArr) {
+        total = sum(total, number)[0];
+    }
+
+    //console.log(total);
+
+    return [total, `${sumArr} was passed in as an array of numbers, and ${total} is their sum.`];
 
 }
 
@@ -96,6 +120,17 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+
+    let total = 1;
+
+    for(let number of multArr) {
+        total = multiply(total, number)[0];
+    }
+
+    console.log(total);
+
+    return [total, `The numbers ${multArr} have a product of ${total}.`];
+
 
 }
 
