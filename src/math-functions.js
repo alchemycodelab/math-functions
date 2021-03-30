@@ -70,15 +70,12 @@ how to do this. However, you may continue to use the + operator for string conca
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
     const array = [];
 
-    const sumArrayOne = sum(a, b);
-    const sum1 = sumArrayOne[0];
-    const sumArrayTwo = sum(sum1, c);
-    const sum2 = sumArrayTwo[0];
+    const sum1 = sum(a, b)[0];
+    const sum2 = sum(sum1, c)[0];
 
-    const productArrayOne = multiply(a, b);
-    const product1 = productArrayOne[0];
-    const productArrayTwo = multiply(product1, c);
-    const product2 = productArrayTwo[0];
+
+    const product1 = multiply(a, b)[0];
+    const product2 = multiply(product1, c)[0];
 
     const sumString = `${a} and ${b} and ${c} sum to ${sum2}.`;
     const productString = `The product of ${a} and ${b} and ${c} is ${product2}.`;
@@ -109,8 +106,13 @@ export function sumArrayWithThreeNumbers(sumArr) {
     const array = [];
     let result = 0;
     for(let num of sumArr) {
+ refactor
+        result = sum(num, result)[0];
+    
+
         let resultArray = sum(num, result);
         result = resultArray[0];
+
 
 
     }
@@ -144,6 +146,9 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
     const array = [];
     let result = 1;
     for(let num of multArr) {
+
+        result = multiply(num, result)[0];
+
         let resultArray = multiply(num, result);
         result = resultArray[0];
 
@@ -178,8 +183,12 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     let result = 1;
     const indexArray = [];
     for(let num of dynamicArray) {
+
+        result = multiply(num, result)[0];
+
         let resultArray = multiply(num, result);
         result = resultArray[0];
+
         indexArray.push(dynamicArray[num - 1]);
 
     }
