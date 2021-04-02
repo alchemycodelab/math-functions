@@ -89,11 +89,20 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+       const a = sumArr[0];
+       const b = sumArr[1];
+       const c = sumArr[2];
 
+       console.log(a);
+       const bobJr = sum(a, b);
+       const bob = sum(bobJr[0], c);
+
+       return [bob[0], `${sumArr} was passed in as an array of numbers, and ${bob[0]} is their sum.`]
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
+//seeing if anything is working 
 
 /////////////////////////////////////
 /* Problem 5
@@ -103,7 +112,7 @@ and the second element is a string that EXACTLY follows this example and uses th
 that were input into the function:
 
 "The numbers 2,3,4 have a product of 24."
-
+// random comment
 IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. 
 To do multiplication, use your multiply() function that you've already created. 
 You're going to have to be resourceful to figure out how to do this. 
@@ -133,7 +142,15 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+        let product = 1;
 
+        for (let num of dynamicArray) {
+                const sallyArray = multiply(product, num);
+
+                product = sallyArray[0];
+        }
+
+        return [product, `The numbers ${dynamicArray} have a product of ${product}`]
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
