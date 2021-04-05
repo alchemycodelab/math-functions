@@ -11,8 +11,12 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
-export function sum(a, b) {
 
+
+export function sum(a, b) {
+    let number = a + b;
+    return [number, `The sum of ${a} and ${b} is ${number}.`];
+    
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -20,13 +24,16 @@ export function sum(a, b) {
 
 /////////////////////////////////////
 /* Problem 2
-Write a function called multiply() that takes in two numbers as arguments and returns an array where the first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called multiply() that takes in two numbers as arguments and returns an array where the
+ first element is the product of those numbers, and the second element is a string that EXACTLY follows 
+ this example and uses the values that were input into the function:
 
 "The product of 5 and 9 is 45."
 */
 
 export function multiply(a, b) {
-
+    let number = a * b;
+    return [number, `The product of ${a} and ${b} is ${number}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,6 +58,15 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+//     let number = sum() + multiply();
+    let sumOfTwoNumbers = sum(a, b)[0];
+    let finalAddResult = sum(sumOfTwoNumbers, c)[0];
+    let productOfTwoNumbers = multiply(a, b)[0];
+    let finalProductResult = multiply(productOfTwoNumbers, c)[0];
+
+    return [finalAddResult, finalProductResult, `${a} and ${b} and ${c} sum to ${finalAddResult}.`,
+        `The product of ${a} and ${b} and ${c} is ${finalProductResult}.`];
+
 
 }
 
@@ -73,11 +89,20 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const a = sumArr[0];
+    const b = sumArr[1];
+    const c = sumArr[2];
 
+    console.log(a);
+    const bobJr = sum(a, b);
+    const bob = sum(bobJr[0], c);
+
+    return [bob[0], `${sumArr} was passed in as an array of numbers, and ${bob[0]} is their sum.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
+//seeing if anything is working 
 
 /////////////////////////////////////
 /* Problem 5
@@ -87,7 +112,7 @@ and the second element is a string that EXACTLY follows this example and uses th
 that were input into the function:
 
 "The numbers 2,3,4 have a product of 24."
-
+// random comment
 IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. 
 To do multiplication, use your multiply() function that you've already created. 
 You're going to have to be resourceful to figure out how to do this. 
@@ -117,7 +142,15 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let product = 1;
 
+    for(let num of dynamicArray) {
+        const sallyArray = multiply(product, num);
+
+        product = sallyArray[0];
+    }
+
+    return [product, `The numbers ${dynamicArray} have a product of ${product}`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
