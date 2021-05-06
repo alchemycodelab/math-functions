@@ -12,6 +12,11 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
+    return [
+        a + b,
+        `The sum of ${a} and ${b} is ${a + b}.`
+    ];
+
 
 }
 
