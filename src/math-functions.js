@@ -56,12 +56,14 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(a, b, c) {
+    const sum1 = sum(a, b)[0];
+    const multi1= multiply(a, b)[0]; //eslint-disable-line
     return [
-        a + b + c,
-        a * b * c,
-        `${a} and ${b} and ${c} sum to ${ a + b + c}.`,
-        `The product of ${a} and ${b} and ${c} is ${a * b * c}.`
+        sum(sum1, c)[0],
+        multiply(multi1, c)[0],
+        `${a} and ${b} and ${c} sum to ${sum(sum1, c)[0]}.`,
+        `The product of ${a} and ${b} and ${c} is ${multiply(multi1, c)[0]}.`
     ];
 }
 
@@ -87,10 +89,12 @@ export function sumArrayWithThreeNumbers(sumArr) {
     const a = sumArr[0];
     const b = sumArr[1];
     const c = sumArr[2];
+    const sum2 = sum(a, b)[0];
+    const sum3 = sum(sum2, c)[0];
 
     return [
         a + b + c,
-        `${a},${b},${c} was passed in as an array of numbers, and ${ a + b + c} is their sum.`
+        `${a},${b},${c} was passed in as an array of numbers, and ${sum3} is their sum.`
     ];
 }
 
@@ -117,10 +121,12 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
     const a = multArr[0];
     const b = multArr[1];
     const c = multArr[2];
+    const multi2 = multiply(a, b)[0];
+    const multi3 = multiply(multi2, c)[0];
 
     return [
         a * b * c, 
-        `The numbers ${a},${b},${c} have a product of ${a * b * c}.`
+        `The numbers ${a},${b},${c} have a product of ${multi3}.`
     ];
 }
 
