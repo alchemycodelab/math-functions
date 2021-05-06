@@ -13,8 +13,8 @@ example and uses the values that were input into the function:
 
 export function sum(a, b) {
     return [
-        a + b,
-        `The sum of ${a} and ${b} is ${a + b}.`
+        a + b, //0
+        `The sum of ${a} and ${b} is ${a + b}.` //1
     ];
 }
 
@@ -92,8 +92,9 @@ export function sumArrayWithThreeNumbers(sumArr) {
     const sum2 = sum(a, b)[0];
     const sum3 = sum(sum2, c)[0];
 
+
     return [
-        a + b + c,
+        sum3,
         `${a},${b},${c} was passed in as an array of numbers, and ${sum3} is their sum.`
     ];
 }
@@ -125,7 +126,7 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
     const multi3 = multiply(multi2, c)[0];
 
     return [
-        a * b * c, 
+        multi3, 
         `The numbers ${a},${b},${c} have a product of ${multi3}.`
     ];
 }
