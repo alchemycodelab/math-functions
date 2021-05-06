@@ -12,6 +12,7 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
+    return ([a + b, `The sum of ${a} and ${b} is ${a + b}.`]);
 
 }
 
@@ -26,7 +27,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    return ([a * b, `The product of ${a} and ${b} is ${a * b}.`]);
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,7 +52,14 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    const sum2 = sum (a, b) [0];
+    const multi2 = multiply (a, b) [0];
+    return [
+        sum (sum2, c) [0], multiply (multi2, c) [0],
+        `${a} and ${b} and ${c} sum to ${sum (sum2, c) [0]}.`,
+        `The product of ${a} and ${b} and ${c} is ${multiply (multi2, c) [0]}.`
+    ];
+      
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,6 +81,15 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const a = sumArr[0];
+    const b = sumArr[1];
+    const c = sumArr[2];
+    const sum3 = sum(a, b)[0];
+    const sum4 = sum(sum3, c)[0];
+    return [
+        sum4, `${a},${b},${c} was passed in as an array of numbers, and ${sum4} is their sum.`
+    ];
+
 
 }
 
@@ -96,6 +113,14 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    const a = multArr[0];
+    const b = multArr[1];
+    const c = multArr[2];
+    const multi3 = multiply(a, b)[0];
+    const multi4 = multiply(multi3, c)[0];
+    return [
+        multi4, `The numbers ${a},${b},${c} have a product of ${multi4}.`
+    ];
 
 }
 
