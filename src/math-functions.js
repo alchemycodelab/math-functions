@@ -12,6 +12,10 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
+    return [
+        a + b,
+        `The sum of ${a} and ${b} is ${a + b}.`
+    ];
 
 }
 
@@ -26,7 +30,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    return [
+        a * b,
+        `The product of ${a} and ${b} is ${a * b}.`
+    ];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,7 +58,12 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    return [
+        a + b + c,
+        a * b * c,
+        `${a} and ${b} and ${c} sum to ${a + b + c}.`,
+        `The product of ${a} and ${b} and ${c} is ${a * b * c}.`
+    ];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,6 +85,14 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const firstnums = sum(sumArr [0], sumArr[1])[0];
+    const secondnums = sum(sumArr[2], firstnums)[0];
+    sumArr.unshift (secondnums);
+    return [
+        secondnums,
+        `2,3,4 was passed in as an array of numbers, and ${secondnums} is their sum.`
+        
+    ];
 
 }
 
@@ -96,6 +116,14 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    const firstnums = multiply(multArr [0], multArr[1])[0];
+    const secondnums = multiply(multArr[2], firstnums)[0];
+    multArr.unshift (secondnums);
+    return [
+        secondnums,
+        `The numbers 2,3,4 have a product of ${secondnums}.`
+        
+    ];
 
 }
 
