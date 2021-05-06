@@ -100,7 +100,12 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    let product = 1;
+    for(let num of multArr){
+        product = multiply(product, num)[0];
+    }
+    const stringT = `The numbers ${multArr} have a product of ${product}.`;
+    return [product, stringT];
 }
 
 
