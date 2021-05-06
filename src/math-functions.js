@@ -74,9 +74,9 @@ To do addition, use your sum() function that you've already created. You're goin
 have to be resourceful to figure out how to do this. However, you may continue 
 to use the + operator for string concatenation.
 */
-
+// `${sum(sum(a, b)[0], c)[0]}`
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    return [`${sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0]}`, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0]} is their sum.`]; 
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
