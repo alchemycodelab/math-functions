@@ -73,9 +73,13 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    let add = 0;
+    for(let num of sumArr){
+        add = sum(add, num)[0];
+    }
+    const stringT = `${sumArr} was passed in as an array of numbers, and ${add} is their sum.`;
+    return [add, stringT];
 }
-
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
@@ -99,6 +103,7 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
 
 }
 
+
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
@@ -117,7 +122,7 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
