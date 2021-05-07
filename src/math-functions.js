@@ -98,10 +98,10 @@ export function sumArrayWithThreeNumbers(sumArr) {
     for(let num of sumArr) {
         sumTotal = sum(sumTotal, num)[0];
     }
-        return [
-            sumTotal,
-            `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumTotal} is their sum.`
-        ];
+    return [
+        sumTotal,
+        `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumTotal} is their sum.`
+    ];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -128,10 +128,10 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
     for(let num of multArr) {
         timesTotal = multiply(timesTotal, num)[0];
     }
-        return [
-            timesTotal,
-            `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${timesTotal}.`
-        ];
+    return [
+        timesTotal,
+        `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${timesTotal}.`
+    ];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -162,10 +162,10 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     for(let number of dynamicArray) {
         multiplicationTotal = multiply(multiplicationTotal, number)[0];
     }
-        return [
-            multiplicationTotal,
-            `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${multiplicationTotal}.`
-        ]
+    return [
+        multiplicationTotal,
+        `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${multiplicationTotal}.`
+    ];
 }
 
 
