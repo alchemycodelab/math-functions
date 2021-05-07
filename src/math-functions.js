@@ -29,7 +29,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    const product = a * b;
+    return [
+        product,
+        `The product of ${a} and ${b} is ${product}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -74,7 +77,7 @@ To do addition, use your sum() function that you've already created. You're goin
 have to be resourceful to figure out how to do this. However, you may continue 
 to use the + operator for string concatenation.
 */
-    export function sumArrayWithThreeNumbers(summArr) {
+export function sumArrayWithThreeNumbers(summArr) {
     //     let sumTotal = 0;
     //     for (let num of sumArr) {
     //         sumTotal = sum(sumTotal, num)[0];
@@ -83,7 +86,7 @@ to use the + operator for string concatenation.
     //         sumTotal,
     //         `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumTotal} is their sum.`
     //     ]
-    }
+}
 
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
