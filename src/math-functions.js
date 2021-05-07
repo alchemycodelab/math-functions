@@ -12,6 +12,11 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
+    return [
+        a + b,
+        `The sum of ${a} and ${b} is ${a + b}.`
+    ];
+
 
 }
 
@@ -26,9 +31,11 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    return [
+        a * b,
+        `The product of ${a} and ${b} is ${a * b}.`
+    ];
 }
-
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
@@ -51,8 +58,14 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    return [
+        sum(a, sum(b, c)[0])[0],
+        multiply(a, multiply(b, c)[0])[0],
+        `${a} and ${b} and ${c} sum to ${sum(a, sum(b, c)[0])[0]}.`,
+        `The product of ${a} and ${b} and ${c} is ${multiply(a, multiply(b, c)[0])[0]}.`
+    ];
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -73,7 +86,10 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    return [
+        sum(sumArr[0], sum(sumArr[1], sumArr[2])[0])[0], 
+        `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum(sumArr[0], sum(sumArr[1], sumArr[2])[0])[0]} is their sum.`
+    ];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,7 +112,10 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    return [
+        multiply(multArr[0], multiply(multArr[1], multArr[2])[0])[0],
+        `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multiply(multArr[0], multiply(multArr[1], multArr[2])[0])[0]}.`
+    ];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -117,6 +136,19 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    //definte variable equal to 1 to pass through loop
+    let x = 1;
+    //begin looping through array
+    for(let i = 0; i < dynamicArray.length; i++) {
+        //multiply variable by next element in array
+        let multResult = multiply(x, dynamicArray[i])[0];
+        //store new result in variable
+        x = multResult;
+    }
+    return [
+        x,
+        `The numbers ${dynamicArray} have a product of ${x}.`
+    ];
 
 }
 
