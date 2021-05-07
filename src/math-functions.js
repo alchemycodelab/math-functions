@@ -36,7 +36,10 @@ export function multiply(a, b) {
 
 /////////////////////////////////////
 /* Problem 3
-Write a function called sumAndMultiplyThreeNumbers() that takes in three 
+Write a  use the arithmetic operators + and * in this function. 
+To do addition, use your sum() function, and to do multiplication, use your multiply() 
+function that you've already created. You're going to have to be resourceful to figure out 
+how to do this. However, you may continue to ufunction called sumAndMultiplyThreeNumbers() that takes in three 
 numbers as separate arguments and returns 
 an array where the first element is the sum of those three numbers, 
 the second element is the product of those three numbers,  
@@ -46,10 +49,7 @@ use the values that were input into the function:
 Third element: "4 and 7 and 5 sum to 16."
 Fourth element: "The product of 4 and 7 and 5 is 140."
 
-IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this function. 
-To do addition, use your sum() function, and to do multiplication, use your multiply() 
-function that you've already created. You're going to have to be resourceful to figure out 
-how to do this. However, you may continue to use the + operator for string concatenation.
+IMPORTANT DETAIL: You may notse the + operator for string concatenation.
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
@@ -81,6 +81,10 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    return [
+        sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0],
+        `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum(sum(sumArr[0], sumArr[1])[0],sumArr[2])[0]} is their sum.`
+    ];
 
 }
 
