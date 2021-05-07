@@ -108,6 +108,11 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    return [
+        multiply(multiply(multArr[0], multArr[1])[0], multArr[2])[0],
+        `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multiply(multiply(multArr[0], multArr[1])[0], multArr[2])[0]}.`
+    ];
+            
 
 }
 
@@ -129,6 +134,8 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    
+
 
 }
 
