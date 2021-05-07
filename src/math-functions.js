@@ -11,11 +11,17 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
-export function sum(a, b) {
-    const sum = a + b;
+export function sum(a, b, c) {
+    let sum = a + b;
+    let string = `The sum of ${a} and ${b} is ${sum}.`
+    if(c !== undefined) {
+        sum += c; 
+        string = `The sum of ${a} and ${b} and ${c} is ${sum}.`
+    };
+//sum =+ is shorthand for sum = sum + c
     return [
         sum,
-        `The sum of ${a} and ${b} is ${sum}.`];
+        string];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -56,7 +62,8 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(a, b, c) {
+    return sum(a, b, c);
 
 }
 
@@ -78,14 +85,14 @@ have to be resourceful to figure out how to do this. However, you may continue
 to use the + operator for string concatenation.
 */
 export function sumArrayWithThreeNumbers(summArr) {
-    //     let sumTotal = 0;
-    //     for (let num of sumArr) {
-    //         sumTotal = sum(sumTotal, num)[0];
-    //     }
-    //     return [
-    //         sumTotal,
-    //         `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumTotal} is their sum.`
-    //     ]
+    let sumTotal = 0;
+    for (let num of sumArr) {
+        sumTotal = sum(sumTotal, num)[0];
+    }
+    return [
+        sumTotal,
+        `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumTotal} is their sum.`
+    ]
 }
 
 
