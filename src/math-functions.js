@@ -85,14 +85,6 @@ have to be resourceful to figure out how to do this. However, you may continue
 to use the + operator for string concatenation.
 */
 export function sumArrayWithThreeNumbers(summArr) {
-    let sumTotal = 0;
-    for (let num of sumArr) {
-        sumTotal = sum(sumTotal, num)[0];
-    }
-    return [
-        sumTotal,
-        `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumTotal} is their sum.`
-    ]
 }
 
 
