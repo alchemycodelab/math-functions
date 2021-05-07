@@ -154,7 +154,21 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let sg1 = dynamicArray[0];
+    let sg2 = dynamicArray[1];
+    let sg3 = dynamicArray[2];
+    let sg4 = dynamicArray[3];
+    let sg5 = dynamicArray[4];
+    let sgprod1 = multiplyArrayWithThreeNumbers([sg1, sg2, sg3])[0];
+    console.log(sgprod1);
+    let sgprod2 = multiply(sg4, sg5)[0];
+    let final = multiply(sgprod1, sgprod2)[0];
+    console.log(final);
 
+    return [
+        final,
+        `The numbers ${dynamicArray} have a product of ${final}.`
+    ];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
