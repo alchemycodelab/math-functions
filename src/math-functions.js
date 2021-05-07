@@ -136,6 +136,19 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    //definte variable equal to 1 to pass through loop
+    let x = 1;
+    //begin looping through array
+    for(let i = 0; i < dynamicArray.length; i++) {
+        //multiply variable by next element in array
+        let multResult = multiply(x, dynamicArray[i])[0];
+        //store new result in variable
+        x = multResult;
+    }
+    return [
+        x,
+        `The numbers ${dynamicArray} have a product of ${x}.`
+    ];
 
 }
 
