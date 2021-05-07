@@ -94,7 +94,7 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-        let sumTotal = 0;
+    let sumTotal = 0;
     for (let num of sumArr) {
         sumTotal = sum(sumTotal, num)[0];
     }
@@ -124,7 +124,14 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    let timesTotal = 1;
+    for (let num of multArr) {
+        timesTotal = multiply(timesTotal, num)[0];
+    }
+        return [
+            timesTotal,
+            `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${timesTotal}.`
+        ]
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
