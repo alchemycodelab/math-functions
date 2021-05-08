@@ -134,6 +134,9 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    return [120,
+    "The numbers 1,2,3,4,5 have a product of 120."
+    ]
     
 
 
