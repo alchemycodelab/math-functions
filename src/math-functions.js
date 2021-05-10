@@ -97,7 +97,7 @@ export function sumArrayWithThreeNumbers(summArr) {
         `${summArr} was passed in as an array of numbers, and ${sumOfThree} is their sum.`]);
 }
 
-
+//welp, i didnt make enough branches in the correct amount of time. 
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
