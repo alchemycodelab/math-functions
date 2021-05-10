@@ -119,8 +119,8 @@ you may continue to use the + operator for string concatenation.
 2,2,5
 */
 
-export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-}
+// export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+// }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -141,8 +141,8 @@ This function should be dynamic, accepting an array of any length.
 2,2,5,2
 */
 
-export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-}
+// export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+// }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
