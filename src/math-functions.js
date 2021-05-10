@@ -12,7 +12,7 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-    return [a + b, `The sum of ${a} and ${b} is ${a + b}.`]
+    return [a + b, `The sum of ${a} and ${b} is ${a + b}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +26,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-    return [a * b, `The product of ${a} and ${b} is ${a * b}.`]
+    return [a * b, `The product of ${a} and ${b} is ${a * b}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,13 +51,13 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-    return [sum(a, sum(b,c)[0])[0], multiply(a, multiply(b,c)[0])[0], `${a} and ${b} and ${c} sum to ${sum(a, sum(b,c)[0])[0]}.`, `The product of ${a} and ${b} and ${c} is ${multiply(a, multiply(b,c)[0])[0]}.`]
+    return [sum(a, sum(b, c)[0])[0], multiply(a, multiply(b, c)[0])[0], `${a} and ${b} and ${c} sum to ${sum(a, sum(b, c)[0])[0]}.`, `The product of ${a} and ${b} and ${c} is ${multiply(a, multiply(b, c)[0])[0]}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
-/////////////////////////////////////
+////////////////////////////////////
 /* Problem 4
 Write a function called sumArrayWithThreeNumbers() that takes in an array of numbers 
 as its single argument and then returns an array where the first element is the sum 
