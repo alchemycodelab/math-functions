@@ -87,6 +87,10 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    return [
+        sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0],
+        `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0]} is their sum.`
+    ];
 
 }
 
