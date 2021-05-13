@@ -12,7 +12,10 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    return [
+        a + b,
+        `The sum of ${a} and ${b} is ${a + b}.`
+    ];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +29,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    return [
+        a * b,
+        `The product of ${a} and ${b} is ${a * b}.`
+    ];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,7 +57,12 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    return [
+        sum(sum(a, b)[0], c)[0],
+        multiply(multiply(a, b)[0], c)[0],
+        `${a} and ${b} and ${c} sum to ${sum(sum(a, b)[0], c)[0]}.`,
+        `The product of ${a} and ${b} and ${c} is ${multiply(multiply(a, b)[0], c)[0]}.`
+    ];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,7 +84,10 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    return [
+        sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0],
+        `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0]} is their sum.`
+    ];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,7 +110,10 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    return [
+        multiply(multiply(multArr[0], multArr[1])[0], multArr[2])[0],
+        `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multiply(multiply(multArr[0], multArr[1])[0], multArr[2])[0]}.`
+    ];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -116,9 +133,9 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
-export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+// export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
-}
+// }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
