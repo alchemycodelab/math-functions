@@ -12,8 +12,12 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    const myArray = [];
+    myArray[0] = a + b; 
+    myArray[1] = `The sum of ${a} and ${b} is ${myArray[0]}.`;
+    return myArray;
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -26,7 +30,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    const myArray = [];
+    myArray[0] = a * b; 
+    myArray[1] = `The product of ${a} and ${b} is ${myArray[0]}.`;
+    return myArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -50,9 +57,26 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(a, b, c) { 
+    //eslint-disable-line
+    
+    const myArray = [];
+    const sumOfTwoNumbers = sum(a, b);
+    const sumOfThreeNumbers = sum(sumOfTwoNumbers[0], c);
+    const finalSum = sumOfThreeNumbers;
 
+    const productOfTwoNumbers = multiply(a, b);
+    const productOfThreeNumbers = multiply(productOfTwoNumbers[0], c);
+    const finalProduct = productOfThreeNumbers;
+    
+    myArray[0] = finalSum[0];
+    myArray[1] = finalProduct[0];
+    myArray[2] = `${a} and ${b} and ${c} sum to ${myArray[0]}.`;
+    myArray[3] = `The product of ${a} and ${b} and ${c} is ${myArray[1]}.`;
+
+    return myArray;
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -73,7 +97,17 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    
+    const myArray = []; 
+    const sumOfTwoNumbers = sum(sumArr[0], sumArr[1]); 
+    const sumOfThreeNumbers = sum(sumOfTwoNumbers[0], sumArr[2]); 
+    const finalSum = sumOfThreeNumbers[0];
 
+
+    myArray[0] = finalSum; 
+    myArray[1] = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${finalSum} is their sum.`;
+
+    return myArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,6 +130,17 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    
+    const myArray = []; 
+    const productOfTwoNumbers = multiply(multArr[0], multArr[1]); 
+    const productOfThreeNumbers = multiply(productOfTwoNumbers[0], multArr[2]); 
+    const finalProduct = productOfThreeNumbers[0];
+
+
+    myArray[0] = finalProduct; 
+    myArray[1] = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${finalProduct}.`;
+
+    return myArray;
 
 }
 
@@ -116,9 +161,17 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
-export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+// export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+//     const myArray = []; 
+//     const productOne = 1; 
+//     for (let i = 0; i < dynamicArray.length; i++) {
+//     }
 
-}
+//     myArray[0] = finalProduct[0]; 
+//         myArray[1] = `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]}, have a product of ${finalProduct}.`;
+
+//     return myArray; 
+// }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
