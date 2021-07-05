@@ -12,7 +12,7 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    return [4 + 7, `The sum of ${4} and ${7} is ${4 + 7}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +26,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    return [5 * 9, `The product of ${5} and ${9} is ${5 * 9}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
