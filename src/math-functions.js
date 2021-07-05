@@ -11,8 +11,11 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
-export function sum(a, b) {
 
+export function sum(numberOne, numberTwo) {
+    let addedTogether = numberOne + numberTwo;
+    let addedSentence = [addedTogether, `The sum of ${numberOne} and ${numberTwo} is ${addedTogether}.`];
+    return addedSentence;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -20,13 +23,18 @@ export function sum(a, b) {
 
 /////////////////////////////////////
 /* Problem 2
-Write a function called multiply() that takes in two numbers as arguments and returns an array where the first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called multiply() that takes in two numbers as arguments and
+returns an array where the first element is the product of those numbers, and
+the second element is a string that EXACTLY follows this example and uses the 
+values that were input into the function:
 
 "The product of 5 and 9 is 45."
 */
 
-export function multiply(a, b) {
-
+export function multiply(numberOne, numberTwo) {
+    let multipliedTogether = numberOne * numberTwo;
+    let finishedSentence = [multipliedTogether, `The product of ${numberOne} and ${numberTwo} is ${multipliedTogether}.`];
+    return finishedSentence;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -50,8 +58,23 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(numberOne, numberTwo, numberThree) {
 
+    const sumOne = sum(numberOne, numberTwo);
+    const sumTwo = sum(numberThree, sumOne[0]);    
+    const finalSum = sumTwo[0];
+
+    const productOne = multiply(numberOne, numberTwo);
+    const productTwo = multiply(numberThree, productOne[0]);
+    const finalProduct = productTwo[0];
+
+    const array = [];
+    array[0] = finalSum;
+    array[1] = finalProduct;
+    array[2] = `${numberOne} and ${numberTwo} and ${numberThree} sum to ${finalSum}.`;
+    array[3] = `The product of ${numberOne} and ${numberTwo} and ${numberThree} is ${finalProduct}.`;
+    return array;
+  
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,13 +96,20 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    let firstProduct = sum(sumArr[0], sumArr[1]);
+    let secondSum = sum(firstProduct[0], sumArr[2]);
+    let finalSum = secondSum[0];
 
+    const finalArray = [];
+    finalArray[0] = finalSum;
+    finalArray[1] = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${finalSum} is their sum.`;
+    return finalArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
-/////////////////////////////////////
+///////////////////
 /* Problem 5
 Write a function called multiplyArrayWithThreeNumbers() that takes an array of numbers 
 as its argument and returns an array whose first element is the product of those numbers, 
@@ -96,6 +126,15 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+
+    let firstProduct = multiply(multArr[0], multArr[1]);
+    let secondProduct = multiply(firstProduct[0], multArr[2]);
+    let finalProduct = secondProduct[0];
+
+    const finalArray = [];
+    finalArray[0] = finalProduct;
+    finalArray[1] = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${finalProduct}.`;
+    return finalArray;
 
 }
 
