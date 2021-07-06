@@ -5,4 +5,4 @@ before_script:
 script:
   - npx eslint .
   - npx qunit test/index.js
-  
+
