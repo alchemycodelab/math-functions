@@ -12,7 +12,10 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
+    const answer = a + b;
+    const message = 'The sum of ' + a + ' and ' + b + ' is ' + answer + '.';
 
+    return [answer, message];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +29,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    const answer = a * b;
+    const message = 'The product of ' + a + ' and ' + b + ' is ' + answer + '.';
 
+    return [answer, message];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,7 +57,19 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    let sumAnswer = 0;
+    let multiplyAnswer = 1;
+    let arr = [a, b, c];
+    
+    arr.forEach(element => {
+        [sumAnswer] = sum(element, sumAnswer);
+        [multiplyAnswer] = multiply(element, multiplyAnswer);
+    });
+    
+    const sumMessage = arr.join(' and ') + ' sum to ' + sumAnswer + '.';
+    const multiplyMessage = 'The product of ' + arr.join(' and ') + ' is ' + multiplyAnswer + '.';
 
+    return [sumAnswer, multiplyAnswer, sumMessage, multiplyMessage];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,7 +91,15 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    let answer = 0;
 
+    sumArr.forEach(element => {
+        [answer] = sum(element, answer);
+    });
+
+    const message = sumArr.toString() + ' was passed in as an array of numbers, and ' + answer + ' is their sum.';
+
+    return [answer, message];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,7 +122,15 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    let answer = 1;
 
+    multArr.forEach(element => {
+        [answer] = multiply(element, answer);
+    });
+
+    const message = 'The numbers ' + multArr.toString() + ' have a product of ' + answer + '.';
+
+    return [answer, message];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -117,7 +151,15 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let answer = 1;
 
+    dynamicArray.forEach(element => {
+        [answer] = multiply(element, answer);
+    });
+
+    const message = 'The numbers ' + dynamicArray.toString() + ' have a product of ' + answer + '.';
+
+    return [answer, message];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
