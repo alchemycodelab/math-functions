@@ -12,7 +12,9 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    let total = a + b;
+    
+    return [total, 'The sum of ' + a + ' and ' + b + ' is ' + total + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +28,8 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    let mult = a * b;
+    return [mult, 'The product of ' + a + ' and ' + b + ' is ' + mult + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,7 +54,9 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    let sum = a + b + c;
+    let product = a * b * c;
+    return [sum, product, a + ' and ' + b + ' and ' + c + ' sum to ' + sum + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + product + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -72,8 +77,13 @@ have to be resourceful to figure out how to do this. However, you may continue
 to use the + operator for string concatenation.
 */
 
-export function sumArrayWithThreeNumbers(sumArr) {
 
+
+export function sumArrayWithThreeNumbers(sumArr) {
+    let sumOne = sum(sumArr[0], sumArr[1])[0];
+    let sumTwo = sum(sumOne, sumArr[2])[0];
+
+    return [sumTwo, 'The numbers ' + sumArr + ' have a sum of ' + sumTwo + '.', sumArr + ' was passed in as an array of numbers, and ' + sumTwo + ' is their sum.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,6 +106,10 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    let productOne = multiply(multArr[0], multArr[1])[0];
+    let productTwo = multiply(productOne, multArr[2])[0];
+
+    return [productTwo, 'The numbers ' + multArr + ' have a product of ' + productTwo + '.'];
 
 }
 
@@ -116,9 +130,9 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
-export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+// export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
-}
+// }
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
-// You're done! Submit the link to the repo following the instructions in Canvas.
+// // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
+// // You're done! Submit the link to the repo following the instructions in Canvas.
