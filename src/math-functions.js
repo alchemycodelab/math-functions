@@ -12,7 +12,7 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    return [a + b, `The sum of ${a} and ${b} is ${a + b}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +26,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    return [a * b, `The product of ${a} and ${b} is ${a * b}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,7 +51,9 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    const sums = sum(sum(a, b)[0], c)[0];
+    const multiplied = multiply(multiply(a, b)[0], c)[0]; 
+    return [sums, multiplied, `${a} and ${b} and ${c} sum to ${sums}.`, `The product of ${a} and ${b} and ${c} is ${multiplied}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,7 +75,8 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    const sums = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0];
+    return [sums, `The numbers ${sumArr.join()} have a sum of ${sums}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,8 +99,10 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    const product = multiply(multiply(multArr[0], multArr[1])[0], multArr[2])[0];
+    return [product, `The numbers ${multArr.join()} have a product of ${product}.`];
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -116,9 +121,11 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
-export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
-}
-
+// export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+// }
+// }
+// export function multiply(a, b) {
+//     return [a * b, `The product of ${a} and ${b} is ${a * b}.`];
+// }
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
