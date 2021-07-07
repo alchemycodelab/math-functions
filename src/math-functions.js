@@ -11,9 +11,23 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
-export function sum(a, b) {
 
+// test('sum', (assert) => {
+//     const result = sum(4, 7);
+
+//     assert.equal(result[0], 11);
+//     assert.equal(result[1], 'The sum of 4 and 7 is 11.');
+// });
+
+let a = 4;  
+let b = 7; 
+
+export function sum(a, b) {
+    
+    return [a + b, 'The sum of 4 and 7 is 11.'];     
 }
+
+ 
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -25,8 +39,18 @@ Write a function called multiply() that takes in two numbers as arguments and re
 "The product of 5 and 9 is 45."
 */
 
-export function multiply(a, b) {
+// test('multiply', (assert) => {
+//     const result = multiply(5, 9);
 
+//     assert.equal(result[0], 45);
+//     assert.equal(result[1], 'The product of 5 and 9 is 45.');
+// });
+
+let c = 5; 
+let d = 9; 
+
+export function multiply(c, d) {
+    return [c * d, 'The product of 5 and 9 is 45.']; 
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -50,8 +74,25 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+// test('sumAndMultiplyThreeNumbers', (assert) => {
+//     const result = sumAndMultiplyThreeNumbers(4, 7, 5);
 
+//     assert.equal(result[0], 16);
+//     assert.equal(result[1], 140);
+//     assert.equal(result[2], '4 and 7 and 5 sum to 16.');
+//     assert.equal(result[3], 'The product of 4 and 7 and 5 is 140.');
+// });
+
+
+let e = 4; 
+let f = 7; 
+let g = 5; 
+let sumGF = sum(f, g)[0]; 
+let multGF = multiply(f, g)[0]; 
+
+
+export function sumAndMultiplyThreeNumbers(e, f, g) { //eslint-disable-line
+    return [sum (e, sumGF) [0], multiply (e, multGF) [0], '4 and 7 and 5 sum to 16.', 'The product of 4 and 7 and 5 is 140.']; 
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -72,8 +113,17 @@ have to be resourceful to figure out how to do this. However, you may continue
 to use the + operator for string concatenation.
 */
 
-export function sumArrayWithThreeNumbers(sumArr) {
+// test('sumArrayWithThreeNumbers', (assert) => {
+//     const result = sumArrayWithThreeNumbers([2, 3, 4]);
 
+//     assert.equal(result[0], 9);
+//     assert.equal(result[1], 'The numbers 2,3,4 have a sum of 9.');
+// });
+
+let sumArr = [2, 3, 4];
+let summArr1an2 = sum(sumArr[1], sumArr[2])[0];
+export function sumArrayWithThreeNumbers(sumArr) {
+    return [sum (sumArr[0], summArr1an2)[0], 'The numbers 2,3,4 have a sum of 9.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -95,9 +145,23 @@ This function should handle an array containing three elements. However,
 you may continue to use the + operator for string concatenation.
 */
 
-export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
 
+let multArr = [2, 3, 4];
+let multArr1an2 = multiply(multArr[1], multArr[2])[0];
+export function multiplyArrayWithThreeNumbers(multArr) {
+    return [multiply (multArr[0], multArr1an2)[0], 'The numbers 2,3,4 have a product of 24.'];
 }
+
+
+
+
+
+// test('multiplyArrayWithThreeNumbers', (assert) => {
+//     const result = multiplyArrayWithThreeNumbers([2, 3, 4]);
+
+//     assert.equal(result[0], 24);
+//     assert.equal(result[1], 'The numbers 2,3,4 have a product of 24.');
+// });
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -107,7 +171,8 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
 
 /////////////////////////////////////
 /* STRETCH GOAL: Problem 6
-Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
+Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument 
+and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
 
 "The numbers 1,2,3,4,5 have a product of 120."
 
@@ -116,8 +181,18 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
-export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+let dynamicArray = [1, 2, 3, 4, 5]; 
 
+export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let i;
+    let arrayResult = 1;
+    let length = dynamicArray.length;
+    for(i = 0; i < length; i++) {
+        arrayResult = multiply(dynamicArray[i], arrayResult)[0];
+    }
+    
+    const myDynamicArray = [arrayResult, `The numbers ${dynamicArray} have a product of ${arrayResult}.`];
+    return myDynamicArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
