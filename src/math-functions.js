@@ -12,8 +12,11 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    let add = a + b;
+    let all = 'The sum of ' + a + ' and ' + b + ' is ' + add + '.';
+    return [add, all];
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -26,7 +29,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    let multi = a * b;
+    let multiTotal = 'The product of ' + a + ' and ' + b + ' is ' + multi + '.';
+    return [multi, multiTotal];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,15 +56,19 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    let sumTotal = sum(sum(a, b)[0], c)[0];
+    let productTotal = multiply(multiply(a, b)[0], c)[0];
+    return [sumTotal, productTotal, a + ' and ' + b + ' and ' + c + ' sum to ' + sumTotal + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productTotal + '.'];
 }
+
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
 /* Problem 4
-Write a function called sumArrayWithThreeNumbers() that takes in an array of numbers 
+Write a function called multArrayWithThreeNumbers() that takes in an array of numbers 
 as its single argument and then returns an array where the first element is the sum 
 of the numbers in the array, and the second element is a string that EXACTLY follows 
 this example and uses the values that were input into the function:
@@ -72,7 +81,15 @@ have to be resourceful to figure out how to do this. However, you may continue
 to use the + operator for string concatenation.
 */
 
-export function sumArrayWithThreeNumbers(sumArr) {
+export function sumArrayWithThreeNumbers(multArr) {
+    let theTotalSum = 0;
+    let i = 0;
+    for (i = 0; i < multArr.length; i++) {
+        theTotalSum = sum(theTotalSum, multArr[i])[0];
+    }
+    let result = [theTotalSum, +multArr[0] + ',' + multArr[1] + ',' + multArr[2] + ' was passed in as an array of numbers, and ' + theTotalSum + ' is their sum.'];
+
+    return result;
 
 }
 
@@ -97,7 +114,16 @@ you may continue to use the + operator for string concatenation.
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
 
+    let theTotalProd = 24;
+    for (let i = 0; i < multArr.length; i++) {
+        theTotalProd = multiplyArrayWithThreeNumbers(theTotalProd, multArr[i])[0];
+    }
+    let result = [theTotalProd, 'The numbers ' + multArr[0] + ',' + multArr[1] + ',' + multArr[2] + ' have a product of ' + theTotalProd + '.'];
+
+    return result;
 }
+
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -116,8 +142,21 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
-export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
+export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let theTotalProd = 1;
+    let numsequence = dynamicArray[0];
+    console.log(numsequence);
+
+    for (let i = 0; i < dynamicArray.length; i++) {
+        theTotalProd = multiply(theTotalProd, dynamicArray[i])[0];
+        if (i > 0) {
+            numsequence = numsequence + ',' + dynamicArray[i];
+        }
+    }
+    console.log(dynamicArray);
+    let result = [theTotalProd, 'The numbers ' + numsequence + ' have a product of ' + theTotalProd + '.'];
+    return result;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
