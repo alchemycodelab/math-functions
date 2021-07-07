@@ -12,7 +12,11 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    const array = [];
+    array[0] = a + b;
+    array[1] = `The sum of ${a} and ${b} is ${array[0]}.`;
+    
+    return array;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +30,11 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    const array = [];
+    array[0] = a * b;
+    array[1] = `The product of ${a} and ${b} is ${array[0]}.`;
+    
+    return array;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -50,7 +58,20 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(a, b, c) {
+    const array = [];
+    const firstSum = sum(a, b);
+    const finalSum = sum(firstSum[0], c);
+    
+    const firstMultiply = multiply(a, b);
+    const finalMultiply = multiply(firstMultiply[0], c);
+
+    array[0] = finalSum[0];
+    array[1] = finalMultiply[0];
+    array[2] = `${a} and ${b} and ${c} sum to ${array[0]}.`;
+    array[3] = `The product of ${a} and ${b} and ${c} is ${array[1]}.`;
+
+    return array; 
 
 }
 
@@ -73,7 +94,15 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const array = [];
+    const firstSum = sum(sumArr[0], sumArr[1]);
+    const secondSum = sum(firstSum[0], sumArr[2]);
+    const finalSum = secondSum[0];
+    
+    array[0] = finalSum;
+    array[1] = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${finalSum} is their sum.`;
 
+    return array;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -95,8 +124,15 @@ This function should handle an array containing three elements. However,
 you may continue to use the + operator for string concatenation.
 */
 
-export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+export function multiplyArrayWithThreeNumbers(multArr) {
+    const array = [];
+    const firstMultiply = multiply(multArr[0], multArr[1]);
+    const finalMultiply = multiply(firstMultiply[0], multArr[2]);
 
+    array[0] = finalMultiply[0];
+    array[1] = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${finalMultiply[0]}.`;
+
+    return array;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -114,11 +150,21 @@ Write a function called multiplyAnyArray() that takes an array of numbers of any
 IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
 
 This function should be dynamic, accepting an array of any length.
-*/
+// */
 
-export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+// export function multiplyAnyArray(dynamicArray) { 
+//     const array = [];
+//     const firstMultiply = multiply(dynamicArray[0], dynamicArray[1]);
+//     const secondMultiply = multiply(firstMultiply[0], dynamicArray[2]);
+//     const thridMultiply = multiply(secondMultiply[0], dynamicArray[3]);
+//     const finalMultiply = multiply(thridMultiply[0], dynamicArray[4]);
 
-}
+//     array[0] = finalMultiply[0];
+//     array[1] = `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${finalMultiply[0]}.`;
+
+// //  return array;
+
+// }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
