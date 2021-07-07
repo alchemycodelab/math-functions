@@ -12,7 +12,11 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    let arr = [];
+    const added = a + b;
+    const addedWords = `The sum of ${a} and ${b} is ${added}.`;
+    arr = [added, addedWords];
+    return arr;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +30,12 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    let arr = [];
+    const mult = a * b;
+    const multWords = `The product of ${a} and ${b} is ${mult}.`;
+    arr = [mult, multWords];
+    return arr;
+    
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,7 +60,15 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    let arr = [];
+    const addNotDone = sum(a, b);
+    const added = sum(addNotDone[0], c);
+    const multNotDone = multiply(a, b);
+    const mult = multiply(multNotDone[0], c);
+    const addWords = `${a} and ${b} and ${c} sum to ${added[0]}.`;
+    const multWords = `The product of ${a} and ${b} and ${c} is ${mult[0]}.`;
+    arr = [added[0], mult[0], addWords, multWords];
+    return arr;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,7 +90,12 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    let arr = [];
+    const addedNotDone = sum(sumArr[0], sumArr[1]);
+    const added = sum(addedNotDone[0], sumArr[2]);
+    const addedWords = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${added[0]} is their sum.`;
+    arr = [added[0], addedWords];
+    return arr;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,7 +118,12 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    let arr = [];
+    const multNotDone = multiply(multArr[0], multArr[1]);
+    const mult = multiply(multNotDone[0], multArr[2]);
+    const multWords = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${mult[0]}.`;
+    arr = [mult[0], multWords];
+    return arr;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
