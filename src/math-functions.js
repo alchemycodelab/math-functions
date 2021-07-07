@@ -13,7 +13,12 @@ example and uses the values that were input into the function:
 
 export function sum(a, b) {
 
+    const add = a + b;
+    let result = `The sum of ${a} and ${b} is ${add}.`;
+    return [add, result];
 }
+
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -26,6 +31,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    const times = a * b;
+    let result = `The product of ${a} and ${b} is ${times}.`;
+    return [times, result];
 
 }
 
@@ -51,7 +59,11 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    const addition = sum(sum(a, b)[0], c);
+    const times = multiply(multiply(a, b)[0], c);
+    let result = `${a} and ${b} and ${c} sum to ${addition[0]}.`;
+    let resultA = `The product of ${a} and ${b} and ${c} is ${times[0]}.`;
+    return [addition[0], times[0], result, resultA];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,6 +85,9 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const add = sum(sum (sumArr[0], sumArr[1])[0], sumArr[2])[0]; 
+    let sumArray = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and 9 is their sum.`;
+    return [add, sumArray];
 
 }
 
@@ -96,7 +111,10 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    const times = multiply(multiply (multArr[0], multArr[1])[0], multArr[2])[0];
+    let multipleArray = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${times}.`;
+    return [times, multipleArray];
+   
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
