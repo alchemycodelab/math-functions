@@ -12,7 +12,8 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    let newSum = a + b;
+    return [newSum, `The sum of ${a} and ${b} is ${newSum}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,8 +27,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
-}
+    let newNum = a * b;
+    return [newNum, `The product of ${a} and ${b} is ${newNum}.`];
+} 
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -51,6 +53,20 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    let theSum = sum(a, b)[0];
+
+    console.log(theSum);
+
+    let theSumOfAll = (c + theSum);
+
+    console.log(theSumOfAll);
+
+    let theMult = multiply(a, b)[0];
+
+    let theMultOfAll = (c * theMult);
+    console.log(theMultOfAll);
+
+    return [theSumOfAll, theMultOfAll, `${a} and ${b} and ${c} sum to ${theSumOfAll}.`, `The product of ${a} and ${b} and ${c} is ${theMultOfAll}.`];
 
 }
 
@@ -73,6 +89,10 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    
+    sumArr = (a, b)[0]
+    let sumArrOfAll = (c, sumArr);
+    return [sumArr, `was passed in as an array of numbers, and ${sumArrOfAll} is their sum.`]
 
 }
 
