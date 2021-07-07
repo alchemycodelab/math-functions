@@ -12,8 +12,13 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
+    const array = [];
+    array [0] = a + b;
+    array [1] = `The sum of ${a} and ${b} is ${array[0]}.`;
+    return array;    
 
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -26,7 +31,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    const array = [];
+    array [0] = a * b;
+    array [1] = `The product of ${a} and ${b} is ${array[0]}.`;
+    return array;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -34,11 +42,10 @@ export function multiply(a, b) {
 
 /////////////////////////////////////
 /* Problem 3
-Write a function called sumAndMultiplyThreeNumbers() that takes in three 
-numbers as separate arguments and returns 
-an array where the first element is the sum of those three numbers, 
-the second element is the product of those three numbers,  
-and the third and fourth elements are strings that EXACTLY follow this example and 
+Write a function called sumAndMultiplyThreeNumbers() that takes in three numbers as separate arguments 
+- and returns an array where the first element is the sum of those three numbers, 
+- the second element is the product of those three numbers,  
+- and the third and fourth elements are strings that EXACTLY follow this example and 
 use the values that were input into the function:
 
 Third element: "4 and 7 and 5 sum to 16."
@@ -51,7 +58,15 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const arr = [];
 
+    arr [0] = sum(sum(a, b)[0], c)[0];
+    arr [1] = multiply(multiply(a, b)[0], c)[0];
+
+    arr [2] = `${a} and ${b} and ${c} sum to ${arr[0]}.`;
+    arr [3] = `The product of ${a} and ${b} and ${c} is ${arr[1]}.`;
+
+    return arr ;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,7 +88,10 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    const arr = [];
+    arr [0] = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0];
+    arr [1] = `The numbers ${sumArr} have a sum of ${arr[0]}.`;
+    return arr;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,7 +114,10 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    const arr = [];
+    arr [0] = multiply(multiply(multArr[0], multArr[1])[0], multArr[2])[0];
+    arr [1] = `The numbers ${multArr} have a product of ${arr[0]}.`;
+    return arr;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -114,11 +135,11 @@ Write a function called multiplyAnyArray() that takes an array of numbers of any
 IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
 
 This function should be dynamic, accepting an array of any length.
-*/
+
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
 }
-
+*/
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
