@@ -12,7 +12,9 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
+    let sum2 = a + b;
 
+    return [sum2, `The sum of ${a} and ${b} is ${sum2}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,8 +28,11 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    let product2 = a * b;
 
+    return [product2, `The product of ${a} and ${b} is ${product2}.`];
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -51,7 +56,11 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    let sumof3 = sum(sum(a, b)[0], c)[0];
+    let prod = multiply(multiply(a, b,)[0], c)[0];
+    let elem3 = `${a} and ${b} and ${c} sum to ${sumof3}.`;
+    let elem4 = `The product of ${a} and ${b} and ${c} is ${prod}.`;
+    return [sumof3, prod, elem3, elem4]; 
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,7 +82,8 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    let add3 = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0];
+    return [add3, `The numbers ${sumArr[0]},${sumArr[1]},${sumArr[2]} have a sum of ${add3}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
