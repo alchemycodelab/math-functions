@@ -12,8 +12,11 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    const total = a + b;
+    var result = [total, 'The sum of ' + a + ' and ' + b + ' is ' + total + '.'];
+    return result;
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -26,6 +29,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    const total = a * b;
+    const result = [total, 'The product of ' + a + ' and ' + b + ' is ' + total + '.'];
+    return result;
 
 }
 
@@ -50,7 +56,11 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(a, b, c) { 
+    const sum = a + b + c;
+    const product = a * b * c;
+    const array = [sum, product, a + ' and ' + b + ' and ' + c + ' sum ' + 'to ' + sum + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + product + '.'];
+    return array;
 
 }
 
@@ -74,7 +84,27 @@ to use the + operator for string concatenation.
 
 export function sumArrayWithThreeNumbers(sumArr) {
 
+    // eslint-disable-next-line no-empty
+    var sum_multiple_numbers = [0];
+    for(let i = 0; i < sumArr.length; i++){
+      
+        sum_multiple_numbers = sum(sum_multiple_numbers[0], sumArr[i]);
+    }
+    let numberArray = 0;
+    for(let i = 0; i < sumArr.length; i++){
+        if(i === (sumArr.length - 1)){
+            numberArray = numberArray + sumArr[i] + ' ';
+        } else {
+
+            numberArray = numberArray + sumArr[i] + ',';
+        }
+    }
+    const array = [sum_multiple_numbers[0], numberArray + 'was passed in as an array of numbers, and ' + sum_multiple_numbers[0] + ' is their sum.'];
+    return array;
 }
+
+
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -95,8 +125,20 @@ This function should handle an array containing three elements. However,
 you may continue to use the + operator for string concatenation.
 */
 
-export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+export function multiplyArrayWithThreeNumbers(multArr) {
+    var multiply_three_numbers = [1];
+    let string = 0;
+    for(let i = 0; i < multArr.length; i++){
+        multiply_three_numbers = multiply(multiply_three_numbers[0], multArr[i]);
+        if(i === multArr.length - 1) {
+            string = string + multArr[i] + ' ';
+        } else {
+            string = string + multArr[i] + ',';
+        }
+    }
+    const array = [multiply_three_numbers[0], 'The numbers ' + string + 'have a product of ' + multiply_three_numbers[0] + '.'];
+    return array;
+    
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -116,8 +158,19 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
-export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+export function multiplyAnyArray(dynamicArray) { 
+    let multiply_any_numbers = [1];
+    let string1 = 0;
+    for(let i = 0; i < dynamicArray.length; i++){
+        multiply_any_numbers = multiply(multiply_any_numbers[0], dynamicArray[i]);
+        if(i === dynamicArray.length - 1){
+            string1 = string1 + dynamicArray[i] + ' ';
+        } else {
+            string1 = string1 + dynamicArray[i] + ',';
+        }
+    }
+    const array = [multiply_any_numbers[0], 'The numbers ' + string1 + 'have a product of ' + multiply_any_numbers[0] + '.'];
+    return array;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
