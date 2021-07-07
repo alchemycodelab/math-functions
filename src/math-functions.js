@@ -12,7 +12,9 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    const addNum = a + b;
+    const string = `The sum of ${a} and ${b} is ${addNum}.`;
+    return [addNum, string];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +28,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    const multiplyNum = a * b;
+    const multString = `The product of ${a} and ${b} is ${multiplyNum}.`;
+    return [multiplyNum, multString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -52,6 +56,14 @@ how to do this. However, you may continue to use the + operator for string conca
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
 
+    const sumTwoNumber = sum(a, b)[0];
+    const sumThreeNumber = sum(sumTwoNumber, c)[0];
+    const multTwoNumber = multiply(a, b)[0];
+    const multThreeNumbers = multiply(multTwoNumber, c)[0];
+    
+    const sumThreeNumbersString = `${a} and ${b} and ${c} sum to ${sumThreeNumber}.`;
+    const multThreeNumbersString = `The product of ${a} and ${b} and ${c} is ${multThreeNumbers}.`;
+    return [sumThreeNumber, multThreeNumbers, sumThreeNumbersString, multThreeNumbersString];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,6 +85,10 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const sumA = sum(sumArr[0], sumArr[1]);
+    const sumB = sum(sumA[0], sumArr[2])[0];
+     
+    return [sumB, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumB} is their sum.`];
 
 }
 
@@ -96,7 +112,9 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    const multA = multiply(multArr[1], multArr[0]);
+    const multB = multiply(multA[0], multArr[2])[0];
+    return [multB, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multB}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -116,9 +134,9 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
-export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+//export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
-}
+//}
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
