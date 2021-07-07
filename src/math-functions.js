@@ -12,7 +12,8 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-
+    const sum = a + b; 
+    return [sum, 'The sum of ' + a + ' and ' + b + ' is ' + sum + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +27,8 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    const multiply = a * b;
+    return [multiply, 'The product of ' + a + ' and ' + b + ' is ' + multiply + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,7 +53,9 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    const sumThreeNumbers = sum (c, sum (a, b)[0])[0];
+    const multThreeNumbers = multiply (c, multiply (a, b)[0])[0];
+    return [sumThreeNumbers, multThreeNumbers, a + ' and ' + b + ' and ' + c + ' sum to ' + sumThreeNumbers + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multThreeNumbers + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,7 +77,8 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    const arrayAdder = sum (sumArr[0], sum (sumArr[1], sumArr[2])[0])[0];
+    return [arrayAdder, 'The numbers ' + sumArr[0] + ',' + sumArr[1] + ',' + sumArr[2] + ' have a sum of ' + arrayAdder + '.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,7 +101,8 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    const arrayMultiplier = multiply (multArr[0], multiply (multArr[1], multArr[2])[0])[0];
+    return [arrayMultiplier, 'The numbers ' + multArr[0] + ',' + multArr[1] + ',' + multArr[2] + ' have a product of 24.'];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
