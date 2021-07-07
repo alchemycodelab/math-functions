@@ -11,8 +11,10 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
-export function sum(a, b) {
 
+export function sum(a, b) {
+    const sumOfTwoNum = a + b;
+    return [sumOfTwoNum, `The sum of ${a} and ${b} is ${sumOfTwoNum}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +28,8 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    const mulOfTwoNum = a * b;
+    return [mulOfTwoNum, `The product of ${a} and ${b} is ${mulOfTwoNum}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,8 +54,11 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    const sumOfThreeNum = sum(sum(a, b)[0], c)[0];
+    const mulOfThreeNum = multiply(multiply(a, b)[0], c)[0];
+    return [sumOfThreeNum, mulOfThreeNum, `${a} and ${b} and ${c} sum to ${sumOfThreeNum}.`, `The product of ${a} and ${b} and ${c} is ${mulOfThreeNum}.`];
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -73,9 +79,18 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    const sumOfArray1 = sumAndMultiplyThreeNumbers(sumArr[0], sumArr[1], sumArr[2])[0];
+  
 
+    return [sumOfArray1, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumOfArray1} is their sum.`];
 }
 
+// export function sumArrayWithThreeNumbers(sumArr) {
+//     const sumOfArray1 = sum(sumArr[0], sumArr[1], sumArr[2]);
+//     const sumOfArray2 = sum(sumOfArray1, );
+
+
+// }
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
 
