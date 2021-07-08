@@ -11,8 +11,25 @@ example and uses the values that were input into the function:
 "The sum of 4 and 7 is 11."
 */
 
-export function sum(a, b) {
+export function sum(a, b, ...rest) {
+    // init variable to track sum
+    let elementOne = 0;
 
+    // add first two numbers
+    if(typeof a === 'object') {
+        a.forEach(number => elementOne += number);
+    } else {
+        elementOne = a + b;
+    }
+    
+    // add remaining numbers to sum
+    rest.forEach(number => elementOne += number);
+    
+    // write string
+    const elementTwo = `The sum of ${a} and ${b} is ${elementOne}.`;
+
+    // populate & return array
+    return [elementOne, elementTwo];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -25,8 +42,25 @@ Write a function called multiply() that takes in two numbers as arguments and re
 "The product of 5 and 9 is 45."
 */
 
-export function multiply(a, b) {
+export function multiply(a, b, ...rest) {
+    // init variable to track product
+    let elementOne = 1;
+    
+    // multiply first two numbers
+    if(typeof a === 'object') {
+        a.forEach(number => elementOne *= number);
+    } else {
+        elementOne = a * b;
+    }
 
+    // multiply with the rest of the numbers
+    rest.forEach(number => elementOne *= number);
+
+    // write string
+    const elementTwo = `The product of ${a} and ${b} is ${elementOne}.`;
+
+    // populate & return array
+    return [elementOne, elementTwo];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,7 +85,20 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    // call funtions for sum and product
+    const sumOfNumbers = sum(a, b, c);
+    const prodOfNumbers = multiply(a, b, c);
 
+    // retrieve sum and product values from arrays
+    const elementOne = sumOfNumbers[0];
+    const elementTwo = prodOfNumbers[0];
+
+    // write strings
+    const elementThree = `${a} and ${b} and ${c} sum to ${elementOne}.`;
+    const elementFour = `The product of ${a} and ${b} and ${c} is ${elementTwo}.`;
+
+    // populate & return array
+    return [elementOne, elementTwo, elementThree, elementFour];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -73,7 +120,15 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+    // call sum function
+    const result = sum(sumArr);
 
+    // retrieve values for array
+    const elementOne = result[0];
+    const elementTwo = `${sumArr} was passed in as an array of numbers, and ${elementOne} is their sum.`;
+
+    // populate and return array
+    return [elementOne, elementTwo];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,7 +151,15 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    // call multiply function
+    const result = multiply(multArr);
 
+    // retrieve values for array
+    const elementOne = result[0];
+    const elementTwo = `The numbers ${multArr} have a product of ${elementOne}.`;
+
+    // populate and return array
+    return [elementOne, elementTwo];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -117,7 +180,15 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    // call multiply function
+    const result = multiply(dynamicArray);
 
+    // retrieve values for array
+    const elementOne = result[0];
+    const elementTwo = `The numbers ${dynamicArray} have a product of ${elementOne}.`;
+
+    // populate and return array
+    return [elementOne, elementTwo];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
