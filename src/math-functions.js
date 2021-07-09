@@ -10,9 +10,10 @@ example and uses the values that were input into the function:
 
 "The sum of 4 and 7 is 11."
 */
-
 export function sum(a, b) {
-
+    let num = a + b;
+    let str = 'The sum of 4 and 7 is 11.';
+    return [num, str];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +27,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    let num = a * b;
+    let str = 'The product of 5 and 9 is 45.';
+    return [num, str];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,6 +54,14 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    let num = sum(a, b);
+    let totalSum = sum(num[0], c);
+    let mul = multiply(a, b);
+    let mulTotalSum = multiply(mul[0], c);
+    let strSum = `${a} and ${b} and ${c} sum to ${totalSum[0]}.`;
+    let strMul = `The product of ${a} and ${b} and ${c} is ${mulTotalSum[0]}.`;
+
+    return [totalSum[0], mulTotalSum[0], strSum, strMul];
 
 }
 
