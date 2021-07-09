@@ -25,9 +25,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 "The product of 5 and 9 is 45."
 */
 
-// export function multiply(a, b) {
-//     return [a * b, `The product of ${a} and ${b} is ${a * b}.`];
-// }
+export function multiply(a, b) {
+    // return [a * b, `The product of ${a} and ${b} is ${a * b}.`];
+}
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -50,11 +50,11 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-// export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-//     let mySum = sum(sum(a, b)[0], c)[0];
-//     let myProduct = multiply(multiply(a, b)[0], c)[0];
-//     return [mySum, myProduct, `${a} and ${b} and ${c} sum to ${mySum}.`, `The product of ${a} and ${b} and ${c} is ${myProduct}.`];
-// }
+export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    let mySum = sum(sum(a, b)[0], c)[0];
+    let myProduct = multiply(multiply(a, b)[0], c)[0];
+    // return [mySum, myProduct, `${a} and ${b} and ${c} sum to ${mySum}.`, `The product of ${a} and ${b} and ${c} is ${myProduct}.`];
+}
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -74,11 +74,11 @@ have to be resourceful to figure out how to do this. However, you may continue
 to use the + operator for string concatenation.
 */
 
-// export function sumArrayWithThreeNumbers(sumArr) {
-//     let [a, b, c] = sumArr;
-//     let mySum = sum(sum(a, b)[0], c)[0];
-//     return [mySum, `${a},${b},${c} was passed in as an array of numbers, and ${mySum} is their sum.`];
-// }
+export function sumArrayWithThreeNumbers(sumArr) {
+    let [a, b, c] = sumArr;
+    let mySum = sum(sum(a, b)[0], c)[0];
+    // return [mySum, `${a},${b},${c} was passed in as an array of numbers, and ${mySum} is their sum.`];
+}
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -99,11 +99,11 @@ This function should handle an array containing three elements. However,
 you may continue to use the + operator for string concatenation.
 */
 
-// export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-//     let [a, b, c] = multArr;
-//     let myProduct = multiply(multiply(a, b)[0], c)[0];
-//     return [myProduct, `The numbers ${a},${b},${c} have a product of ${myProduct}.`];
-// }
+export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    let [a, b, c] = multArr;
+    let myProduct = multiply(multiply(a, b)[0], c)[0];
+    // return [myProduct, `The numbers ${a},${b},${c} have a product of ${myProduct}.`];
+}
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -123,16 +123,16 @@ This function should be dynamic, accepting an array of any length.
 */
 // woohoo!
 
-// export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-//     let product = dynamicArray.reduce((a, b) => multiply(a, b)[0]);
-//     let length = dynamicArray.length;
-//     let substring = '';
-//     for(let i = 0; i < length - 1; i++) {
-//         substring += `${dynamicArray[i]},`;
-//     }
-//     substring += dynamicArray[length - 1];
-//     return [product, `The numbers ${substring} have a product of ${product}.`];
-// }
+export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let product = dynamicArray.reduce((a, b) => multiply(a, b)[0]);
+    let length = dynamicArray.length;
+    let substring = '';
+    for(let i = 0; i < length - 1; i++) {
+        substring += `${dynamicArray[i]},`;
+    }
+    substring += dynamicArray[length - 1];
+    // return [product, `The numbers ${substring} have a product of ${product}.`];
+}
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
