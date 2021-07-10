@@ -12,7 +12,7 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-    return [a + b, 'The sum of ' + a + ' and ' + b + ' is ' + (a + b) + '.'];
+    return [a + b, `The sum of ${a} and ${b} is ${a + b}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,9 +51,12 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-    let mySum = sum(sum(a, b)[0], c)[0];
-    let myProduct = multiply(multiply(a, b)[0], c)[0];
-    return [mySum, myProduct, `${a} and ${b} and ${c} sum to ${mySum}.`, `The product of ${a} and ${b} and ${c} is ${myProduct}.`];
+    let mySum = [a, b, c].reduce((x, y) => sum(x, y)[0]);
+    let myProduct = [a, b, c].reduce((x, y) => multiply(x, y)[0]);
+    return [mySum,
+        myProduct,
+        `${a} and ${b} and ${c} sum to ${mySum}.`,
+        `The product of ${a} and ${b} and ${c} is ${myProduct}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -75,9 +78,9 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-    let [a, b, c] = sumArr;
-    let mySum = sum(sum(a, b)[0], c)[0];
-    return [mySum, `${a},${b},${c} was passed in as an array of numbers, and ${mySum} is their sum.`];
+    let mySum = sumArr.reduce((x, y) => sum(x, y)[0]);
+    return [mySum,
+        `${sumArr.join(',')} was passed in as an array of numbers, and ${mySum} is their sum.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -100,9 +103,9 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-    let [a, b, c] = multArr;
-    let myProduct = multiply(multiply(a, b)[0], c)[0];
-    return [myProduct, `The numbers ${a},${b},${c} have a product of ${myProduct}.`];
+    let myProduct = multArr.reduce((x, y) => multiply(x, y)[0]);
+    return [myProduct,
+        `The numbers ${multArr.join(',')} have a product of ${myProduct}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -125,13 +128,8 @@ This function should be dynamic, accepting an array of any length.
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     let product = dynamicArray.reduce((a, b) => multiply(a, b)[0]);
-    let length = dynamicArray.length;
-    let substring = '';
-    for(let i = 0; i < length - 1; i++) {
-        substring += `${dynamicArray[i]},`;
-    }
-    substring += dynamicArray[length - 1];
-    return [product, `The numbers ${substring} have a product of ${product}.`];
+    return [product,
+        `The numbers ${dynamicArray.join(',')} have a product of ${product}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
