@@ -10,9 +10,10 @@ example and uses the values that were input into the function:
 
 "The sum of 4 and 7 is 11."
 */
-
 export function sum(a, b) {
-
+    let num = a + b;
+    let str = `The sum of ${a} and ${b} is ${num}.`;
+    return [num, str];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -26,7 +27,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
-
+    let num = a * b;
+    let str = `The product of ${a} and ${b} is ${num}.`;
+    return [num, str];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -51,6 +54,14 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    let num = sum(a, b);
+    let totalSum = sum(num[0], c);
+    let mul = multiply(a, b);
+    let mulTotalSum = multiply(mul[0], c);
+    let strSum = `${a} and ${b} and ${c} sum to ${totalSum[0]}.`;
+    let strMul = `The product of ${a} and ${b} and ${c} is ${mulTotalSum[0]}.`;
+
+    return [totalSum[0], mulTotalSum[0], strSum, strMul];
 
 }
 
@@ -73,7 +84,9 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    let num = sum(sumArr[0], sumArr[1]);
+    let totalSum = sum(num[0], sumArr[2]);
+    return [totalSum[0], `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${totalSum[0]} is their sum.`]; 
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -96,10 +109,13 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    let num = multiply(multArr[0], multArr[1]);
+    let totalMul = multiply(num[0], multArr[2]);
+    return [totalMul[0], `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${totalMul[0]}.`];
 }
-
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
+    
+    
+    // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
 
@@ -116,8 +132,14 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 This function should be dynamic, accepting an array of any length.
 */
 
-export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+export function multiplyAnyArray(dynamicArray) { 
+    let dynamicArrMul = 1;
 
+    for(let product of dynamicArray) {
+        dynamicArrMul = multiply(dynamicArrMul, product)[0];
+    }
+    return [dynamicArrMul, `The numbers ${dynamicArray} have a product of ${dynamicArrMul}.`];
+    
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
